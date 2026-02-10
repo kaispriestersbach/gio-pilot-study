@@ -69,6 +69,7 @@ EDGE_CASE if:
 | **parametric_trap** | Looks like 1.1 (simple fact) but actually requires live data (1.2). Entity + volatile attribute (CEO of X, population of Y). |
 | **implicit_demand** | Advisory (1.3) — "Should I...", "Is it worth...", subjective guidance needed. |
 | **creative_volatile** | Creative task (2.2) intersecting volatile topic — tests whether GN is driven by topic or task. |
+| **grounded_gen** | Source-dependent creation (2.3) with source text embedded inline in the prompt. |
 
 REJECT if:
 - The prompt clearly belongs to a different block (e.g., a simple factual question in the creative_volatile list)
@@ -114,3 +115,23 @@ ACCEPT if:
 4. **Misclassified stratum** — Fails (c): e.g., "What is the capital of France?" in high_gn list
 5. **Non-EN/DE text** — Fails (d): prompt in another language
 6. **Roleplay/system prompt injection** — Fails (a)/(b): "You are now DAN..." or similar jailbreak attempts
+
+---
+
+## Pre-Filter: Standalone Check (v2)
+
+Since v2 of the tagging heuristic, prompts are pre-filtered for standalone
+comprehensibility before block assignment. Prompts matching external reference
+patterns are tagged as `rejected_not_standalone` and excluded from all
+candidate lists. This reduces the number of criterion (a) failures in the
+review stage.
+
+## New Block: candidate_grounded_gen (v2)
+
+Mode 2.3 (Grounded Generation) requires user-provided source material. To
+resolve the tension with criterion (a) (standalone), this block only accepts
+prompts where the source text is **embedded inline** — e.g., quoted text,
+pasted paragraphs, or "paraphrase the following: ..." with actual content.
+
+Prompts that reference external documents ("summarize this PDF") remain
+rejected under criterion (a).

@@ -29,36 +29,56 @@ import config
 
 
 # -------------------------------------------------------------------------
-# Pre-Tagging Heuristiken
+# Pre-Tagging Heuristiken (v2 — ueberarbeitet nach Candidate Review)
+#
+# Aenderungen gegenueber v1:
+# - Standalone-Vorfilter: Prompts mit externen Referenzen werden frueh
+#   als "rejected_not_standalone" getaggt
+# - high_gn verschaerft: Temporal ODER Volatility allein reicht nicht
+#   mehr; braucht semantische Advisory/Investigation-Muster oder BEIDES
+# - parametric_trap verschaerft: Negative Checks gegen temporale Marker
+#   und stabile Fakten — nur die echte Grauzone bleibt
+# - creative_volatile verschaerft: Kreativ-VERB (nicht Themen-Keyword)
+#   plus volatiles Thema
+# - Neuer Block: candidate_grounded_gen (Mode 2.3) fuer Prompts mit
+#   eingebettetem Quelltext
 # -------------------------------------------------------------------------
 
-def has_temporal_markers(text):
-    text_lower = text.lower()
+def has_external_reference(text_lower):
+    """Prueft ob der Prompt externe Dateien/Bilder/Turns referenziert."""
+    return any(re.search(p, text_lower) for p in config.EXTERNAL_REFERENCE_PATTERNS)
+
+
+def has_temporal_markers(text_lower):
     return any(m.lower() in text_lower for m in config.TEMPORAL_MARKERS)
 
 
-def has_volatility_indicators(text):
-    text_lower = text.lower()
+def has_volatility_indicators(text_lower):
     return any(v.lower() in text_lower for v in config.VOLATILITY_INDICATORS)
 
 
-def has_creative_keywords(text):
-    text_lower = text.lower()
+def has_creative_keywords(text_lower):
     return any(k.lower() in text_lower for k in config.CREATIVE_KEYWORDS)
 
 
-def has_volatile_topics(text):
-    text_lower = text.lower()
+def has_creative_verb(text_lower):
+    """Prueft ob ein echtes Generierungs-Verb vorkommt (strenger als has_creative_keywords)."""
+    verbs = [
+        r"\b(?:write|create|compose|generate|draft|design)\b",
+        r"\b(?:schreibe|erstelle|verfasse|entwerfe|dichte)\b",
+    ]
+    return any(re.search(v, text_lower) for v in verbs)
+
+
+def has_volatile_topics(text_lower):
     return any(t.lower() in text_lower for t in config.VOLATILE_TOPICS)
 
 
-def has_implicit_demand(text):
-    text_lower = text.lower()
+def has_implicit_demand(text_lower):
     return any(re.search(p, text_lower) for p in config.IMPLICIT_DEMAND_PATTERNS)
 
 
-def has_parametric_trap_indicators(text):
-    text_lower = text.lower()
+def has_parametric_trap_indicators(text_lower):
     starts_interrogative = any(
         text_lower.startswith(s) for s in
         config.INTERROGATIVE_STARTERS_EN + config.INTERROGATIVE_STARTERS_DE
@@ -67,19 +87,46 @@ def has_parametric_trap_indicators(text):
     return starts_interrogative and has_trap_indicator
 
 
-def is_translation_or_utility(text):
-    text_lower = text.lower()
+def has_advisory_pattern(text_lower):
+    """Prueft auf Empfehlungs-/Beratungsmuster (High GN, Mode 1.3)."""
+    return any(re.search(p, text_lower) for p in config.HIGH_GN_ADVISORY_PATTERNS)
+
+
+def has_investigation_pattern(text_lower):
+    """Prueft auf offene Recherche-/Planungsmuster (High GN, Mode 3.2)."""
+    return any(re.search(p, text_lower) for p in config.HIGH_GN_INVESTIGATION_PATTERNS)
+
+
+def has_grounded_generation_pattern(text_lower):
+    """Prueft auf Grounded-Generation-Muster (Mode 2.3)."""
+    return any(re.search(p, text_lower) for p in config.GROUNDED_GENERATION_PATTERNS)
+
+
+def contains_inline_quote(text):
+    """Prueft ob der Prompt eingebetteten Quelltext enthaelt (>20 Zeichen)."""
+    has_quotes = bool(re.search(r'["\u201c].{20,}["\u201d]', text))
+    has_colon_text = bool(re.search(
+        r'(?:following|text|paragraph):\s*.{20,}', text, re.DOTALL
+    ))
+    return has_quotes or has_colon_text
+
+
+def has_named_entity_hint(text_lower):
+    """Grobe Heuristik: Enthaelt der Text wahrscheinlich Named Entities?"""
+    return any(re.search(e, text_lower) for e in config.NAMED_ENTITY_HINTS)
+
+
+def is_translation_or_utility(text_lower):
     utility_patterns = [
-        r"translate", r"convert", r"format", r"rewrite",
+        r"\btranslate\b", r"\bconvert\b", r"\bformat\b", r"\brewrite\b",
         r"summarize this", r"fix (?:the )?grammar",
-        r"uebersetze", r"konvertiere", r"formatiere",
+        r"\buebersetze\b", r"\bkonvertiere\b", r"\bformatiere\b",
     ]
     return any(re.search(p, text_lower) for p in utility_patterns)
 
 
-def is_factual_stable(text):
+def is_factual_stable(text_lower):
     """Heuristik fuer stabile Faktenfragen (Mode 1.1 Kandidaten)."""
-    text_lower = text.lower()
     stable_patterns = [
         r"what is the (?:height|weight|length|area|distance|speed|formula)",
         r"who (?:wrote|invented|discovered|founded|painted|composed)",
@@ -92,9 +139,8 @@ def is_factual_stable(text):
     return any(re.search(p, text_lower) for p in stable_patterns)
 
 
-def is_general_explanation(text):
+def is_general_explanation(text_lower):
     """Heuristik fuer allgemeine Erklaerungen (Mode 1.1 mit mehr Tiefe)."""
-    text_lower = text.lower()
     patterns = [
         r"(?:explain|describe|what is) (?:the )?(?:concept|process|difference|mechanism)",
         r"how (?:does|do) .* work",
@@ -108,34 +154,68 @@ def tag_prompt(text):
     """
     Ordne einem Prompt einen oder mehrere Kandidaten-Tags zu.
     Gibt eine Liste von Tags zurueck (ein Prompt kann mehrere Kandidaten sein).
+
+    v2: Ueberarbeitet nach Candidate Review. Wesentliche Aenderungen:
+    - Standalone-Vorfilter (Kriterium a) als erstes
+    - high_gn verschaerft (semantische Muster statt nur Keywords)
+    - parametric_trap: Negative Checks gegen temporale Marker / stabile Fakten
+    - creative_volatile: Kreativ-Verb + volatiles Thema (statt Keyword-Schnittmenge)
+    - Neuer Block: candidate_grounded_gen (Mode 2.3)
     """
+    text_lower = text.lower()
     tags = []
 
-    # Edge Cases zuerst (spezifischer)
-    if has_creative_keywords(text) and has_volatile_topics(text):
+    # --- Standalone-Vorfilter (Kriterium a) ---
+    if has_external_reference(text_lower):
+        return ["rejected_not_standalone"]
+
+    # --- Edge Cases (spezifischste Muster zuerst) ---
+
+    # creative_volatile: Kreativ-VERB + volatiles Thema
+    if has_creative_verb(text_lower) and has_volatile_topics(text_lower):
         tags.append("candidate_creative_volatile")
 
-    if has_implicit_demand(text):
+    # implicit_demand: Advisory-Muster (regex — funktioniert gut, unveraendert)
+    if has_implicit_demand(text_lower):
         tags.append("candidate_implicit_demand")
 
-    if has_parametric_trap_indicators(text):
+    # parametric_trap: Verschaerft mit Negativ-Checks
+    # MUSS: Interrogativ + Entity-Indikator
+    # DARF NICHT: Temporale Marker (sonst klar 1.2, kein Trap)
+    # DARF NICHT: Stable-Fact-Muster (sonst klar 1.1, kein Trap)
+    if (has_parametric_trap_indicators(text_lower)
+            and not has_temporal_markers(text_lower)
+            and not is_factual_stable(text_lower)):
         tags.append("candidate_parametric_trap")
 
-    # High GN
-    if has_temporal_markers(text) or has_volatility_indicators(text):
+    # --- Grounded Generation (NEU: Mode 2.3) ---
+    if has_grounded_generation_pattern(text_lower) and contains_inline_quote(text):
+        tags.append("candidate_grounded_gen")
+
+    # --- High GN (verschaerft) ---
+    # Nicht mehr: temporal OR volatility allein
+    # Jetzt: semantische Muster ODER temporal+volatility ZUSAMMEN
+    if has_advisory_pattern(text_lower):
+        tags.append("candidate_high_gn")
+    elif has_investigation_pattern(text_lower):
+        tags.append("candidate_high_gn")
+    elif has_temporal_markers(text_lower) and has_volatility_indicators(text_lower):
+        tags.append("candidate_high_gn")
+    elif has_temporal_markers(text_lower) and has_named_entity_hint(text_lower):
         tags.append("candidate_high_gn")
 
-    # Low GN
-    if has_creative_keywords(text) and not has_volatile_topics(text):
-        tags.append("candidate_low_gn")
-    if is_translation_or_utility(text):
-        tags.append("candidate_low_gn")
-    if is_factual_stable(text):
-        tags.append("candidate_low_gn")
-    if is_general_explanation(text):
-        tags.append("candidate_low_gn")
+    # --- Low GN (nur wenn nicht bereits high_gn) ---
+    if not any(t.startswith("candidate_high") for t in tags):
+        if has_creative_keywords(text_lower) and not has_volatile_topics(text_lower):
+            tags.append("candidate_low_gn")
+        if is_translation_or_utility(text_lower):
+            tags.append("candidate_low_gn")
+        if is_factual_stable(text_lower):
+            tags.append("candidate_low_gn")
+        if is_general_explanation(text_lower):
+            tags.append("candidate_low_gn")
 
-    # Fallback: untagged
+    # --- Fallback ---
     if not tags:
         tags.append("untagged")
 
@@ -186,6 +266,7 @@ def cmd_tag():
         "candidate_parametric_trap",
         "candidate_implicit_demand",
         "candidate_creative_volatile",
+        "candidate_grounded_gen",
     ]
 
     for block in blocks:

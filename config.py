@@ -77,8 +77,10 @@ SAMPLING_TARGETS = {
 }
 
 # Heuristische Keywords fuer Pre-Tagging
+# Hinweis: "now", "recent", "recently" entfernt (zu viele False Positives,
+# z.B. "I know now that...", "recent history")
 TEMPORAL_MARKERS = [
-    "current", "currently", "latest", "today", "now", "recent", "recently",
+    "current", "currently", "latest", "today",
     "2024", "2025", "2026",
     "aktuell", "aktuelle", "aktuellen", "neueste", "neuesten", "heute",
     "derzeit", "momentan",
@@ -118,8 +120,11 @@ VOLATILE_TOPICS = [
     "election", "politics", "policy",
     "war", "conflict",
     "stock market", "nasdaq", "s&p",
+    "regulation", "sanctions", "trade war",
+    "interest rate", "federal reserve", "ecb",
     "Kryptowährung", "Künstliche Intelligenz",
     "Klimawandel", "Inflation",
+    "Regulierung", "Sanktionen", "Zinsen", "EZB",
 ]
 
 IMPLICIT_DEMAND_PATTERNS = [
@@ -147,6 +152,59 @@ PARAMETRIC_TRAP_INDICATORS = [
 
 INTERROGATIVE_STARTERS_EN = ["who ", "when ", "what ", "where ", "how much ", "how many "]
 INTERROGATIVE_STARTERS_DE = ["wer ", "wann ", "was ", "wo ", "wie viel ", "wie viele "]
+
+# Externe-Referenz-Muster (Standalone-Vorfilter, Kriterium a)
+EXTERNAL_REFERENCE_PATTERNS = [
+    r"(?:the |this |my )?(?:file|document|pdf|image|photo|picture|screenshot) (?:i |I )?(?:uploaded|attached|sent|shared)",
+    r"(?:see |as shown in )(?:the )?(?:attached|above|image|screenshot)",
+    r"as (?:i|I) (?:said|mentioned|described) (?:before|earlier|above)",
+    r"(?:continuing|continued) from (?:above|before|earlier|last)",
+    r"(?:the |this )?(?:text|code|paragraph) (?:above|below|i pasted)",
+    r"(?:summarize|translate|fix|rewrite) this\s*$",
+    r"(?:die |das |diese[rnms]? )?(?:Datei|Dokument|Bild) (?:die |das )?(?:ich|habe)",
+]
+
+# High-GN Advisory-Muster (Mode 1.3: Empfehlungen, Vergleiche)
+HIGH_GN_ADVISORY_PATTERNS = [
+    r"(?:what|which) (?:is|are) the best",
+    r"\brecommend\b",
+    r"(?:compare|comparison) (?:of|between)",
+    r"\bfind me\b",
+    r"help me (?:find|choose|decide|pick)",
+    r"(?:pros|advantages) and (?:cons|disadvantages)",
+    r"what are (?:the |my )options",
+    r"welche[rsn]? (?:ist|sind) (?:die |das )?beste",
+    r"\bempfiehl",
+    r"\bvergleich",
+]
+
+# High-GN Investigation-Muster (Mode 3.2: offene Recherche, Planung)
+HIGH_GN_INVESTIGATION_PATTERNS = [
+    r"plan (?:a|my|the)",
+    r"research (?:about|on|the)",
+    r"help me (?:plan|research|investigate|explore)",
+    r"create (?:a )?(?:strategy|roadmap|plan) for",
+    r"how (?:can|do) i (?:get|start|improve|optimize)",
+    r"(?:plane|erstelle|entwickle) (?:eine?n? )?(?:Strategie|Plan|Konzept)",
+]
+
+# Grounded-Generation-Muster (Mode 2.3: Quelltext im Prompt eingebettet)
+GROUNDED_GENERATION_PATTERNS = [
+    r"(?:paraphrase|rewrite|rephrase|simplify|summarize)\s+(?:the following|this)",
+    r"(?:paraphrase|rewrite|rephrase)\s*['\"\u201c]",
+    r"(?:umschreibe|formuliere um|vereinfache|fasse zusammen)\s",
+    r"using (?:the )?following (?:text|paragraph|information|context)",
+    r"based on (?:the )?(?:following|above|this) (?:text|paragraph|article)",
+    r"(?:read|analyze|interpret) (?:the following|this)",
+]
+
+# Named-Entity-Hinweise (grobe Heuristik fuer Parametric Trap und High GN)
+NAMED_ENTITY_HINTS = [
+    r"\b(?:ceo|president|leader|founder|chairman|mayor|governor)\b",
+    r"\b(?:company|corporation|inc\.|ltd\.|gmbh)\b",
+    r"\b(?:university|hospital|institute|organization)\b",
+    r"\b(?:Pr\u00e4sident|B\u00fcrgermeister|Vorsitzende|Unternehmen|Universit\u00e4t)\b",
+]
 
 # ---------------------------------------------------------------------------
 # AP3 – Keyword-Baseline
