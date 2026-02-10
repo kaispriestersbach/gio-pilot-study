@@ -169,8 +169,9 @@ its size:
 |---|---|---|
 | `filtered_pool.csv` | 230,289 filtered WildChat prompts (EN/DE) | 59 MB |
 
-<!-- TODO: Add Zenodo DOI badge and link after upload -->
-<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18593413.svg)](https://doi.org/10.5281/zenodo.18593413)
+
+Download from: https://zenodo.org/records/18593414
 
 To use the Zenodo data, download `filtered_pool.csv` and place it in the
 `data/` directory. Alternatively, regenerate it with `make ap1`.
@@ -284,16 +285,16 @@ If you use this code or data, please cite both the paper and the dataset:
 }
 ```
 
-<!-- TODO: Add Zenodo citation after upload -->
-<!--
+```bibtex
 @dataset{spriestersbach2025gio_data,
-  title     = {GIO Pilot Study: Experiment Code and Data},
+  title     = {WildChat-GIO: Filtered English/German Prompt Pool
+               for the GIO Pilot Annotation Study},
   author    = {Spriestersbach, Kai and Vollmer, Sebastian},
   year      = {2025},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.XXXXXXX}
+  doi       = {10.5281/zenodo.18593413}
 }
--->
+```
 
 Please also cite the WildChat dataset:
 

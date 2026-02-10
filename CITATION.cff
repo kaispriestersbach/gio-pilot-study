@@ -7,12 +7,17 @@ authors:
     family-names: Spriestersbach
     email: k.spriestersbach@rptu.de
     affiliation: "RPTU Kaiserslautern-Landau, Department of Computer Science"
-    orcid: ""
+    orcid: "https://orcid.org/0009-0001-9631-2011"
   - given-names: Sebastian
     family-names: Vollmer
     email: s.vollmer@rptu.de
     affiliation: "RPTU Kaiserslautern-Landau, Department of Computer Science"
+    orcid: "https://orcid.org/0000-0003-2831-1401"
 repository-code: "https://github.com/kaispriestersbach/gio-pilot-study"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.18593413"
+    description: "Zenodo dataset: WildChat-GIO filtered prompt pool"
 license: MIT
 version: "1.0.0"
 date-released: "2025-02-10"
@@ -31,6 +36,6 @@ preferred-citation:
       family-names: Spriestersbach
     - given-names: Sebastian
       family-names: Vollmer
-  year: 2025
+  year: 2026
   institution:
     name: "RPTU Kaiserslautern-Landau"
