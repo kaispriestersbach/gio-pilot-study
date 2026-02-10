@@ -1,17 +1,18 @@
 """
-AP2 Hilfsskript: Automatisches Sampling fuer Pipeline-Test.
+AP2 Hilfsskript: Review-gestuetztes Sampling.
 
 Waehlt automatisch 50 Studien-Prompts + 5 Kalibrierungs-Prompts
-aus den Kandidaten-Listen (data/candidates/) und erstellt eine
-gueltige sampled_prompts.csv.
+aus den Kandidaten-Listen (data/candidates/), gefiltert durch die
+v2-Reviews (data/candidate_reviews/review_v2_*.csv).
 
-Die Zuordnung zu GIO-Modes ist eine Schaetzung — die eigentliche
-Annotation passiert durch die Experten-Rater.
+Nur Prompts mit verdict=ACCEPT werden beruecksichtigt.
+Die GIO-Mode-Schaetzung stammt aus den Reviews (nicht aus Heuristik).
 
 Output: data/sampled_prompts.csv
 """
 
 import sys
+from collections import Counter
 from pathlib import Path
 
 import pandas as pd
@@ -20,69 +21,48 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import config
 
 
-def estimate_gio_mode(text, block, subtype=""):
-    """Grobe GIO-Mode-Schaetzung basierend auf Block und Text."""
-    text_lower = text.lower()
+def load_accepted_candidates(candidate_path, review_path, n_needed=0):
+    """Lade Kandidaten und filtere auf ACCEPT-Verdicts aus der Review.
 
-    # Edge Cases
-    if subtype == "parametric_trap":
-        return "1.2"  # High E_spec, sieht wie 1.1 aus, ist aber 1.2
-    if subtype == "implicit_demand":
-        return "1.3"  # Advisory
-    if subtype == "creative_volatile":
-        return "2.2"  # Ungrounded Generation mit volatile topic
+    Falls n_needed > 0 und nicht genug ACCEPTs vorhanden sind, werden
+    EDGE_CASE-Prompts als Fallback hinzugenommen.
 
-    # Low GN
-    if block == "low_gn":
-        if any(k in text_lower for k in ["translate", "convert", "format", "rewrite",
-                                          "uebersetze", "konvertiere"]):
-            return "2.1"  # Utility
-        if any(k in text_lower for k in ["write", "create", "compose", "generate",
-                                          "poem", "story", "essay",
-                                          "schreibe", "erstelle", "verfasse"]):
-            return "2.2"  # Ungrounded Generation
-        if any(k in text_lower for k in ["summarize", "rewrite this", "fix",
-                                          "zusammenfassen", "korrigiere"]):
-            return "2.3"  # Grounded Generation
-        if any(k in text_lower for k in ["explain", "how does", "how do",
-                                          "describe", "difference between",
-                                          "erklaere", "wie funktioniert"]):
-            return "1.1"  # Fact Retrieval (Explanation)
-        if any(k in text_lower for k in ["what is", "who ", "define ", "when ",
-                                          "was ist", "wer ", "wann "]):
-            return "1.1"  # Fact Retrieval
-        return "2.2"  # Default Low GN -> creative
+    Returns:
+        DataFrame mit Spalten aus Kandidaten-CSV plus 'mode' aus Review.
+    """
+    candidates = pd.read_csv(candidate_path)
+    reviews = pd.read_csv(review_path)
 
-    # High GN
-    if block == "high_gn":
-        if any(k in text_lower for k in ["plan", "find", "help me", "compare",
-                                          "research", "investigate", "look for",
-                                          "hilf mir", "finde", "suche", "vergleiche"]):
-            return "3.2"  # Open-Ended Investigation
-        if any(k in text_lower for k in ["should", "recommend", "best", "advice",
-                                          "opinion", "worth", "advisable",
-                                          "sollte", "empfehlen", "bester", "meinung"]):
-            return "1.3"  # Advisory
-        if any(k in text_lower for k in ["current", "latest", "today", "now",
-                                          "price", "weather", "stock", "score",
-                                          "aktuell", "heute", "Preis", "Wetter"]):
-            return "1.2"  # Real-Time Synthesis
-        return "1.2"  # Default High GN
+    # Primaer: ACCEPTs
+    accepted_revs = reviews[reviews["verdict"] == "ACCEPT"][["conversation_id", "mode"]]
+    merged = candidates.merge(accepted_revs, on="conversation_id", how="inner")
 
-    return "1.1"
+    # Fallback: EDGE_CASEs wenn ACCEPTs nicht reichen
+    if n_needed > 0 and len(merged) < n_needed:
+        shortfall = n_needed - len(merged)
+        edge_revs = reviews[reviews["verdict"] == "EDGE_CASE"][["conversation_id", "mode"]]
+        edge_merged = candidates.merge(edge_revs, on="conversation_id", how="inner")
+        if len(edge_merged) > 0:
+            # Nur so viele EDGE_CASEs wie noetig
+            edge_fill = edge_merged.head(min(shortfall, len(edge_merged)))
+            merged = pd.concat([merged, edge_fill], ignore_index=True)
+            print(f"    -> {len(edge_fill)} EDGE_CASE(s) als Fallback hinzugefuegt")
+
+    return merged
 
 
 def ensure_mode_coverage(rows, min_per_mode=3):
     """Stelle sicher, dass jeder Mode mindestens min_per_mode vertreten ist.
 
     Weist bei Bedarf Prompts anderen Modes zu, um die Mindestabdeckung
-    zu erreichen. Modes 3.1 ist ausgenommen (Warnung, kein Fehler).
+    zu erreichen. Mode 3.1 ist ausgenommen (Warnung, kein Fehler).
     """
     required = ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "3.2"]
 
     # Zaehle aktuelle Verteilung
-    from collections import Counter
-    mode_counts = Counter(r["gio_mode_estimate"] for r in rows if r["block"] != "calibration")
+    mode_counts = Counter(
+        r["gio_mode_estimate"] for r in rows if r["block"] != "calibration"
+    )
 
     # Identifiziere unterbesetzte und ueberbesetzte Modes
     under = {m: max(0, min_per_mode - mode_counts.get(m, 0)) for m in required}
@@ -91,7 +71,7 @@ def ensure_mode_coverage(rows, min_per_mode=3):
     if not under:
         return  # Alles gut
 
-    # Ueberbesetzte Modes (>5 Stück)
+    # Ueberbesetzte Modes (>5 Stueck)
     over = {m: mode_counts[m] - 5 for m in required if mode_counts.get(m, 0) > 5}
 
     # Umverteilen: Aus ueberbesetzten Modes in unterbesetzte
@@ -112,94 +92,137 @@ def ensure_mode_coverage(rows, min_per_mode=3):
 
 def main():
     print("=" * 60)
-    print("AP2: Automatisches Sampling (Pipeline-Test)")
+    print("AP2: Review-gestuetztes Sampling (v2)")
     print("=" * 60)
 
     candidate_dir = config.DATA_DIR / "candidates"
+    review_dir = config.DATA_DIR / "candidate_reviews"
 
-    # Lade Kandidaten
-    blocks = {
-        "low_gn": ("candidate_low_gn.csv", 18, ""),
-        "high_gn": ("candidate_high_gn.csv", 18, ""),
-        "edge_pt": ("candidate_parametric_trap.csv", 5, "parametric_trap"),
-        "edge_id": ("candidate_implicit_demand.csv", 5, "implicit_demand"),
-        "edge_cv": ("candidate_creative_volatile.csv", 4, "creative_volatile"),
-    }
+    # Block-Definitionen: (candidate_file, review_file, block_name, subtype, n_needed)
+    blocks = [
+        ("candidate_low_gn.csv", "review_v2_low_gn.csv", "low_gn", "", 18),
+        ("candidate_high_gn.csv", "review_v2_high_gn.csv", "high_gn", "", 18),
+        ("candidate_parametric_trap.csv", "review_v2_parametric_trap.csv", "edge", "parametric_trap", 5),
+        ("candidate_implicit_demand.csv", "review_v2_implicit_demand.csv", "edge", "implicit_demand", 5),
+        ("candidate_creative_volatile.csv", "review_v2_creative_volatile.csv", "edge", "creative_volatile", 4),
+    ]
 
     all_rows = []
     prompt_id_counter = 1
+    low_gn_accepted = None  # Fuer Kalibrierung merken
 
-    for block_key, (filename, n_needed, subtype) in blocks.items():
-        filepath = candidate_dir / filename
-        if not filepath.exists():
-            print(f"  FEHLER: {filepath} nicht gefunden!")
+    for cand_file, rev_file, block_name, subtype, n_needed in blocks:
+        cand_path = candidate_dir / cand_file
+        rev_path = review_dir / rev_file
+
+        if not cand_path.exists():
+            print(f"  FEHLER: {cand_path} nicht gefunden!")
+            sys.exit(1)
+        if not rev_path.exists():
+            print(f"  FEHLER: {rev_path} nicht gefunden!")
             sys.exit(1)
 
-        df = pd.read_csv(filepath)
-        sample = df.head(n_needed)  # Erste n Zeilen (deterministisch)
+        accepted = load_accepted_candidates(cand_path, rev_path, n_needed=n_needed)
+        n_available = len(accepted)
 
-        # Block-Name fuer sampled_prompts.csv
-        if block_key.startswith("edge"):
-            block_name = "edge"
+        # low_gn merken fuer Kalibrierung
+        if block_name == "low_gn":
+            low_gn_accepted = accepted.copy()
+
+        # Warnung wenn nicht genug Kandidaten
+        if n_available < n_needed:
+            print(f"  WARNUNG: {cand_file}: nur {n_available} ACCEPTs, "
+                  f"brauche {n_needed}. Nehme alle verfuegbaren.")
+
+        # Stratifiziertes Sampling: nach Mode diversifizieren
+        n_sample = min(n_needed, n_available)
+        if n_sample < n_available:
+            # Versuche Mode-Diversitaet durch gruppiertes Sampling
+            sample = _stratified_sample(accepted, n_sample)
         else:
-            block_name = block_key
+            sample = accepted.head(n_sample)
+
+        label = f"{block_name}/{subtype}" if subtype else block_name
+        print(f"  {label:30s}: {n_available:3d} ACCEPTs -> {n_sample} ausgewaehlt")
 
         for _, row in sample.iterrows():
-            mode = estimate_gio_mode(row["prompt_text"], block_name, subtype)
+            # Mode aus Review uebernehmen (nicht aus Heuristik)
+            review_mode = str(row["mode"])
+            # Parametric Traps: Review gibt "1.1/1.2" — fuer Validation auf "1.2" mappen
+            if review_mode == "1.1/1.2":
+                gio_mode = "1.2"
+            else:
+                gio_mode = review_mode
+
             all_rows.append({
                 "prompt_id": f"P{prompt_id_counter:02d}",
                 "conversation_id": row["conversation_id"],
                 "prompt_text": row["prompt_text"],
                 "block": block_name,
                 "subtype": subtype if block_name == "edge" else "",
-                "gio_mode_estimate": mode,
-                "justification": f"Auto-selected from {filename} candidates.",
+                "gio_mode_estimate": gio_mode,
+                "justification": f"Review-accepted ({review_mode}) from {cand_file}.",
                 "source": "WildChat",
                 "language": row["language"],
             })
             prompt_id_counter += 1
 
-        print(f"  {block_name:10s} ({subtype or '-':20s}): {len(sample)} Prompts ausgewaehlt")
+    # --- Kalibrierungs-Prompts ---
+    # Aus low_gn ACCEPTs die NICHT bereits fuer Studie verwendet wurden
+    print(f"\n  Kalibrierungs-Prompts:")
+    if low_gn_accepted is None:
+        print("  FEHLER: low_gn Kandidaten nicht geladen!")
+        sys.exit(1)
 
-    # Kalibrierungs-Prompts (aus Low GN, Zeilen 18-22 = nach Studie)
-    print("\n  Kalibrierungs-Prompts:")
-    calib_candidates = pd.read_csv(candidate_dir / "candidate_low_gn.csv")
-    calib_sample = calib_candidates.iloc[18:23]
+    study_ids = {r["conversation_id"] for r in all_rows}
+    calib_pool = low_gn_accepted[~low_gn_accepted["conversation_id"].isin(study_ids)]
+
+    n_calib = min(5, len(calib_pool))
+    if n_calib < 5:
+        print(f"  WARNUNG: Nur {n_calib} low_gn ACCEPTs fuer Kalibrierung verfuegbar.")
+
+    calib_sample = calib_pool.head(n_calib)
 
     for _, row in calib_sample.iterrows():
-        mode = estimate_gio_mode(row["prompt_text"], "calibration", "")
+        review_mode = str(row["mode"])
         all_rows.append({
             "prompt_id": f"C{prompt_id_counter - 50:02d}",
             "conversation_id": row["conversation_id"],
             "prompt_text": row["prompt_text"],
             "block": "calibration",
             "subtype": "",
-            "gio_mode_estimate": mode,
-            "justification": "Calibration prompt for rater training.",
+            "gio_mode_estimate": review_mode,
+            "justification": f"Calibration prompt (review-accepted, {review_mode}).",
             "source": "WildChat",
             "language": row["language"],
         })
         prompt_id_counter += 1
 
-    print(f"  {'calibration':10s} ({'-':20s}): {len(calib_sample)} Prompts ausgewaehlt")
+    print(f"  {'calibration':30s}: {len(calib_pool):3d} verfuegbar -> {n_calib} ausgewaehlt")
 
-    # Mode-Abdeckung sicherstellen (Umverteilung falls noetig)
+    # --- Mode-Abdeckung sicherstellen ---
     print("\n  Mode-Abdeckung pruefen und ggf. umverteilen...")
     ensure_mode_coverage(all_rows, min_per_mode=3)
 
-    # Speichern
+    # --- Speichern ---
     df_final = pd.DataFrame(all_rows)
     df_final.to_csv(config.SAMPLED_PROMPTS_PATH, index=False)
 
-    # Zusammenfassung
+    # --- Zusammenfassung ---
     study = df_final[df_final["block"] != "calibration"]
     calib = df_final[df_final["block"] == "calibration"]
 
-    print(f"\n  Gesamt: {len(study)} Studien + {len(calib)} Kalibrierung = {len(df_final)} Prompts")
+    print(f"\n  Gesamt: {len(study)} Studien + {len(calib)} Kalibrierung "
+          f"= {len(df_final)} Prompts")
 
     print(f"\n  Block-Verteilung (Studie):")
     for block, n in sorted(study["block"].value_counts().items()):
         print(f"    {block:15s}: {n}")
+
+    print(f"\n  Subtype-Verteilung (Edge Cases):")
+    edges = study[study["block"] == "edge"]
+    for st, n in sorted(edges["subtype"].value_counts().items()):
+        print(f"    {st:25s}: {n}")
 
     print(f"\n  GIO-Mode-Schaetzung (Studie):")
     for mode in sorted(config.DROPDOWN_GIO_MODES):
@@ -208,8 +231,51 @@ def main():
         marker = " OK" if n >= 3 else " <-- FEHLT" if mode != "3.1" else ""
         print(f"    Mode {mode} ({name:25s}): {n}{marker}")
 
+    print(f"\n  Sprach-Verteilung:")
+    for lang, n in sorted(df_final["language"].value_counts().items()):
+        print(f"    {lang}: {n}")
+
     print(f"\n  Gespeichert: {config.SAMPLED_PROMPTS_PATH}")
     print("  Naechster Schritt: make ap2-validate")
+
+
+def _stratified_sample(df, n, seed=None):
+    """Stratifiziertes Sampling nach Mode-Diversitaet.
+
+    Versucht, moeglichst viele verschiedene Modes in der Stichprobe zu haben,
+    indem aus jeder Mode-Gruppe mindestens 1 Prompt gezogen wird (falls moeglich).
+    """
+    if seed is None:
+        seed = config.RANDOM_SEED
+
+    modes = df["mode"].unique()
+
+    if len(modes) <= 1 or n >= len(df):
+        # Nur ein Mode oder alle noetig -> einfaches Random-Sample
+        return df.sample(n=min(n, len(df)), random_state=seed)
+
+    selected = []
+    remaining_budget = n
+
+    # Phase 1: Je 1 Prompt pro Mode (garantierte Diversitaet)
+    for mode in modes:
+        if remaining_budget <= 0:
+            break
+        mode_group = df[df["mode"] == mode]
+        pick = mode_group.sample(n=1, random_state=seed)
+        selected.append(pick)
+        remaining_budget -= 1
+
+    # Phase 2: Restliches Budget proportional auffuellen
+    if remaining_budget > 0:
+        already_picked_ids = pd.concat(selected)["conversation_id"].tolist()
+        pool = df[~df["conversation_id"].isin(already_picked_ids)]
+        if len(pool) > 0:
+            fill = pool.sample(n=min(remaining_budget, len(pool)), random_state=seed)
+            selected.append(fill)
+
+    result = pd.concat(selected).head(n)
+    return result
 
 
 if __name__ == "__main__":
