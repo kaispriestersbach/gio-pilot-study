@@ -1,0 +1,101 @@
+conversation_id,verdict,mode,failed_criteria,reason
+73c194646e2feca587ab846be764d56e,ACCEPT,2.3,none,Creative rephrase with visual cues; embedded source text present
+aad3f764164646d15cbad23e79b45367,REJECT,2.1,c,Embedded source too short (~10 words); simple paraphrase is utility
+40cf7026ebb63b5ad2ea91f3b1d3da8f,ACCEPT,2.3,none,Rewrite of substantial embedded scientific text; grounded generation
+cc60a3252a5eafdfd615bd80f0218ea7,ACCEPT,2.3,none,Rewrite embedded text for grammatical accuracy; source present
+9e0e53d0c056e65f6c0a6346bc0eeb3c,REJECT,2.1,c,Very short embedded text (~13 words); simple paraphrase is utility
+cd4c7aca09e1707cb172cdb71c57597f,ACCEPT,2.3,none,Describe and discuss embedded research phases; creative generation
+a20d79c9a06cedd07ed641259072e952,REJECT,2.1,c,Very short embedded text (~14 words); simple paraphrase is utility
+adcf61b26dbe7ca9ce31faba97eab852,ACCEPT,2.3,none,Rewrite substantial embedded business text as native English
+236ef7afb35c3c69c67478cdcd2a6395,ACCEPT,2.3,none,Proofread embedded email with professional perspective; creative polish
+e1125ac721818e0780bcd40b252e1c3b,REJECT,2.3,"a,c",References external URL without embedding source text
+e42b3bab6cbdae77b8401d580a1b1079,ACCEPT,2.3,none,Paraphrase substantial embedded academic text on chemical processes
+2d72c20eee2e3c33efbe134d8077d593,ACCEPT,2.3,none,Analyze embedded passage with critical commentary; grounded generation
+45922be16512b1e2dabfb9d51d68ce9f,ACCEPT,2.3,none,Paraphrase embedded sentence about hiring process; source adequate
+703630df97253cf4760d04b2582eb175,REJECT,2.1,c,Very short embedded text (~16 words); simple paraphrase is utility
+f833ba3fb9a262f618560bc1ea7ed19f,ACCEPT,2.3,none,Rewrite embedded joke to be funnier; creative generation from source
+03a16460635d319a6032620f9a69505b,ACCEPT,2.3,none,Analyze embedded linguistic example using van Dijk model
+9fcceb8a53405bc6fbeb90bbc14bc4d7,ACCEPT,2.3,none,Rewrite embedded technical sentence; source text adequate
+c86673861f48b5f5173223ea83a1d26a,ACCEPT,2.3,none,Rewrite embedded paragraph to sound motivating; creative generation
+11f4b68f9cae6fffc78062f2ea0e4552,REJECT,2.1,c,Embedded text too short (~8 words); simple paraphrase is utility
+3c74b25911f4e802fb38d4356dcc770c,ACCEPT,2.3,none,Paraphrase embedded academic sentence; source text adequate
+d51d2307c1e3bbfc43ccdc92a9928f65,REJECT,2.2,c,Creative fiction writing; embedded sign text is not real source material
+e8e249fbc6217a7703bb2545ba37111b,ACCEPT,2.3,none,Rewrite embedded research sentence in academic style; grounded gen
+4c6055b76358632e0e3cd80ebb31ffbb,ACCEPT,2.3,none,Simplify embedded literary excerpt; creative rewriting task
+cc618167e6c33c6f2f62d50703a98d9e,ACCEPT,2.3,none,Rewrite embedded scientific text more professionally; grounded gen
+b0505826b38e803ecc9841b69ecb1379,ACCEPT,2.3,none,Rewrite substantial embedded Genesis commentary; grounded generation
+e4dfdb56b43af3e73b423973c1c8ad7e,EDGE_CASE,2.3,none,Borderline source length; but rewrite of complete commentary passage
+18a272835596b1a486b901cb3509068b,ACCEPT,2.3,none,Paraphrase substantial embedded text on computational models
+fb013fc6ec845c7a423b89937b0a9c93,ACCEPT,2.3,none,Rewrite embedded survey passage to be more interesting; creative
+0f1f148f41e7a315392c8675cd21ee24,REJECT,2.1,c,Very short embedded text (~10 words); simple paraphrase is utility
+a5aa0660a2e40e47bb38620f62696481,ACCEPT,2.3,none,Paraphrase substantial embedded text about marshmallow plant
+4ec6f1f069289146015e26ba1aa40b1c,REJECT,2.1,c,Short embedded text message (~25 words); simple paraphrase is utility
+824e25368641fc96ec5c461fe9304925,REJECT,2.1,c,Very short embedded phrase (~6 words); simple rephrase is utility
+8d2ef2b08f5d0cd1b2d56871bb12c802,ACCEPT,2.3,none,Rewrite embedded story paragraph as catfight; creative generation
+766d377e692073f6c6505259545467d4,REJECT,2.1,c,Very short embedded text (~11 words); simple paraphrase is utility
+a4372db8aea0dc57691988a5b5563ae7,ACCEPT,2.3,none,Rewrite substantial Genesis commentary keeping same words
+02b3701228cdc8c939631655eb234412,ACCEPT,2.3,none,Rewrite and expand embedded text about ticket fees; creative
+234b30b3bd5f1f2cc0cc6252227e44f6,ACCEPT,2.3,none,Rewrite substantial embedded technical text about access reviews
+b0aa592352393190db47295a4a71ed65,ACCEPT,2.3,none,Rewrite embedded image description for accessibility; creative task
+22bb41f6cf6433a9c5c482bc4483835e,ACCEPT,2.3,none,Paraphrase embedded botanical taxonomy paragraph; grounded gen
+675fbbf507bcbe11474f3e1395ac5788,ACCEPT,2.3,none,Paraphrase embedded paragraph on national innovation systems
+a60a9950fd98822d8ceb24f92af266a3,ACCEPT,2.3,none,Write article based on embedded software delivery announcement
+041f65acf046bf29223f1d9567f6f4e2,ACCEPT,2.3,none,Rewrite embedded sentence about crisis and freedom; source adequate
+7a85898b49f1a9fc42f8c545000ff68c,ACCEPT,2.3,none,Invert character motivations in embedded story paragraph; creative
+8d50f056b2b08b8b3377b73a9e111d93,ACCEPT,2.3,none,Rewrite embedded technical text as professional email format
+db7044d69eaf96b167d44ac18fa6598a,ACCEPT,2.3,none,Rephrase embedded apartment complaint in professional tone
+082b8c4b264343b3b749609010b2cf28,ACCEPT,2.3,none,Rewrite embedded sentence with synonym substitution; creative task
+e58ac6a88b02ed17666aac6b4ac1f8fc,ACCEPT,2.3,none,Rewrite embedded fight paragraph in catfight style plus continuation
+38e925abcf5b131eb785c096384fd8aa,REJECT,2.1,c,Embedded text far too short (~5 words); simple paraphrase is utility
+3406409ce48f3c805da4e40ed6814995,ACCEPT,2.3,none,Rephrase embedded text with dark visual style; creative generation
+0a6cd4ef1de7645cb2b61a9f2a623dcb,ACCEPT,2.3,none,Rephrase embedded movie plot summary; source text adequate
+6fc306d75483acebc379a1ff1fb3975d,ACCEPT,2.3,none,Fix grammar and continue embedded story; creative generation
+aa5b84abfa4f0cdbc3bc7a553122c7c1,REJECT,2.1,c,Short embedded text message (~22 words); simple paraphrase is utility
+3369d09cfb281404246ec5af457533f0,ACCEPT,2.3,none,Rewrite embedded dream narrative in absurdly verbose style; creative
+0946052069bb65da984b6c6f45626560,ACCEPT,2.3,none,Rewrite substantial embedded email about diesel storage tanks
+4ca94b957992dc2dbf553f37bd9bf95d,ACCEPT,2.3,none,Rewrite embedded text about COMAC celebration; source adequate
+b9204bc253bb866033d0d2324d192bfb,REJECT,2.1,c,Proofreading is pure utility (error correction); not creative generation
+421cfcdd4aab3997a38d96c13e34ac72,REJECT,2.1,c,Short embedded text (~30 words); simple paraphrase is utility
+fe957d7b2936e7b6dd8fe2b5e95125fd,ACCEPT,2.3,none,Rephrase substantial embedded medical/cosmetic text; grounded gen
+c0a7acdbb8b5397adf1209a95b10aff2,ACCEPT,2.3,none,Rewrite embedded sentence into two coherent sentences; source adequate
+dabc19b04c527ea04c9c78eb114c29b6,REJECT,2.3,"a,c",References external URL without embedding source text
+b31d14f8cadb5aaf893cf75f528234e1,REJECT,2.1,a,References emails not included in prompt; missing content
+527cd822391d0f78c26cb15540eb75f0,REJECT,2.1,c,Proofreading/grammar correction is pure utility; not creative gen
+4dc61aace1dc74e2b7a04c063acfbd57,ACCEPT,2.3,none,Rewrite embedded business text as proper email; creative formatting
+2d9a0306179ab479a048b1be7d64a721,ACCEPT,2.3,none,Simplify substantial embedded quantum physics text into two sentences
+dc36bc31e2d50ada07e2c776dc190c71,REJECT,2.1,c,Short embedded text (~20 words); simple paraphrase is utility
+faf123a16ca48f9e605b01f1ed8ade1e,ACCEPT,2.3,none,Creative rephrase with visual cues; embedded source text present
+aaf4752e2d80bffe413dc226d619c2db,EDGE_CASE,2.3,none,Short but complete sentence; rewrite as native speaker is creative
+2aa3298adb43c38871c28741d3e51c07,ACCEPT,2.3,none,Rewrite embedded dialog in absurdly verbose style; creative task
+737522ed2f228ec46c8e9fea5e4709fa,REJECT,2.1,c,Very short embedded text (~10 words); simple rephrase is utility
+0ede72d5ec801ef8f21cf2e3bf6a5e28,ACCEPT,2.3,none,Rewrite embedded sentence for grammar while preserving meaning
+7abbf62e233933cec1edb4b6b7914ae1,ACCEPT,2.3,none,Summarize substantial embedded text about scene writing techniques
+cf571db8cd8cde067fb3d55b14dacb9e,ACCEPT,2.3,none,Rewrite embedded sentence about translator services; source adequate
+d2fe9522723802801400632c9cade992,REJECT,2.3,"a,c",References external URL without embedding source text
+a9737d6d7c4b65d87d7598524e4246d6,EDGE_CASE,2.3,none,Borderline source length (~15 words); rephrase of complete thought
+cc49d2c7c4ba93396ddd4536f06f1e13,ACCEPT,2.3,none,Rewrite embedded sentence for technical paper style; grounded gen
+aa41d44ac56f234c8ba27a2e2e1ca2e1,REJECT,2.1,c,Short embedded text (~20 words); simple paraphrase is utility
+1595e1613cdc4df10ce129d443f74054,ACCEPT,2.3,none,Paraphrase embedded multi-sentence tech troubleshooting text
+5e2fe254779224da50a173697aa6f351,ACCEPT,2.3,none,Rephrase substantial embedded systems biology text; grounded gen
+3973b8c8a3721c3a8c42b1b6dd97a9a5,ACCEPT,2.3,none,Paraphrase embedded multi-sentence text about geyser malfunction
+45a06531bef775fef5f254b86548ae4d,ACCEPT,2.3,none,Summarize substantial embedded ISO standard description; grounded gen
+648f27676bd07a2c96d9c50a698ec456,ACCEPT,2.3,none,Rewrite substantial embedded literary analysis; grounded generation
+1c5c964673041a0cb323ace1dc425223,REJECT,2.1,c,Short embedded text (~24 words); simple paraphrase is utility
+b491bcf52b4e2b278751f3cfc23323d5,ACCEPT,2.3,none,Rephrase substantial embedded array method explanation; grounded gen
+c8fe5997783ce8a35e1649af58eb1a3b,REJECT,2.1,c,Code translation (Python to Next.js) is pure utility; not creative gen
+7043a8eb5091a5c0671b202ecc8b520c,ACCEPT,2.3,none,Rewrite substantial embedded academic paragraph on trust; grounded gen
+a25cd78aeb4a3e20b6aa8e8bd2312651,ACCEPT,2.3,none,Rewrite embedded team event text; source text adequate
+b8109987f8ece0bba524b41345a7a17e,REJECT,2.1,c,Short embedded text (~18 words); simple paraphrase is utility
+afc3a3f158d1ef6a0f0f895d13921d6b,ACCEPT,2.3,none,Rewrite substantial embedded Genesis commentary; grounded generation
+352fc33f2d9993228ef08e0f6ef2685a,ACCEPT,2.3,none,Rewrite embedded marketing text in bombastic style; creative task
+659459daff1ee67630fcc93564b453aa,ACCEPT,2.3,none,Rewrite embedded sentence about report modification; source adequate
+d7d5f654f6705155bcda1657083e200f,ACCEPT,2.3,none,Rewrite embedded political philosophy text for 4th grade level
+836cb82943078904eeedce9838708696,REJECT,2.1,c,Short embedded text (~15 words); simple paraphrase is utility
+cacc8d883fe83efcd26dfe77b047228b,REJECT,2.1,c,Embedded text too short (~9 words); simple rewrite is utility
+7c9989df4f1ebec23a2a6848f29ff580,REJECT,2.1,"c,d",Very short garbled text; simple rephrase is utility
+f04c720e3078b1307c60acc42782efad,ACCEPT,2.3,none,Rewrite embedded sentence on network regulation; source adequate
+30e1cf0908a4abe88ba51820f20b9703,ACCEPT,2.3,none,Write backstory based on embedded fight scene paragraph; creative
+7293f783907777156d1f893824f2247c,ACCEPT,2.3,none,Analyze embedded DuckTales game description; grounded generation
+d9e2ec48cc2de722ecb05377c36cec8a,ACCEPT,2.3,none,Analyze and comment on embedded Twitter quote; grounded generation
+49116abf889a225d6f451e1820bb6c4d,ACCEPT,2.3,none,Rewrite embedded company description text; grounded generation
+521ea9264ef1236775a2755f15e225a5,ACCEPT,2.3,none,Paraphrase substantial embedded historical military text

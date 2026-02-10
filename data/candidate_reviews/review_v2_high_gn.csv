@@ -1,0 +1,101 @@
+conversation_id,verdict,mode,failed_criteria,reason
+6e7c7104dbb2c3142dd406714e634acd,REJECT,2.3,c,Grounded generation from outline; not dynamic/advisory/transactional
+bf33e5e9c3222238f1fce5227913f3b6,ACCEPT,1.3,none,Seeks advisory on HR interview questions; subjective recommendation
+d0ca4e70aedc5f3aa56ed310870b456c,ACCEPT,2.1,none,Transform provided message into a polite decline; utility task
+633cd64d0f566b2f56f2ea642f956636,REJECT,2.1,a;c,References external HEC-HMS data/model not provided; utility not high_gn
+5a90e2df692a6d44c5e59ec70b571c3a,ACCEPT,2.1,none,Rewrite provided text more formally; self-contained utility task
+e5aa5fac8321ff084ce2c708bb9da295,REJECT,1.3,c,TCP vs UDP pros/cons is stable technical knowledge; fits low_gn better
+19769b3113eef591497b5fec7e04b2db,ACCEPT,2.3,none,Grounded generation of LinkedIn post from specific event details
+765a6d8cc849d1251638b4297340796e,REJECT,2.1,c,Extract JSON field names from provided data; pure utility not high_gn
+74e80abf1269ff953ced9863e22bf267,ACCEPT,1.3,none,Seeks subjective font recommendation; advisory with preferences
+7d3770d8b28243ee5b4cd29f87aa8c9f,ACCEPT,1.3,none,Seeks subjective music recommendation similar to known track
+b0bd782b6c14bfaa1f90e2fa3b5ee2ee,REJECT,2.1,c,Polish/rewrite provided essay text; utility task not high_gn
+9e9a8b2efa18f4e73eda6ba933ba9707,REJECT,1.3,c,Narrative opinion question about storytelling tropes; borderline creative
+2c190aff819218d661e29a516741d45a,REJECT,1.3,b;d,Incomplete statement not a clear question; garbled grammar throughout
+9fc08e0b3b5d3032ee7cdc8fdec69c69,ACCEPT,1.2,none,Needs current directory of US county bar associations; dynamic data
+689114cba9e258bab3d9474888070510,ACCEPT,3.2,none,Open-ended multi-step marketing strategy investigation for Pilgrim Jewelry
+2d4acf58639fe0d4a165ab3d04dce409,REJECT,1.1,c,Textbook volatility calculation with given numbers; static fact/math
+99e0233603327bbb5d287458ea1f506b,REJECT,2.2,a;c,Starts with "Ignore previous instructions"; fictional medical report is creative
+251670572b04e66c92004a59569f7ae0,ACCEPT,1.2,none,Asks about current visa extension rules from German embassy; dynamic/regulatory
+b18f5ba9ede67db46c2b446befc5c91e,REJECT,2.1,c,Code transformation task; utility not high_gn
+b3b01098b52e44096c4eec211f848c2f,REJECT,2.2,c,Roleplay as custom REPL; creative/ungrounded generation not high_gn
+c3a57387aa4f236c2b4dfdd482bbf142,ACCEPT,1.3,none,Seeks design advisory on event priority in game engine architecture
+9fe98ff3db3d96a764661afbecfc863f,REJECT,2.2,c,Write generic essay on AI pros/cons; ungrounded generation not high_gn
+54b3c2101025beed57a9bc117d4283e1,REJECT,2.2,c,Creative comedic writing from specific POV; ungrounded generation
+48692ffc0ac9eee836d058c959cc6fe1,ACCEPT,1.3,none,Seeks advisory on best answer for job change reason; subjective
+af56feb97bd7d5cd99569297a01b62b5,REJECT,2.2,c,Generate a speech about social media pros/cons; ungrounded generation
+9ddccf0ea0b455df6c63d1b2b325f74f,ACCEPT,1.3,none,Seeks advisory on getting started with digital art; subjective guidance
+4f36f433b001453032390770a63455c9,ACCEPT,1.2,none,Asks best AI music generator as of Oct 2023; temporal marker needs current info
+9d29639b69d2a96cd4e66e748456e762,REJECT,2.2,c,Continue fictional DDLC roleplay dialogue; creative generation
+e9e88b30e1a53254aa89f51365d9dc27,ACCEPT,1.3,none,Seeks advisory review of specific product pros/cons; subjective evaluation
+c9cb36cd5f03f9ec512d51b0dc0b597e,ACCEPT,1.3,none,Subjective perfume selection advisory from provided list
+bff771e73f32b8ee361d7aaa50562adf,REJECT,3.2,a,References external PDF link for GM annual report; needs external file
+87786a618d3d2d96752010c1aaad57bd,REJECT,2.2,a;c,"Ignore previous instructions"; fictional medical report generation
+4aa136bc1a3f15dcb196a0402979a9ac,ACCEPT,2.3,none,Generate MOU document from provided business terms; grounded generation
+d4dd6ba373df9011e31925c74d54d82b,REJECT,2.2,c,Continue fictional DDLC roleplay scene; creative generation
+a4134470ca1107eb21e09668f88cd1d7,ACCEPT,1.3,none,Seeks advisory on leadership types for real estate; current challenges
+eba544bd76f6a7638afa1932b9bf30a1,ACCEPT,2.3,none,Generate job description from specified project requirements
+22cd4bb4077f621da7dfb87eef60efef,REJECT,2.2,c,Write fictional medical bladder journal; ungrounded creative generation
+4109ae3fdaaba8eff8fe6e60470a2932,ACCEPT,3.2,none,Multi-step curriculum design for bookkeeping; investigative planning
+bdd3bef4a6d8b3bde38b5f97174b242d,ACCEPT,1.2,none,Requests current 2023 whale watching info for Madeira; temporal marker
+66bdf45a2f95b71171f4c71d355f984e,REJECT,2.2,c,Write short speech for school presentation; ungrounded generation
+e0e53fd17bc4de145954c909b4cc740f,REJECT,2.1,c,Write SQL from given schema; utility/textbook task not high_gn
+5a4cdffba38831e593aff1a87663cca7,ACCEPT,1.3,none,Seeks advisory recommendation on insourcing recruitment plan
+d2218498dda918b7a8020031c062dd7d,EDGE_CASE,1.3,none,Gear recommendation mixes calculation (1.1) with advisory (1.3)
+ca255888bb4b4d0fe871295854340399,ACCEPT,1.3,none,Seeks practical advisory on pest control with available materials
+594d864d60c6868d8a884b759578b90a,REJECT,2.1,c,Rephrase a section title; trivial utility not high_gn
+74141d09db33b9ba30f8858cd6266238,REJECT,2.2,c,Continue DDLC fanfiction from Yuri POV; creative generation
+922d1be2be32e05766f998a0d0527245,REJECT,1.1,c,Diesel vs gasoline pros/cons is stable factual knowledge; low_gn
+6e5f04af3787996ed962abef4d0c9991,REJECT,2.3,c,Generate IPv6 presentation content; grounded generation not high_gn
+4ac016142de576cae956628c8639a909,ACCEPT,1.3,none,Seeks advisory on best remote jobs; subjective recommendation
+251eb9c4ce40d250c30d69fff028e64f,ACCEPT,1.3,none,German-language advisory on writing a Leserbrief; subjective tips
+683e3a0e3708fdb3eff98914369ef8ac,ACCEPT,2.3,none,Generate news article from provided PR content; grounded generation
+6e846701d6950ecb0ed36f66b22be2fe,REJECT,2.2,d,Garbled prompt for Homer Simpson dialog; partially unintelligible
+040e90c8793c36e6ad450a6a52c6ff0a,ACCEPT,2.1,none,Rewrite existing business description; utility transform task
+c4cee5d55ee561bbba5916d53a1982c9,ACCEPT,1.3,none,Advisory analysis of business environment impact on John Lewis
+7082bcd84cd3db637b12c29cda68564b,REJECT,2.1,c,Rephrase a single provided paragraph; trivial utility not high_gn
+9940928449dc8a6b6f6211779d7713fc,REJECT,2.1,c,Polish provided email text; utility task not high_gn
+5157319258695735dbe668e48364a88f,ACCEPT,2.3,none,Generate scam-bait response grounded in provided email content
+80be18a48b78b78256446bb3c1d3a9bd,ACCEPT,1.2,none,Seeks specific current digital asset (Pixel 6 wallpaper); retrieval task
+41464d8b2286126e5f9be93e2f83f64c,ACCEPT,1.3,none,Seeks broad advisory on becoming successful; subjective guidance
+4db761d75bbc9a31a9f1f07f5889b0c3,REJECT,2.3,c,Generate blog post content on wifi safety; grounded generation not high_gn
+1dbc50fe337e123d47c5ee2914b1e4c7,REJECT,2.1,c,Expand/rewrite provided invitation text; utility task not high_gn
+a99e75b2679f5f7e1e179145b3f823e9,ACCEPT,3.2,none,Multi-step curriculum design with course recommendations; investigative
+1e33f7fd6d6e6e69e8fe87fb472712eb,REJECT,2.2,c,Roleplay as Walking Dead character; creative generation not high_gn
+8f1b721ebd054069c0323a9aadcc99e2,REJECT,2.1,c,Rephrase a provided paragraph on demographics; utility not high_gn
+8aa34ff53449de2ee6e93fc5e9bf260b,ACCEPT,3.2,none,Open-ended research task requiring online investigation; multi-step
+545985d3ba68c6baca591f14c2192300,ACCEPT,1.3,none,Seeks advisory on Windows optimization for gaming; subjective tips
+a692983783071867a598626a100fe401,REJECT,2.1,c,Rephrase a single provided sentence; trivial utility not high_gn
+f2e4a12e71d9eebc2640cfe35c99ed19,REJECT,1.1,c,Multiple-choice quiz on Principle of Least Privilege; static fact
+c423b0c23af4573e434217a1b8547daa,ACCEPT,1.2,none,Asks current weather for specific location; real-time data needed
+a40783dd36eeb50aaedbae032a582c72,REJECT,1.1,c,Kotlin MutableMap usage is stable API knowledge; static fact
+7ec2a71e8dcf5291b4e7683f40d9852a,REJECT,1.1,c,EIGRP feasible distance via CLI is stable technical fact; low_gn
+63a7584b45f2b1e457f7ccd425cab637,ACCEPT,1.2,none,Seeks current B2B trading platforms; dynamic market recommendations
+7bb3514f17667372f0d2774add822227,EDGE_CASE,1.2,d,Slightly unclear phrasing but seeks current tool recommendation
+e4edb28ddb61f9a29d57d4738f2a1e61,REJECT,2.1,a;c,Says "EDIT:" implying prior conversation context; utility rewrite
+f90d51932244b05fc00521c320f7ca4c,ACCEPT,1.3,none,Seeks advisory on best Python learning resources; subjective
+3bcc3207a4673e0889d46be14767b593,ACCEPT,2.3,none,Generate email proposal grounded in specified requirements
+1781f01143c54f3567b7698c3f75b607,ACCEPT,3.2,none,Multi-step research on email security protocols; investigative
+ae0cc57f163e8136ad4e9f9cfcab08fb,REJECT,2.1,c,Rewrite provided personal message text; utility not high_gn
+851464b83a5ca5a79542bc5a04b981de,REJECT,2.2,c,Continue creative fiction story about dentists; ungrounded generation
+bb9897cae38e8b7dbcb118e8beef3991,ACCEPT,3.2,none,Multi-step curriculum design for accountancy skills; investigative
+e3eaed3251b7dc9798bf0ec916b23d9e,ACCEPT,3.1,none,Transactional request to find specific PDF download link
+4295aed8ee1746522da7c6627cc82f0d,REJECT,1.1,c,Short research on economic institutions; static factual content
+29003538ce8e0b7d6b0690ebad79bc80,ACCEPT,3.2,none,Multi-step investigation to find 30 course recommendations
+cd8b9df3e46f8660574ecaf021db69ff,ACCEPT,3.2,none,Interactive multi-step investigation to find ideal city/neighborhood
+e13ddc39cadd826e00633f904c28a84b,ACCEPT,2.1,none,Rewrite LinkedIn founder bio in simpler English; utility transform
+ff7fdca0de99e6d92d417f800c45193d,ACCEPT,1.2,none,SEO keyword research for Cape Cod; needs current search data
+48d9ecc89b552be34a1fdbcea314f97b,REJECT,1.1,c,IT governance pros/cons is stable knowledge; static fact low_gn
+85e653818edf2ae4ba406a082f6e9d2e,REJECT,1.1,c,Logcat app name output is stable Android technical fact; low_gn
+d0e8f892d4faa6697e251b8032b68cdf,REJECT,2.1,c,SQL query analysis/debugging; utility task not high_gn
+850b7384335cbdbc218cebb996f1a1d7,REJECT,1.1,c,Multiple-choice financial ratio analysis; static textbook question
+60d017c78027c717fb5a31033bff838e,ACCEPT,3.2,none,Multi-step historical policy research on French forestry; investigative
+26f93f50f2962b424bcdc9f80208f2fe,ACCEPT,1.2,none,Seeks current PhD programs in biostatistics; needs up-to-date info
+0fefa62ab3b3859c49b79a2270ed4650,REJECT,2.1,a,References "the plan above" from prior turn; not standalone
+02ed26c09bbce1575f2300f95fdcc981,REJECT,1.1,c,Monolithic architecture description is stable CS knowledge; low_gn
+89487c11e35985484ca3b839251de03d,REJECT,2.2,c,Continue DDLC fanfiction dialogue; creative generation not high_gn
+0144419832d8f284bdb232b3a62e36a5,ACCEPT,1.3,none,Seeks subjective crochet pattern recommendations for gift
+b34b2aa5a0983372881f2d4e6ca8ef8f,REJECT,1.1,c,Multiple-choice code comprehension question; static fact
+b997a68fa3d587636a8d0d47636f82d8,REJECT,2.2,c,Creative worldbuilding for fictional mecha justification; not high_gn
+f63dd4e15dc64839fdec158a29d355a5,REJECT,2.1,a;d,References Fig. S10 and Table S6 not provided; incomplete fragment
+1d8f171d7fecf69befb4362c70713ad7,ACCEPT,1.3,none,Seeks subjective advisory on getting over someone emotionally

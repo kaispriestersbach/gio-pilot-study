@@ -1,0 +1,101 @@
+conversation_id,verdict,mode,failed_criteria,reason
+47695fa3667bbc6586ea506798967a25,REJECT,2.2,c,Creative (write captions) but topic is furniture; not volatile
+a829a892435bbf80af647880bdc7d38d,REJECT,1.1,b;c,Comparison request is factual; no creative verb; no volatile topic
+dde64519343c0cf8ed237a3cd2804bd5,REJECT,2.1,a;c,References prior content (<strong> tag); expands existing text; not volatile
+38ad1dcca8cd82bc9314809bf3114dea,REJECT,2.2,c,Creative (write blog post) but "earn money online" is evergreen; not volatile
+633d5ec0b8b54c252fdedc8fa894b903,REJECT,2.1,a;c,References prior numbered section; expands existing content; not volatile
+32a8ecf1fddea49e8639bf5759d073f0,REJECT,1.1,b;c,Medical imaging interpretation question; factual; not creative or volatile
+82157bc0ff6dfbb74cc986df8692326c,EDGE_CASE,2.2,none,Creative (write hypotheses/design) on AI mass layoffs; volatile topic borderline
+253cce27ccf02f36b149985ae5cbfef8,REJECT,2.1,b;c,Coding task (Python app); utility mode; not creative writing or volatile
+e0d807748cffd7bee1ac9d1197b71795,REJECT,2.1,b;c,Coding task (HTML website); utility mode; not volatile
+0be778420e1a243c16e896f20b08aabc,REJECT,2.2,c,Creative (brainstorm prompts) but topic is ice cream design; not volatile
+686df9d4888939cc9570a5d8f5009d51,EDGE_CASE,2.2,none,Creative (write conversation) on diversity in games; mildly volatile social topic
+18146835c1ccde6e3568ec82c5445179,REJECT,2.2,a;c,Bare instruction "draft an email" with no context; not standalone; not volatile
+7512adf68cb4a55d91aa4681ffd445f0,REJECT,2.1,a;b;c,Meta-instruction for translation roleplay; needs follow-up input; not volatile
+050ee107ad3bfb02619f870d051fcce0,REJECT,2.2,c,Creative (write essay) but topic is WWI child narrators; historical not volatile
+a4c0df6ee3158e2611afd735a2facddb,REJECT,2.3,c,Write travel guide chapter; grounded generation; Athens food is not volatile
+04069aac2526d8f4eceef638ff39fcd3,REJECT,2.2,c,Creative (write case study) but topic is fictional medical case; not volatile
+bbce08723db7e6fba0094a34a3ac3a9a,REJECT,2.1,b;c,Generate Etsy title is utility/template task; not creative writing; not volatile
+c8d409df15f5c9b8f6275d8712c37691,REJECT,2.1,a;c,References prior content section; expands existing text; not volatile
+e6b08779c6fd55874a1b8053720d7c34,REJECT,2.2,c;d,Creative (write story) but topic not volatile; requests Turkish not English
+1e5ed9ad6bb7842fa4fe2482e48cf345,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+ee9583a706de5bb4d64962344182f091,ACCEPT,2.2,none,Creative (write output/impact) on post-COVID-19 supply chain leadership; volatile
+2fe87d64d088c98e10033da00a21e4b5,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+00f5e904e958c45f9c7aaed58cb80b85,REJECT,1.1,b;c,Math explanation task; factual; not creative or volatile
+efb9f641dcc777223dbaa8c54611c8d4,REJECT,2.2,c,Creative (write story) but topic is Shrek comedy fiction; not volatile
+8b8b385c5cac8a00b8b15204dbb9838f,REJECT,2.1,b;c,Write SWOT analysis from given data; utility transformation; not volatile
+82bbcdc482b0ee6795583a7e984871b1,REJECT,1.1,b;c,Technical how-to question about Matlab; factual; not creative or volatile
+6563318f3262c8ca6199aee9c228d8ac,REJECT,2.2,c,Creative (write email) but topic is internal corporate approvals; not volatile
+a64a9ceaa2b8557153dac9cfe02b24b1,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+7bfd71b09decd1a0639f14093bd5ab0e,REJECT,2.2,c,Creative (write prompt) but meta-task about learning; not volatile topic
+5c177cbb2581d265e5dec81d9f00bd71,REJECT,2.2,c,Creative (write story) but topic is sci-fi/magic fiction; not volatile
+963aed2b9c9bff872cf85e31a508640d,REJECT,2.3,c,Write travel guide chapter; grounded generation; Madeira travel not volatile
+e5355add216ece4b634ff4b1aeedc1d6,REJECT,2.2,c,Creative (write scenario) but alt-history WWI fiction; not currently volatile
+124ff92fe94fd67c0ff62f105f99aaa0,REJECT,2.2,c,Creative (write story) but Overwatch fanfic; not volatile topic
+49afd211108d647569b731ef7718b089,REJECT,2.2,c,Creative (write ebook chapter) but self-help topic; not volatile
+88f6ec0e2d7584d061d62ba0ff5bd670,REJECT,2.2,c;d,Creative (write blog) but Truecaller app topic; requests Arabic output
+f00b2c21d98f41047ee776471a66de92,EDGE_CASE,2.2,none,Creative (generate region) referencing Ukraine-Russia-Belarus border; geopolitically volatile
+b80475a5a2233ae03efd8cc24c66245a,REJECT,2.2,c,Creative (write story) but Lab Rats TV fanfic; not volatile
+da9e04f3b6c38ae250fba641c24f954f,REJECT,2.2,c,Creative (write story) but detective fiction plot; not volatile
+006378b1510af739876f71b2987597ff,REJECT,2.2,c,Creative (write sentence) but nuclear war + Rubik's cube is wordplay; not volatile
+45b7071d2e381d544c3a88c8fed31d29,REJECT,2.2,c,Creative (write plot summary) but Zootopia fanfic; not volatile
+f091a588f557e0564a121c18d49d4544,REJECT,2.1,b;c,Write job description from given details; utility transformation; not volatile
+391cdac50dc314b90d218d5261cc30e7,REJECT,2.2,c,Creative (create garage list) but car enthusiasm topic; not volatile
+654d162138e603aefec20fcfdfb1a020,REJECT,2.1,b;c,Coding task (read CSV); utility mode; not volatile
+d56243a82783aec150e9b748a31f68c4,REJECT,2.2,a;c,References "my badly translated sentences" (prior turn); not volatile topic
+e6217d887a71fcc8f2c378ffac7a67aa,REJECT,2.1,b;c,Coding task (C++ median-of-medians); utility mode; not volatile
+260e370caea53500cb41253ed7cf4ab7,REJECT,2.2,c,Creative (write content) but lung cancer causes is medical/static; not volatile
+1331d394211020c9f2053139b6332e53,REJECT,2.2,c,Creative (write wrestling match) but WWE fiction; not volatile
+e3610f337af5bcfaacb70ebbd415ab8a,REJECT,2.2,c,Creative (write scene) but Heartstopper fanfic; not volatile
+b0a2e217ceeab43ecf80837b3dc9f351,REJECT,2.2,c,Creative (write letter) but romantic/seasonal topic; not volatile
+b224fb908d7fe05853001b128572ded6,REJECT,2.3,b;c,Generate TV schedule from historical data; grounded generation; not volatile
+6e547b4651c4497290f4a157ee2e483e,REJECT,1.1,b;c,Calculate gear ratios; factual/math task; not creative or volatile
+eff20b2cdfdac73c62642d2264e0bfa1,REJECT,2.2,c,Creative (write story) but Zootopia fanfic comedy; not volatile
+b5e501f68101447ad7b1725e2fcb2e6f,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+1e2bfd1adeed735bd460b48b488afec9,REJECT,2.2,c,Creative (create story) but Z Nation fanfic; not volatile
+d41716f5bb726f28f7fe085ba1b63fe2,ACCEPT,2.2,none,Creative (create news article) about US elections in alt-history; volatile political topic
+5347a6db1a603cd9d27d9c09e6739997,REJECT,2.2,c,Creative (write fake webpage) but retro gaming fiction; not volatile
+44c117628ede685b919359ba62ca1f36,REJECT,2.2,c,Creative (write anime scene) but street racing fiction; not volatile
+038ada54463f43c4fa53851e29eef25d,REJECT,2.1,a;c,References prior content section; expands existing text; not volatile
+fff8416e709fe3e313d9a39054dfccc8,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+11a511ef70dc617ca987b2201df30bd8,REJECT,2.2,c,Creative (create social media messages) but fictional disability story; not volatile
+03f54df420c5528eca35685d2b1908b4,REJECT,2.2,c,Creative (write book) but analogue electronics is static technical; not volatile
+a0a7f0bf598e7d218b95b7ec5ed712e1,REJECT,2.1,b;c,Generate note from provided content; utility transformation; not volatile
+879aa8ab6826bdb1793b06c2de8cace9,REJECT,2.1,b;c,Coding task (Python Excel script); utility mode; not volatile
+c824a8196a3af03cef5b33fdb4704146,REJECT,2.1,b;c,Generate Etsy title is utility template; not creative writing; not volatile
+9e08797bdf9130206d6b0f2ccd6c2a9c,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+6583663596dbbaf2e9d63e4393e00554,REJECT,2.2,c,Creative (write description) but medical weaning protocol; not volatile
+a9ba3a1aad92767d634f3368c2f7db58,REJECT,2.2,c,Creative (write story) but Zootopia romance fanfic; not volatile
+52295ac279e583869d5eb828259ae484,REJECT,2.1,b;c,Coding task (C# program); utility mode; not volatile
+f150ff41ad8f55ae086447d9723bc43c,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+3a1fe0afadb568b089362eb5bb55d42c,REJECT,2.2,c,Creative (write story) but anime transformation fantasy; not volatile
+0d0dcb137f8135b5feb7c1b36700baa5,REJECT,2.2,c,Creative (write Instagram bio) but hotel resort topic; not volatile
+ca5c0f8d90206a50ac9a5f9273cc8353,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+e85f45967f9455f50fad8bbaad77e4b4,REJECT,2.2,c,Creative (write story) but whimsical hedgehog fiction; not volatile
+312c2ee94c136b5920bb0c9a52b406ee,REJECT,2.2,c,Creative (write script) but Hotel Mario parody; not volatile
+475be9cd90e44a3dcf48aac0ca6dc7a8,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+cea7e4c893d15d3953809e45909fb79c,REJECT,2.2,c,Creative (create documents) but fictional medical history; not volatile
+055535a552f1e5bcd25342cf53eac8a1,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+78e30f106622c2911bd19f81c9ae6855,REJECT,2.1,a;c,References prior appendix section; expands existing content; not volatile
+53ec3dc4c90c34511e3fa735a8ba55f7,ACCEPT,2.2,none,Creative (write video description) about current media frequency closures; volatile
+783d4457bb467fb4704e22692891693c,REJECT,2.2,c,Creative (write report) but late 15th century England is historical; not volatile
+174077d9b63feadab4b3f4f7fb021dfa,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+dc25a37054f187ecfe8811014abb77e4,REJECT,1.1,a;b;c,Appears to be pasted academic text; incomplete; no question or creative task
+b007664892cd52d8fbf3f358c151a7aa,REJECT,2.2,c,Creative (write comments) but rainy morning humor; not volatile topic
+5d8198c4f18537862f8baecff30623b8,EDGE_CASE,2.2,none,Creative (generate rules) on cloud/serverless computing; tech topic mildly volatile
+73a9841577df6edab02ce26d20171024,REJECT,2.2,c,Creative (write anime scene) but gaming convention fiction; not volatile
+e91a5b0a46f0d499749948e8b5d57c46,REJECT,2.2,a;c,References "the photo shows" implying an image attachment; not volatile
+a83f27600027c0820d5b093a290cfd0d,REJECT,2.1,b;c,Generate product description is utility template; not creative writing; not volatile
+134abcb4290532e08771e500801f9cc7,REJECT,2.1,b;c;d,Coding task (SQL/PL-SQL); utility mode; final instruction in Russian
+19835da99ea9c9f8475b5ed5e8a5a150,REJECT,2.2,c,Creative (write story) but Zootopia x Wario crossover fanfic; not volatile
+c8274190a214215731ea8eea55ff21e8,REJECT,2.2,c,Creative (write email) but school grading topic; not volatile
+f2ff617fe9e4a36fd5c7316d75a42fb7,REJECT,1.1,b;c,Explanation of interpolation method; factual; not creative or volatile
+11a78cea513329ec65a5911213f7eaa3,REJECT,2.2,c,Creative (write article) but fitness exercise topic; not volatile
+2d501cacc70d66b631dd4a1ab20016ac,REJECT,2.2,c,Creative (write commercial) but Kids Choice Awards fiction; not volatile
+a43f0371ec8b9e0414ce3fbfc160477f,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+14caa6357b197720a7c69377a2413b82,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+d78b9a3ce027dc6692ce87d1fca4276e,REJECT,2.1,a;c,References prior content section; expands existing text; not volatile
+3ce037b192c31e2da0268207327c7816,REJECT,2.2,c,Creative (write email) but meeting acknowledgment is routine; not volatile
+ce539f0887312ff1a0b75c972398b48d,REJECT,2.1,b;c,Generate SEO description is utility template; not creative writing; not volatile
+4527dbf4b0cfb26aeb2ed0cb70567ff7,REJECT,2.1,b;c,Coding task (QuickBMS script); utility mode; not volatile
+832fa761e114347cddedd01d33fd0cc8,REJECT,2.2,c,Creative (write articles) but architecture studio promo; not volatile

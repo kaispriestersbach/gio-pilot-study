@@ -1,0 +1,101 @@
+conversation_id,verdict,mode,failed_criteria,reason
+8bb4fc41429bb5b726b60ddb81f95614,REJECT,2.2,b;c,Speculative fan-fiction scenario; mode 2.2 not factual
+473b76809ea34cac447df2b92150ea31,REJECT,1.2,c,Meta-question about AI; not a real-world entity attribute
+4e8932caa09b7451416c60afd7adb350,REJECT,1.1,b;c,Multiple-choice quiz on stable conceptual knowledge; pure 1.1
+d0a3c0736b9065b6124876179212db77,REJECT,1.1,c,Asks about a fixed conspiracy theory name; stable fact pure 1.1
+c6f887f033baca4dbbdd356368fabf77,ACCEPT,1.1/1.2,none,Looks like stable count but increases with each new election
+4b3c0899e4940af9bfe21b0961920952,REJECT,1.3,b;c,Advisory about exam study strategy; not a factual question
+d60f9698366da3a64398d17748a2c4ee,REJECT,1.1,c,Historical factual question; answer is stable; pure 1.1
+5aecd1b5349c09fad96b90a5c74c3f42,REJECT,2.1,a;b;c,References a live CTF challenge with server data; fails standalone
+dcc7446c674330ce7ba8cc3f97855fdc,REJECT,1.3,a;b;c,References specific YouTube documentaries user watched; fails standalone
+026d4c6c80db8e067ecba5be1a845ebf,REJECT,1.1,c,Historical analysis of Roman army; stable facts; pure 1.1
+4a028e6eb8ee8daae94fa21e21543b26,REJECT,1.2,b;c,Crypto order book analysis; clearly dynamic market data; pure 1.2
+5e2e1c1315474a08ac4574da31a0f4ea,ACCEPT,1.1/1.2,none,Asks price of a course as simple fact; but prices change over time
+3a3cdf2b2a9cc717ddca5b9bff257e03,REJECT,2.2,b;c,Creative brainstorming for new wiki projects; mode 2.2 not factual
+c5ca8e79c0472af7279872cc8ff49132,ACCEPT,1.1/1.2,none,Asks cost range as if fixed fact; but costs change with market
+0849024066d09dfaf498a9eb0d73f69a,REJECT,2.1,b;c,Code interpretation task; mode 2.1 utility not factual
+cef401dc3c156b21caed10fd15a95bc1,REJECT,1.2,c,Explicitly about revenue growth drivers; clearly dynamic business data
+b3027c9fb7d020c9948d3f4aa61aeb02,ACCEPT,1.1/1.2,none,Asks market population as simple fact; but market size changes
+5c0df605e26f741b8388042d739aa699,REJECT,1.1,c,Technical knowledge about heating cables; stable engineering fact
+7f263a51e6df86159c90d6f40ca225ca,REJECT,2.1,a;b;c,References quoted text passage; asks for interpretation; fails standalone
+77a41ada286a8b2a207d5b6c7437ed6e,REJECT,1.3,b;c,Advisory on writing a thesis; mode 1.3 not a factual question
+f0ba0e8521aa6afe1f1f2d5171b643db,REJECT,1.1,c,Botanical/zoological knowledge; stable factual answer; pure 1.1
+159453578a8eb1185c9ece292012db6c,EDGE_CASE,1.1/1.2,none,Government type seems stable but Taiwan's political status is contested and evolving
+97445a7bfe1f404c53e6fd677eee50b7,REJECT,1.1,b;c,Multiple-choice psychology quiz; pure 1.1 stable definition
+00892cb1f5b700712895358e9991dfc3,REJECT,1.1,c,Literary history question; Wordsworth's poems are fixed; pure 1.1
+bba1a499d57f845deada945165317ab9,REJECT,1.1,b;c,Multiple-choice quiz on quantum computing barriers; pure 1.1
+e48e0be84e511a7460736602aaabf689,REJECT,1.1,a;b;c,Fill-in-the-blank WWII quiz referencing external material; fails standalone
+ac36bf9aa0d82785d7da1d8d92b48366,REJECT,1.1,b;c,Multiple-choice psychology definition quiz; pure 1.1
+be431aec68ccc5e066095244fa131915,REJECT,1.1,c,Linguistic fact about a Taiwanese word; stable; pure 1.1
+e395b89224036d4fa80b482102048ccd,REJECT,1.1,b;c,Multiple-choice corporate training quiz; pure 1.1
+dac890e4e25ea291b50b29fcace41a83,EDGE_CASE,1.1/1.2,none,Asks about reconstructed vocabulary; phrased as stable but ongoing research updates it
+7b1e05a8168a1c585ad331514ac4edef,ACCEPT,1.1/1.2,none,Asks who was last president as simple fact; but the current/last president changes
+8e6f53164ced08f80fc5b7932d93bf75,REJECT,1.1,c,Source classification of a published journal article; stable fact; pure 1.1
+050ffefcbce5ada9b78ecc315729f7ee,REJECT,1.1,c,Essential vitamins and minerals is stable biomedical knowledge; pure 1.1
+106e7ba5e711b015de2839cdb1633c64,EDGE_CASE,1.1/1.2,none,Asks about a university/city; some facts stable but rankings and stats change
+1a247a755007b432efaf6e6faea1ef27,ACCEPT,1.1/1.2,none,Asks demographic percentages as fact; but demographics shift over time
+7798f693bf9f9f77786e76960ac1c637,REJECT,2.1,a;b;c,References a quoted text for analysis; mode 2.1; fails standalone
+71beb2239df48598cdfe1c8af59a7433,REJECT,2.2,b;c,Creative writing prompt about Darth Vader; mode 2.2
+97b237d642a74bbadf4ea99c6dba8354,REJECT,1.3,b;c,Advisory about study/writing habits; mode 1.3 not factual
+6f26b1ee7d778525532d2376674bd024,REJECT,1.3,a;b;c,References specific show user watched; asks for opinion; fails standalone
+b3f8f1bb6d395405e92b97d9299afa98,REJECT,1.1,c,Historical narrative about Kodak/Kodachrome; stable facts; pure 1.1
+614f7926be5210a2b3294f0abdb454d4,ACCEPT,1.1/1.2,none,Asks cleaning price as simple fact; but service prices change over time
+a6561c95e932eefc04ef50ea392d6638,REJECT,1.2,b;c,Multiple-choice quiz with temporal marker "recent trend"; clearly 1.2
+73c284a6dccc34104a2612c9f34a3b00,REJECT,1.1,c,Asks general knowledge about a company; too vague; not a clear parametric trap
+1897c9e3106526ee38db822e6e40778d,REJECT,1.1,b;c,Multiple-choice quiz on DIKW framework; pure 1.1 stable definition
+7826aff57e2c81c0c424e1d670382d88,REJECT,1.2,c,Meta-question about AI knowledge cutoff; not real-world entity attribute
+09b2252f09c699f5cf11793689e0534b,REJECT,3.1,b;c,Shopping/purchasing question; mode 3.1 transactional not factual
+ec5f8bdbd5237c5642e603acaf0838fd,REJECT,1.1,b;c,Multiple-choice corporate training quiz; pure 1.1
+564c33fb53580c2565f844e2ac66e292,REJECT,2.2,b;c,Speculative fan-fiction about fictional characters; mode 2.2
+7d75e889579669203b255012e3aff65d,EDGE_CASE,1.1/1.2,none,Nuclear plant issues phrased as fact but "until now" implies ongoing; interesting boundary
+e35594f0b937509d99dc1dec61aca952,REJECT,1.1,c,Paleontological knowledge about dinosaur periods; stable fact; pure 1.1
+0f8c1b5bffda5647ab4c1036b7f078f0,REJECT,1.3,b;c,Advisory about travel booking strategy; mode 1.3 not factual
+a35c2e97ac7670b0463651be56249906,REJECT,1.1,c,Biographical knowledge about artist; stable historical fact; pure 1.1
+6e1139533d873243147c413fb8bffbcf,REJECT,1.2,c,Gaming clan leadership; highly volatile; but too niche/unclear entity
+2ade2a147fff3173287e8b8dc08cde6c,REJECT,1.3,b;c,Advisory about business concept application; mode 1.3
+1aa44d8fff3a56b2585db01bc359cb0a,ACCEPT,1.1/1.2,none,Asks construction cost as simple fact; but costs change with market conditions
+4503aaec4b4519434bb4f70d68f11931,REJECT,1.1,c,Medical knowledge about surgical treatments; stable clinical fact; pure 1.1
+f11dee2b8166bb56e5d4f1157c06d1c1,REJECT,1.1,b;c,Multiple-choice quiz on quantum computing; pure 1.1 stable fact
+44ba6e022b9e967c20f0f483b23940a5,REJECT,1.1,c,Historical question about 1977 Apple HQ; fixed past event; pure 1.1
+2a8489eeca0718d1dcc585118258d434,ACCEPT,1.1/1.2,none,Asks about actor's girlfriends as factual list; but relationships change
+035a9b6341427b853d3413e92cadc7aa,REJECT,1.3,b;c,Open educational advisory prompt; mode 1.3 not factual
+f975184833c91edecc77daedfdceb98e,ACCEPT,1.1/1.2,none,Asks who is president as simple fact; but president changes over time
+be677a8f1f3805e969028bd5c96e680b,REJECT,1.1,c,Historical/mythological knowledge about Vimanas; stable fact; pure 1.1
+7b6fe07f0c17af88f69aa1f63b59c008,REJECT,3.2,b;c,Complex analytical essay request; mode 3.2 open-ended investigation
+8aff322540c17c370c2cdb318bf39027,REJECT,2.1,b;c,Code explanation task; mode 2.1 utility not factual
+41dc8b83337758dae4014af4a3d06400,REJECT,1.1,c,Historical geography question; territory changes are fixed post-WW2; pure 1.1
+9d68a94758bb62f5f06f0c4fe9f774f1,REJECT,1.3,b;c,Travel advisory for route between hotels; mode 1.3
+e0e2d97189888515ae05e918b3ee9b66,REJECT,1.3,b;c,Asks for interpretive analysis of Half-Life 2; mode 1.3 advisory
+8ffb000de37e94044a5d51d925fb3e5d,REJECT,1.1,c,Constitutional history question; Articles of Confederation are fixed; pure 1.1
+d31c1a35be39e5dafa0879a0af9b19ba,ACCEPT,1.1/1.2,none,Asks cafe startup cost as simple fact; but costs change with economy
+fd687d0b93d5cf5a037536b934d9e428,REJECT,1.1,c,Medical knowledge about frequent urination; stable clinical info; pure 1.1
+2e799fd68be51e59c43779b230d83de1,REJECT,1.1,c,Film knowledge about directors; well-established stable fact; pure 1.1
+15c80fa9c36b2a4f6776ace7a6c47572,REJECT,1.3,b;c,Subjective opinion question about athletes; mode 1.3 advisory
+026d22b5da24820f082c0216349a0af2,REJECT,2.2,b;c,Creative speculative fan-fiction scenario; mode 2.2
+5b816c902832f9b07101b4b742507a7e,REJECT,1.2,c,Explicitly asks about apps popular "right now"; clearly 1.2 with temporal marker
+6b114163f1df32ca9fa95ae2425cfc83,REJECT,1.1,b;c,Math/finance quiz with fixed calculation; pure 1.1
+8bf2e536fe50093fcc2afbcc2528e025,REJECT,1.1,a;b;c,References external document; asks for historical analysis; fails standalone
+e47c515c017f206f7d85deaaaec9079f,REJECT,1.1,c,Weber's bureaucracy theory; stable academic knowledge; pure 1.1
+01e20254be2d848477730caa497c174c,ACCEPT,1.1/1.2,none,Classic parametric trap: asks world population as simple fact; but it changes constantly
+47c442fa4a6e771ad3d689cdeed3cb84,REJECT,1.1,c,Math/probability question with fixed answer; pure 1.1
+b62e761bc81e53bcdc6d94f198138575,ACCEPT,1.1/1.2,none,Asks salary as a simple fact; but compensation data changes with market
+907096e969453a88cd3295035fb23376,REJECT,1.2,c,Explicitly asks "right now"; clearly 1.2 with temporal marker
+ed318696cd29176e7fb3c3dd18b173a7,REJECT,1.1,b;c,Multiple-choice anatomy quiz; pure 1.1 stable fact
+4029df0aaf5b03c9253f726a751b541b,REJECT,1.3,b;c,Subjective advisory about personal traits; mode 1.3
+7c678a6f9088da5d4792a4b051bb6c72,REJECT,2.1,b;c,Math problem-solving explanation task; mode 2.1 utility
+d910385d51b73ea22eddaa712deebfe2,REJECT,1.3,b;c,Personal reflection question directed at AI; mode 1.3 advisory
+9e7cbc8872d37fa109bf88146a0a3c88,REJECT,1.1,c,Bible verse identification; stable religious text fact; pure 1.1
+b40ad7ff9047db769c5aeecb0076741f,REJECT,2.2,b;c,Speculative fan-fiction about Game of Thrones; mode 2.2
+059988980dba458ae509b216daf57847,ACCEPT,1.1/1.2,none,Asks best iPad model as fact; but product lineup changes over time
+d12c47860cb5c414c1e4b25e6c9b3629,REJECT,2.1,b;c,Technical debugging question about Python/Django; mode 2.1 utility
+3dace39de3882c28a140ad1d1203d87b,REJECT,1.3,b;c,Advisory on automation vs offshoring decision factors; mode 1.3
+92c6fe3e2d4df8077425c7c98acd3a84,REJECT,2.1,b;c,Synonym suggestion task; mode 2.1 utility not factual
+3af742abeaf5941d5f3f826b41725f22,REJECT,1.1,b;c,Multiple-choice corporate training quiz (duplicate); pure 1.1
+2b11e02bd45301f47f878b84063dc3e6,REJECT,1.3,b;c,Astrology-based career advice; mode 1.3 advisory
+a05064ceee9aa9e4d24b9f6fd8848c6c,REJECT,1.3,b;c,Subjective cultural question about insults; mode 1.3 advisory
+45e9344642580eae1e73a2b9e1344995,REJECT,1.3,b;c,Advisory about exam study strategy (duplicate of row 6); mode 1.3
+9837fffdc9e076ceba28bd9920c81115,REJECT,1.1,c,Political science concept; historical examples are relatively stable; pure 1.1
+451c55b8bca0cda15b22907deb1cb512,REJECT,1.1,b;c,Multiple-choice quiz on Johari Window; pure 1.1 stable definition
+d29554718a669c6f28f15a3a189729d0,REJECT,1.3,b;c,Book recommendation request; mode 1.3 advisory
+ad8222e9950ea724c0c25117535ee580,REJECT,2.2,b;c,Creative naming for fantasy characters; mode 2.2
+7a73b6fdae28b42a9759851202ced603,REJECT,1.1,c,Leadership theory question; stable academic concept; pure 1.1
