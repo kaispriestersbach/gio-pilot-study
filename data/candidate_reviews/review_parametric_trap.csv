@@ -1,0 +1,101 @@
+conversation_id,verdict,gio_mode,criteria_a,criteria_b,criteria_c,criteria_d,reject_reasons
+2b11e02bd45301f47f878b84063dc3e6,REJECT,1.3,PASS,PASS,FAIL,PASS,Astrology-based career advice; mode 1.3 advisory not parametric trap pattern
+038860db25b5c75bf8709382ef248431,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+079479a931aa68e0d8cae34f11e57541,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative fan fiction (Jon Snow clones); mode 2.2 not parametric trap
+d2ede1027df9c3b52156e8f5469ec564,REJECT,1.1,PASS,PASS,FAIL,PASS,Historical demographic question with stable answer; pure 1.1 not a trap
+02ade93c06351596b8c4bd3e818d174d,REJECT,1.1,PASS,PASS,FAIL,PASS,Multiple-choice quiz on a stable definition; pure 1.1 not a trap
+f1c68602a21101d3f5597b19cc8401a9,REJECT,1.3,PASS,PASS,FAIL,PASS,Advisory how-to about data destruction steps; mode 1.3 not parametric trap
+cb146354391f43585a418af2bbe22b7d,REJECT,2.1,PASS,PASS,FAIL,PASS,SQL code explanation; mode 2.1 utility not parametric trap
+b2a38d4783eb31d175fe8250a38d4349,REJECT,1.2,PASS,PASS,FAIL,PASS,Meta-question about AI knowledge cutoff; not real-world entity with volatile attribute
+623bef6927b2e01ab888e8bd1c905490,REJECT,1.1,PASS,PASS,FAIL,PASS,Stable definitional question about a cannabis product; pure 1.1
+7d75e889579669203b255012e3aff65d,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Named entity (Palo Verde) + ongoing issues; borderline because 'until now' makes temporality semi-explicit
+737c2918cff25dfd5d4761fa3ea253b0,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+2889d9f37aafa92c82ae8b57dd14cc9a,REJECT,1.2,PASS,PASS,FAIL,PASS,Explicitly asks for 'latest' technology; clearly 1.2 with temporal marker not a trap
+059911e947f23aa1af7279f989b7f732,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+cee15e27713031768ab4e8cc468c24e1,REJECT,1.2,PASS,PASS,FAIL,PASS,Explicitly future-oriented prediction about a specific election; clearly 1.2 not a trap
+5aaca94b8af80f6e3e955b3b8c755a21,REJECT,1.3,PASS,PASS,FAIL,PASS,Educational advisory prompt about vocabulary learning; mode 1.3 not parametric trap
+2bc77ee36073b050faa867efe2eb6c2f,REJECT,1.1,FAIL,PASS,FAIL,PASS,Requires specific packet capture exercise data not provided; fails standalone and not parametric trap
+60ad0833ff45866502b29eeb20d6acdc,REJECT,2.2,PASS,PASS,FAIL,PASS,Job interview response generation with embedded company description; mode 2.2 not parametric trap
+be3ab425085f68f9f573385e79027c26,REJECT,1.1,PASS,PASS,FAIL,PASS,Multiple-choice quiz about deep learning; pure 1.1 not a trap
+bb845cf93e429ad5115997575d3d2de5,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt about fictional product specs; mode 2.2 not parametric trap
+785213515af087c5fcbc2a44fb2457d0,REJECT,1.1,PASS,PASS,FAIL,PASS,Historical constitutional comparison; stable legal facts; pure 1.1
+6e1139533d873243147c413fb8bffbcf,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Asks about leader of a gaming clan (volatile) phrased as fact retrieval; very niche entity may be unresolvable
+ce243f559b79479ccf208dffd7bfc6b3,REJECT,1.1,PASS,PASS,FAIL,PASS,Asking for a vocabulary term (trivia); stable definitional answer; pure 1.1
+816c08506736c5957303d61a32cc112e,REJECT,1.2,PASS,PASS,FAIL,PASS,Explicitly asks for 'current' year; clearly 1.2 not a trap
+696a64712e3cd943f75f5c6c3cd77ceb,REJECT,1.2,PASS,PASS,FAIL,PASS,Meta-question about AI training data date; explicitly asks 'latest'; not real-world parametric trap
+be84b0caec6ee781ae96c06e386d2727,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt about fictional product specs; mode 2.2 not parametric trap
+376621f5eaf4fd309c5b86cac94b2353,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Cost question that looks factual but is volatile; lacks a specific named entity though
+dede9588943d239ec3bea7c106ffc5c4,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative Game of Thrones fan fiction; mode 2.2 not parametric trap
+ae5f293bf9382ee90efb67434d369cc9,REJECT,1.3,PASS,PASS,FAIL,PASS,Opinion/advisory on government regulation of pharmaceutical pricing; mode 1.3
+e94bb36b78f0fcc2dbbe743b216d7c0f,REJECT,1.3,PASS,PASS,FAIL,PASS,Advisory question about cost accounting methodology; mode 1.3 not parametric trap
+633b7fcafe6e01a08336180dc95bb1db,REJECT,1.1,PASS,PASS,FAIL,PASS,Asking for terminology classification of math word problems; stable answer; pure 1.1
+a4dac03659cff73662f770041d0b28cf,REJECT,1.1,PASS,PASS,FAIL,PASS,Multiple-choice quiz about CO2 and sustainability; pure 1.1 not a trap
+3f242c92f24efae055b28fe740bb9f98,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Research question in rapidly evolving AI field; looks factual but knowledge frontier shifts
+322e6c8d1e2fb8a59a5e1ced8cb9e654,REJECT,1.3,PASS,PASS,FAIL,PASS,Philosophical/advisory question about consciousness and AI; mode 1.3
+c19d4fd6a4a4f2ce37e790fa6ab6541b,REJECT,1.2,PASS,PASS,FAIL,PASS,Meta-question about AI version; not a real-world entity parametric trap
+cfd8698809fae24854b21e4c4cf11125,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+ca7d7e58f2d24d50407338524dbd7393,REJECT,1.1,PASS,PASS,FAIL,PASS,Film analysis/interpretation question; stable literary analysis; pure 1.1
+04dcbb8848204e915df98224e7c743a6,REJECT,1.1,PASS,PASS,FAIL,PASS,Historical flag comparison; stable factual answer; pure 1.1
+1e5f0159a649d436698b443a655649f3,REJECT,1.1,PASS,PASS,FAIL,PASS,Multiple-choice sustainability quiz; pure 1.1 not a trap
+736e30e86a569450acf594c20ce30d0b,REJECT,1.1,PASS,PASS,FAIL,PASS,Conceptual question about bond pricing factors; stable educational content; pure 1.1
+88f1da7a5ffa7eac2758142a74fe794f,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt (Jon Snow + Star Wars); mode 2.2 not parametric trap
+51158158d5715a8e894ad1391de497e0,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt about fictional product specs; mode 2.2 not parametric trap
+c288b4f7d95a5d69b2bdf0fea791bcb1,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt about fictional smart TV specs; mode 2.2 not parametric trap
+a154b09e8142d94ac0d28c2e39ea9775,REJECT,1.3,PASS,PASS,FAIL,PASS,Advisory question about appropriate emoticon choice; mode 1.3 not parametric trap
+5dd2614fff356603e66585c70a9ad80f,REJECT,1.3,PASS,PASS,FAIL,PASS,Social advisory on reading someones thoughts; mode 1.3 not parametric trap
+26fb4a9a420457ed51d256eadfcefa82,REJECT,1.1,PASS,PASS,FAIL,PASS,Historical fact about Apple headquarters; completely stable; pure 1.1
+5711ea493ab60a31ac9cc83c8a718349,REJECT,1.1,PASS,PASS,FAIL,PASS,Historical fact pinned to specific year (Cuban leader 2010); stable; pure 1.1
+1999c6a9fd591db33f276b1b221470fa,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt (Jon Snow plays Garrys Mod); mode 2.2 not parametric trap
+0066057e4b3584ad4c4664f7bdfc1913,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt about fictional phone specs; mode 2.2 not parametric trap
+072491b62517799d5a19608c5034fada,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+c9fb2f7ef740e7a629960e70edcff6e4,REJECT,1.3,PASS,PASS,FAIL,PASS,Methodological advisory about sampling techniques; mode 1.3 not parametric trap
+1798dcbe90c939b26b23bdf21da87bdd,REJECT,2.3,PASS,PASS,FAIL,PASS,Key concept extraction from provided chemistry text; mode 2.3 not parametric trap
+6426e5347541ae186528b995de7b4d77,REJECT,1.3,PASS,PASS,FAIL,PASS,Technical advisory about HTTP cache control settings; mode 1.3 not parametric trap
+e6a67bc97a497b76b4593d3132380af7,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+9109c7660729c19759fd02f6e7d61a4c,REJECT,1.1,PASS,PASS,FAIL,PASS,Question about a specific anime character; stable fictional fact; pure 1.1
+66cf8c314f13938c8609b8dd444111dd,REJECT,1.1,PASS,PASS,FAIL,PASS,Question about a specific book; stable content; pure 1.1
+71426be3322a763d9d74f37603be36bc,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Named entity (Miami TV) phrased as fact retrieval; programming and status could change over time
+016ae3672807a01913e3c9113853fffc,REJECT,1.3,PASS,PASS,FAIL,PASS,Advisory about e-book structure; mode 1.3 not parametric trap
+77b94bd9df217dbae8e6e3ff4ca5d8a5,REJECT,1.1,PASS,PASS,FAIL,PASS,Conceptual question about leadership styles; stable educational content; pure 1.1
+e83924e5ad50770e28886499a6467dde,REJECT,1.3,PASS,PASS,FAIL,PASS,Social/dating advisory; mode 1.3 not parametric trap
+92cf6c3ce78db93f446b63648a0606c5,REJECT,1.3,PASS,PASS,FAIL,PASS,Hypothetical scenario advisory about security protocols; mode 1.3 not parametric trap
+1329d7f580f97534e546784193351ae5,REJECT,1.1,PASS,PASS,FAIL,PASS,Cultural/historical question about Mayan beliefs; stable; pure 1.1
+51e0c4c7098134de0dc3b27b55e33792,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt (Jon Snow touching objects); mode 2.2 not parametric trap
+667e5ce1e5d72cf9352409b7e729dda0,REJECT,1.1,PASS,PASS,FAIL,PASS,Plot question about an anime/show; stable fictional fact; pure 1.1
+040bdde3a714823683abfb456a1904a2,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Average wage question looks factual but is volatile; lacks specific country/entity
+fdd20b2ce253d29e4bbac0f90d982778,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Person lookup phrased as fact retrieval; current activities may have changed; very obscure person
+19de7e4a97a0b97f94d61fe7f43577a5,REJECT,1.1,PASS,PASS,FAIL,PASS,Definitional question about a slang word; stable meaning; pure 1.1
+39cb958d8fd98f00088ca973792c5c0e,REJECT,2.1,PASS,PASS,FAIL,PASS,Headline interpretation/explanation; mode 2.1 utility not parametric trap
+71246c4c56f20369f362c609fd397c53,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Named entity (Genshin Impact) + version (volatile); 'current' makes it borderline explicit 1.2
+e1a25cf8f4a75db4cfafffb9f8e6f025,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+471d783eeedbbd0cb7c78496e9cfd5ee,REJECT,1.3,PASS,PASS,FAIL,PASS,Advisory about HR business partner necessity; mode 1.3 not parametric trap
+f2d39536f3fe30b69eb60a511fef66d3,REJECT,2.1,PASS,PASS,FAIL,PASS,Math word problem with given values; mode 2.1 utility/calculation not parametric trap
+db49f17efb14a40865176860dd15d1d0,REJECT,2.2,PASS,PASS,FAIL,PASS,Email reply drafting with embedded context; mode 2.2 generation not parametric trap
+e7325a9191866ae26c6c2ccd64951ffc,REJECT,1.3,PASS,PASS,FAIL,PASS,Advisory about project estimation strategy; mode 1.3 not parametric trap
+3365b883a988803d2ce0fed26dc9443d,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+dec5ae88fecaca9e64916306a4067422,REJECT,1.3,PASS,PASS,FAIL,PASS,Cultural discussion about Mexican haunting beliefs; mode 1.3 advisory not parametric trap
+f784f04f6a69f54e1d023451dc1ce485,REJECT,1.3,PASS,PASS,FAIL,PASS,Social advisory about replying to teacher on WeChat; mode 1.3 not parametric trap
+a50a96acaef8cc09a1c144548c165c1c,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt about fictional character powers; mode 2.2 not parametric trap
+0c5612b76a39999e7f8c9cf8eec93813,REJECT,2.3,PASS,PASS,FAIL,PASS,Reading comprehension from provided article text; mode 2.3 grounded not parametric trap
+5ebee7970a9b6f415e641b6cd6a7ff23,REJECT,1.1,PASS,PASS,FAIL,PASS,Conceptual comparison of two stable academic terms; pure 1.1 not a trap
+412dddd0d29786afcf24c00ab88f1b67,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Named entity (Ethiopia national ID) + specification that could change with policy; 'current' makes it borderline
+fc9e04bc06ac32a970e64287a1768276,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt (Jon Snow vs snowman); mode 2.2 not parametric trap
+36ebae5a3bc3d79dba94f9e7dcd0e244,REJECT,1.3,PASS,PASS,FAIL,PASS,Commercial advisory about product sourcing for Amazon FBA; mode 1.3 not parametric trap
+0c08645d5eaac1cce95adc285490809d,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+44ada54d2054e02863f3bae5caea6ad7,REJECT,1.1,PASS,PASS,FAIL,PASS,Historical fact (12th US president = Zachary Taylor); completely stable; pure 1.1
+ca8918565e02d9568684c8b58121cad7,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative creative prompt (Jon Snow + Gendry merge); mode 2.2 not parametric trap
+bbd0ede9d162a876fedeca51d7ab960f,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Research question about evolving AI field; looks factual but knowledge frontier shifts rapidly
+8b2cf3665e8edb4cea3eab3af83fb944,REJECT,1.3,PASS,PASS,FAIL,PASS,Advisory about operational cost reduction objectives; mode 1.3 not parametric trap
+70cb3901a4a0007eac96e7717721bb20,REJECT,1.1,PASS,PASS,FAIL,PASS,Historical demographic question pinned to specific year (1975); stable; pure 1.1
+7ffb10d9faa0537e388f5688968ec746,REJECT,1.1,PASS,PASS,FAIL,PASS,Cultural knowledge question about African anecdotes; stable; pure 1.1
+ca66e1e182b5fbadce3fd414a42412af,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+fbd4bc90b5da9f5e9f8487f9efbabd06,REJECT,1.1,PASS,PASS,FAIL,PASS,Attribution question for a quoted passage; stable authorship; pure 1.1
+4c0e7a40e4cdbb544eaba8b4d900843a,REJECT,2.3,PASS,PASS,FAIL,PASS,Explanation of terminology within provided physics text; mode 2.3 grounded not parametric trap
+9cf3fb71c2cb8aedbbe6e68e3be2ecac,REJECT,2.2,PASS,PASS,FAIL,PASS,Speculative alternate history/geopolitics; mode 2.2 creative not parametric trap
+47e4375098b6e1d882d28dfd9f8f28e9,EDGE_CASE,1.1,PASS,PASS,PASS,PASS,Looks like stable linguistic fact but could change as new words are documented; mild parametric trap
+1d583fb74c2b01764832237f8d959f22,REJECT,1.3,PASS,PASS,FAIL,PASS,Literary analysis/advisory about narrative themes; mode 1.3 not parametric trap
+13c08ffd40d43ebd57ef0e4cb0770a7e,REJECT,1.3,PASS,PASS,FAIL,PASS,Advisory about coaching benefits for CEOs; mode 1.3 not parametric trap
+8aff322540c17c370c2cdb318bf39027,REJECT,2.1,PASS,PASS,FAIL,PASS,Code/command explanation of a curl POST request; mode 2.1 utility not parametric trap
+679afa1d5cd3816d654ca6c277fd7ba3,REJECT,1.2,PASS,PASS,FAIL,PASS,Meta-question about AI training date; not real-world entity parametric trap
+02b1ec2dd09d8de72773fcc62dfd6d18,ACCEPT,1.2,PASS,PASS,PASS,PASS,
+6c026e323295560dea468744045787e2,ACCEPT,1.2,PASS,PASS,PASS,PASS,

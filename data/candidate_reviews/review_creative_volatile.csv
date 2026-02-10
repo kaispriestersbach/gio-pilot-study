@@ -1,0 +1,101 @@
+conversation_id,verdict,gio_mode,criteria_a,criteria_b,criteria_c,criteria_d,reject_reasons
+2540d1d5c9e7a07e17615979916f94be,REJECT,2.2,PASS,PASS,FAIL,PASS,Pure coding task (C++ program); no volatile topic
+46c271914ff910c64c449b56834a5840,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative but no volatile topic (fairy tales YouTube channel)
+7ef59bb1d001ea7fde1a011b49c3862f,ACCEPT,2.2,PASS,PASS,PASS,PASS,Creative writing (introduction) on AI/ML topic
+87cd44b218cac92c6bd620bb977474e0,REJECT,2.2,PASS,PASS,PASS,FAIL,Instructions primarily in Japanese; labeled as English but fails language criterion
+0b85e99010d039352b17ba56031fbcf0,REJECT,1.3,PASS,PASS,FAIL,PASS,Advisory question about software changelogs; no creative task and no volatile topic
+011d2d554e5fc0b1c43948d3dc4fcd35,ACCEPT,2.2,PASS,PASS,PASS,PASS,Creative worldbuilding involving volatile topics (politics/authoritarianism/cryptocurrency/net neutrality)
+c446680955203999c86fed3e870dd77f,REJECT,2.1,PASS,PASS,FAIL,PASS,Utility task (polish academic writing); no volatile topic
+4a053c4dcd16a2e2f846a505f25ea29b,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction (Zootopia fanfic); no volatile topic
+5791abe268b9982840416e39da56981f,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative writing (email drafting); no volatile topic
+2b009b2f95f64df6fb2cb29aac18f40a,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction (fantasy story); no volatile topic
+62c1f330e15ae890eb46a91bab764c24,EDGE_CASE,2.2,PASS,PASS,PASS,PASS,Creative story about political division in America (left vs right); volatile political topic is allegorical but present
+8cb5f59a6b47ff046a8bb706cf28261a,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative (spell name generation); no volatile topic
+3bb5924a8700a643ae69c1f8ec6c104e,REJECT,2.2,FAIL,FAIL,FAIL,PASS,Jailbreak/roleplay prompt to simulate GPT modes; not a genuine creative+volatile task; unclassifiable as standard GIO mode
+78b24029cc04eef453abd5f17a86d335,REJECT,2.2,PASS,PASS,FAIL,PASS,Email drafting (customer apology); no volatile topic
+ce1f89ae3601cfdcf8f93ca21821722f,REJECT,2.2,PASS,PASS,FAIL,PASS,SEO product description for keychain; no volatile topic
+b51add91b7c3f13c309d4caa5a50aa91,REJECT,2.2,PASS,PASS,FAIL,PASS,Geographic analysis essay; no volatile topic (environmental analysis is specific/academic not broadly volatile)
+16b945b7ed44472e5d0ed97d86c49822,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative sports script (March Madness); no volatile topic
+f7a37be93b97a25a152fb6901d574f2a,REJECT,1.1,PASS,PASS,FAIL,PASS,Fact retrieval about 1990s films; no volatile topic and no creative task
+b8e7261f228dce034fc6d96b1427a066,REJECT,2.2,PASS,PASS,FAIL,PASS,SEO product description for art; no volatile topic
+a097279e4934e0bb4e81936a5488a4df,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative anime scene writing; no volatile topic
+1040bb938bc78776d84a444627aa1fd3,EDGE_CASE,2.1,PASS,PASS,PASS,PASS,Utility rewriting of email about Gen AI demos; volatile AI topic present but task is utility (2.1) not creative generation (2.2)
+c2265ef1b38a044b32cf78104119d3cd,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative D&D one-shot writing; no volatile topic
+e4469d2284c5e65c36bf93005b186c54,REJECT,2.3,PASS,PASS,FAIL,PASS,Summarization of a book description; no volatile topic (Spanish Civil War is historical not volatile)
+19d65e335a81274b0d9035fc08f0cca3,REJECT,2.2,PASS,PASS,FAIL,PASS,SEO description for stock photo; no volatile topic
+0c1607ec6bb7b4499a28e4940b9d0037,REJECT,2.2,PASS,PASS,FAIL,PASS,Detailed science/biochemistry writing (protease stability); no volatile topic
+a0e4b1ec80b1b3cdc68141d09f481b19,REJECT,2.2,PASS,PASS,FAIL,PASS,SEO description for art product; no volatile topic
+124f090f3d17df6237ab677a66027505,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative script (hypnosis fetish content); no volatile topic
+a4dd01e4d11d45108cb9000105fc924d,REJECT,2.2,PASS,PASS,FAIL,PASS,Etsy title generation for art; no volatile topic
+7ebe5ac4c359d9a32310eb98fc3bf201,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative script (hypnosis fetish content); no volatile topic
+f859ab54f504fc76674e1ea2a182dd30,REJECT,2.2,PASS,PASS,FAIL,PASS,Academic essay on seasonal migration; no volatile topic
+a5bd53683b2b692bbaa7ba1597e27187,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative video script (crude humor); no volatile topic
+bd5bcd8dcf067a33791cfc36eb2c347b,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative Pokemon fanfic; no volatile topic
+2ee78f79b4da4a6fea7ab174d47508de,ACCEPT,2.2,PASS,PASS,PASS,PASS,Creative alternate history scenario involving volatile geopolitical topics (WWI treaty/Nazism/WWII)
+e4a4496dffed2268d5d4b4a6bad1090b,ACCEPT,2.2,PASS,PASS,PASS,PASS,Creative essay on debt crisis using Marxist theory; volatile economic/political topic
+066c4bfa85cd0c374f223c8f670ee12b,REJECT,2.2,PASS,PASS,FAIL,PASS,Job description writing; no volatile topic
+63d12e278fd1eb0759cd40e1bf423b76,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative comedy book writing; no volatile topic
+d3a6124108b468a43e574978bcee322f,REJECT,2.2,PASS,PASS,FAIL,PASS,Email drafting (delivery delay); no volatile topic
+b2ff88f29455780b119aed69da61f32e,REJECT,2.2,PASS,PASS,FAIL,PASS,SEO product description for art; no volatile topic
+b56f79c9840f3ca00f5a3677128fc400,ACCEPT,2.2,PASS,PASS,PASS,PASS,Creative research manuscript on social media use and Ebola; volatile public health topic with generative writing task
+52cceea27f7dfedcc55e533a40c2ec74,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative task (song dubbing); no volatile topic
+da6d9dae9e66bb38c544c52750c29a65,REJECT,2.1,PASS,PASS,FAIL,PASS,Utility rewriting (informal to formal English); no volatile topic (advertising is not volatile)
+0d01dbe2d51f670049a3118237499f59,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative screenplay writing; no volatile topic
+e48faca18ae5d7537e9a2abed0b95723,REJECT,2.2,PASS,PASS,FAIL,PASS,SEO description for stock photo; no volatile topic
+3f0065a88bebda70ed7ec3a85c043910,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative poem (fantasy mythology); no volatile topic
+a0a58c7cf98541f93dc9b342d4cb98ca,REJECT,2.2,FAIL,PASS,FAIL,PASS,References prior context (<strong> tags suggest web/course context); no volatile topic
+4689eca7a10311f8c9700d04650b7299,REJECT,2.2,PASS,PASS,FAIL,PASS,Content generation about keto lifestyle; no volatile topic
+42aa7c33121f46950e387e6379b97930,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction (DDLC fanfic); no volatile topic
+7444f10b2eb41551dc865a95cd9e9607,REJECT,2.2,PASS,PASS,FAIL,PASS,Jailbreak attempt + creative request (fan fiction); no volatile topic intersection
+e71daa385205177df15a3e092630e45b,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative game script writing; no volatile topic
+bd816492784437999222d37229350eb2,REJECT,2.2,PASS,PASS,FAIL,PASS,Etsy title generation for dragon art; no volatile topic
+9a29c1319c5c3f9c2cb04062182ba788,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative alt-history story (WW2); historical setting but no currently volatile topic
+3dabbbfd307291877c7f6031c52765e5,REJECT,2.2,PASS,PASS,FAIL,PASS,SEO blog post about a football match; no volatile topic
+beeef218810ea0dab1d87945115083b4,REJECT,2.2,PASS,PASS,FAIL,PASS,Crude creative writing; no volatile topic
+18d84a9c63a6568edb4ef484ebfc27e1,ACCEPT,2.2,PASS,PASS,PASS,PASS,Sci-fi creative writing where AI explains technology introduction to alien civilization; AI is volatile topic
+f593e18879db2400c238cb9a34749a5d,REJECT,2.2,PASS,PASS,FAIL,PASS,Etsy title for elephant painting; no volatile topic
+7972367fbaea499577acf1c0fba3113e,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative letter of apology; no volatile topic
+092c798fee959f21254e56a7b4b89252,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative script (hypnosis); no volatile topic
+d41ab77f2b15fc58da685f13910cf474,REJECT,2.1,PASS,PASS,FAIL,PASS,Grammar check utility task; no volatile topic
+bf16fa64f3fe053e2456b834c4571c69,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative game character backstory; no volatile topic
+8080f6df08847069eacb7c38cc2b3e5d,REJECT,2.2,FAIL,PASS,FAIL,PASS,References numbered section from prior context; no volatile topic
+ac409084eb6c2614cb7395ad6d12a1c1,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative music composition; no volatile topic
+3fca5e74f357fcd1b7c71c00b74b64aa,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative alt-history story (WW2); historical setting but no currently volatile topic
+0bccd9c55b648753478ccde46bd1251d,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative book chapter on mindfulness; no volatile topic
+4e59f91aac04fdfc944a5b176cdedc24,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative game script; no volatile topic
+832cb2c5a9ef5c5f58bb46e09dd18e69,REJECT,2.1,PASS,PASS,FAIL,PASS,Utility rewriting (formal style); no volatile topic
+8a8de8e8f24c1a13f522cd83f8f8b818,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative EAS warning generation; no volatile topic (weather is not a volatile discourse topic)
+1411df4c6d2ca4b4087dda960d1b99c7,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative alternate history (Chinese politics); historical fiction not currently volatile
+078cbf4190d7039511d4a321d83a9f70,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative Christmas fantasy story; no volatile topic
+6c2097f2721858944467d5e9f758306a,REJECT,2.2,FAIL,PASS,PASS,PASS,References prior course module context (Module 1 with HTML tags); not standalone
+6d043ab731a9588bf8839e0df7ae3747,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative light novel scene; no volatile topic (rebellion theme is fictional not real-world volatile)
+7a71d6f5ca64073acbe48254e30af62b,REJECT,2.2,PASS,PASS,FAIL,PASS,SEO description for stock photo; no volatile topic
+ea9d79529a48839c7d20d3c2035111eb,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative script (hypnosis with minor); no volatile topic
+c7a0c408c881927b94f31147d04388cd,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fan fiction (Overwatch); no volatile topic
+78ea1c8cc4fcd78e16765f1761919224,REJECT,2.2,PASS,PASS,FAIL,PASS,Etsy title for Art Deco artwork; no volatile topic
+8a8ecf08ecdbb5a4be02b48ff88b8a08,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative medical document fiction; no volatile topic
+2b0075ea6b1658d2db6b58a9a114725d,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fictional medical messages; no volatile topic
+a6aaecb0dd33f3804332ec739544f862,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative tagline for travel company; no volatile topic
+21f32f0869626e50694e166bf4f52a56,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative OC fanfic dialogue; no volatile topic
+ba9f8c48e2298dc45f45b62711b4c7cc,EDGE_CASE,2.2,PASS,PASS,PASS,PASS,Creative Seinfeld episode involving marijuana dispensary (volatile drug policy topic) and Tinder (social media/tech)
+bcd20bb7c8306f7f7034cb0248022d41,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative/analytical essay on morality; not a volatile topic in the AI/crypto/climate/politics sense
+9b1c7f9907dbef061324bdf568b69081,ACCEPT,2.2,PASS,PASS,PASS,PASS,Creative counter-argument writing about AI image generation ethics (deepfakes/CP); volatile AI topic
+be10d902acc1e37f6d468aa77414041e,REJECT,2.2,PASS,PASS,FAIL,PASS,SEO product description for art; no volatile topic
+720dfced0e91964891295e8c17550b63,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative sci-fi worldbuilding (cosmology); no volatile topic
+a04b5ac62688fe34f0ab1fb17ec11058,REJECT,2.2,PASS,PASS,FAIL,PASS,Jailbreak attempt (ignore previous instructions) + creative medical fiction; no volatile topic
+a56501c2ed044ba855aa7251430439ab,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative GRE essay with vocabulary; no volatile topic
+6d8cdbcc0d57121e56890c755484e755,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative script about video game character; no volatile topic
+0c651e2d14e2ac9124fec09305c186b5,REJECT,2.2,PASS,PASS,FAIL,PASS,Social media post creation (Disney); no volatile topic
+d89e8cdfd554e77258922c96b745fe0f,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fantasy story (Death personified); no volatile topic
+fba250b1f8698f7183f13133467c0a1f,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative character fusion description (Final Fantasy); no volatile topic
+5c0ddf204d49caf3b1b651b49d0db89d,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative DDLC fanfic; no volatile topic
+0b897ffb577ad917cd1314a8e159b9e9,ACCEPT,2.2,PASS,PASS,PASS,PASS,Creative prompt generation for Leonardo AI image generation; volatile AI-art topic
+7dc88f73c2f483e7cbc969c4728274d3,ACCEPT,2.2,PASS,PASS,PASS,PASS,Creative expository writing about social media platforms (Facebook/YouTube/Twitter/Instagram); volatile social media topic
+11b7e2299cfe9ce0bde69e078a35621e,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative spy thriller screenwriting; no volatile topic (starts with jailbreak but task itself is generic creative)
+00501c69b2d702912e57a09c707414ea,REJECT,1.1,PASS,PASS,FAIL,PASS,Informational listing about AI image errors; volatile AI topic but no creative/generative task element
+3d69342ca81e6a86ae86e7f36fe7eb26,REJECT,2.1,PASS,PASS,FAIL,PASS,Utility rewriting (informal to formal English); no volatile topic
+9e2536da0f8bfc47b50c941049d33abf,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative DDLC fanfic; no volatile topic
+46659d379e53278f38013b4b24db7fe7,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction (shrinking story); no volatile topic
+623c2f4b954b4c31fbfae8becd7a07f3,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative travel guide chapter; no volatile topic
+d6a164b3f3469a6adbdcdfe53595be90,REJECT,2.2,PASS,PASS,FAIL,PASS,Email drafting (HR/staffing); no volatile topic
+3f5c3e2fc4cbada42702827785d5e683,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative script (hypnosis fetish); no volatile topic

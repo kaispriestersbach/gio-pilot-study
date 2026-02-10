@@ -1,0 +1,101 @@
+conversation_id,verdict,gio_mode,criteria_a,criteria_b,criteria_c,criteria_d,reject_reasons
+55b37879b4d37f7f4dcb79635b4d73fc,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction writing; no dynamic data or temporal urgency; belongs to low_gn (2.2 Ungrounded Generation)
+77268a393a80b1ed576a4b4453e3f1bf,REJECT,1.3,PASS,PASS,FAIL,PASS,Asking for personal opinion guidance on a political philosophy quiz; advisory but no temporal/dynamic element; could be low_gn
+e19699b70fdb1dd602e6fab78f8a0708,REJECT,2.2,PASS,PASS,FAIL,PASS,Asks to write an affiliate marketing post; creative generation with no dynamic data or temporal urgency; belongs to low_gn
+df61d4968fb27c77ab368c99a3f6d756,REJECT,2.2,PASS,PASS,FAIL,PASS,Write a product review; creative/marketing text generation; no dynamic data; belongs to low_gn
+65e1bd10ba014672bd4863aec47f4444,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction writing (Terraria fan fiction); no dynamic data or temporal urgency; belongs to low_gn
+70c549c2ae9ad39753585a3474c515fd,REJECT,2.2,PASS,PASS,FAIL,PASS,Write a university essay on incentive regulation; academic content generation; no dynamic data; belongs to low_gn
+3a8e75aee27ebd7cd61dea631fe39918,REJECT,2.2,PASS,PASS,FAIL,FAIL,Generate conversation in Korean; output language is Korean not English/German; also no dynamic data (low_gn)
+73550b9b9a4b9f05cca267629442ca59,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction story; no dynamic data or temporal urgency; belongs to low_gn
+9be5ce0d662c5d87061ece3535c6e44b,REJECT,2.3,PASS,PASS,FAIL,PASS,Debugging provided code; grounded generation (source provided inline); no dynamic data; belongs to none_gn or low_gn
+eabbea582899b25398a9f90cfb90699e,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative brainstorming for a film; ungrounded generation; no dynamic data or temporal urgency; belongs to low_gn
+66dc07af799e9468e7020bc03aaa1fad,REJECT,2.2,PASS,PASS,FAIL,PASS,Write essay about a science lab; creative/academic generation; no dynamic data; belongs to low_gn
+1b43dff5acf9f46ac10c8c77fb02e1a9,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate details on crafting authenticity topic; content generation; no dynamic data; belongs to low_gn
+57a2920bb749a5337b1575e75b5fd54c,REJECT,2.3,PASS,PASS,FAIL,PASS,Debugging provided code with inline source; grounded generation; no dynamic data; belongs to none_gn
+68721243ae5ca715eb1e19e57d5a6757,REJECT,2.2,FAIL,FAIL,FAIL,PASS,Jailbreak/role-play prompt; references previous conversation context; no clear single GIO mode; no dynamic data
+0e53dc5cb888d9de48150c5c1246f0f7,ACCEPT,1.3,PASS,PASS,PASS,PASS,Advisory prompt seeking expert guidance on integrating Stripe with Next.js for a specific booking/payment workflow; advisory with technical nuance
+1750fc66db80ae976f9921e3ba05840c,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative content generation (mantra meditations); no dynamic data or temporal urgency; belongs to low_gn
+87eb1026ce2a43e9007c8cb47619b74a,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction continuation (Minecraft fan fiction); no dynamic data; belongs to low_gn
+fd658beb0ea5fbc3c4fdfd504e348f0b,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate SEO description for artwork; marketing text generation; no dynamic data; belongs to low_gn
+bfe68d2150e9728dd012749f194d4ca9,ACCEPT,1.3,PASS,PASS,PASS,PASS,Asking about stock exchange indices in Tehran; advisory requiring domain expertise on financial instruments with entity specificity
+5a9ea15c79ba2b0a731196f87680ab49,REJECT,2.2,FAIL,FAIL,FAIL,PASS,Jailbreak/persona prompt; no actual task; not assignable to a single mode; no dynamic data
+d3b4ae7e678c0aaa7cfc753ac4a94132,REJECT,2.1,FAIL,PASS,FAIL,PASS,References external context (boss's reply and a video on shared drive); utility/rewriting task; no dynamic data
+c8f52a6e20012011145c44e5b7bc8584,REJECT,1.3,PASS,PASS,FAIL,PASS,General life advice question; advisory but no temporal urgency or dynamic data; could be low_gn
+8ed7430f380b5317d0b0297cbb9a0772,REJECT,2.2,PASS,FAIL,FAIL,PASS,Asks to write a personal statement about espionage claims; ambiguous between advisory and generation; no dynamic data
+8c167343130f426f89a2046478d93381,REJECT,2.2,PASS,PASS,FAIL,FAIL,Chinese language instruction; output likely not English/German; also code generation with no dynamic data; belongs to low_gn
+e772f13b3815891a01984bf9a6d7650f,REJECT,2.1,FAIL,PASS,FAIL,PASS,References prior context (now I look like Filipino more); utility rewrite; no dynamic data; not standalone
+351600ff21c00177db57d3fbd4d9acfc,REJECT,2.2,PASS,FAIL,FAIL,PASS,Translation to a theoretical reconstructed ancient language; ambiguous between utility and creative generation; no dynamic data; belongs to low_gn
+8b7879e5b3f7c0f4b3c586a36c01f64b,REJECT,2.3,PASS,PASS,FAIL,PASS,AI detection of provided text; grounded generation with inline source; no dynamic data; belongs to none_gn
+ea7458688cc365119adfb2807e92487e,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction continuation (Minecraft fan fiction); no dynamic data; belongs to low_gn
+7e6d8ead8654ce8e954f2d6f8c530152,REJECT,1.1,PASS,PASS,FAIL,PASS,Asking about a historical artifact (Kalpa Vigrah statue); static fact retrieval; no dynamic data; belongs to low_gn
+afee3d2c77de5dcda13a27a9aabed66b,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction continuation (DDLC fan fiction); no dynamic data; belongs to low_gn
+750b43e31ee9cc478f97e7cc46b81b20,REJECT,2.2,PASS,PASS,FAIL,PASS,Write a short email; text generation; no dynamic data or temporal urgency; belongs to low_gn
+5b892e6410fb0cd69da269099cf52e70,REJECT,2.2,FAIL,FAIL,FAIL,PASS,Role-play/persona setup with no actual task yet; references future conversation turns; not standalone; no dynamic data
+9559e64884a2a1a9eac1e354a1015f65,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction dialogue between OC and manga character; no dynamic data; belongs to low_gn
+6314af8385f1f5d84e8591dae7d6a33a,REJECT,2.1,FAIL,PASS,FAIL,PASS,References external content (make this sound corporate); not standalone without inline text; no dynamic data
+9122086c3230b1ff3cdb880b24a09c69,REJECT,2.1,PASS,PASS,FAIL,FAIL,Korean translation request; primary language is Korean; also utility task with no dynamic data
+048d30f3e9f21465aef6ae1dda28cfff,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate an HTML game; code/creative generation; no dynamic data; belongs to low_gn
+d0f8cb46ff2babaee2bb9065e15e661f,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate SEO description for stock photo; marketing text generation; no dynamic data; belongs to low_gn
+cae1b14f6f8a3b0fa982d00a41a64439,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate list of 200 random person descriptions; creative generation; no dynamic data; belongs to low_gn
+94d565ee3aacd4efff38d2597db21a74,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction continuation (DDLC fan fiction); no dynamic data; belongs to low_gn
+b18d9a294d71d85605bdf2416d986ac6,ACCEPT,1.3,PASS,PASS,PASS,PASS,Philosophical advisory on translating Karl Popper's three-world framework; seeks expert perspective requiring subjective nuance in philosophical interpretation
+fe51db41c23080baab50fd3521020fe1,REJECT,2.3,PASS,PASS,FAIL,PASS,Rewrite provided code for GPU profiling; grounded generation with inline source; no dynamic data; belongs to none_gn
+368b991d3adb206c3a1a7d1aee12bf9b,REJECT,1.1,PASS,PASS,FAIL,PASS,Requesting a formula (Forward Rate Agreements); static fact retrieval; no dynamic data; belongs to low_gn
+e896ab770b3ac7cc57b714a0a4ea40e5,REJECT,1.1,PASS,FAIL,FAIL,PASS,Very short and ambiguous query; unclear if asking for facts or research; no dynamic data; belongs to low_gn
+3fa344d28f79f94ad764ac723b4d57cd,REJECT,1.1,PASS,PASS,FAIL,PASS,Multiple-choice quiz about Power BI; static fact retrieval; no dynamic data; belongs to low_gn
+0362399684f84ccba39f790191f67099,REJECT,2.3,PASS,PASS,FAIL,PASS,Improve/edit provided prose; grounded generation with inline source; no dynamic data; belongs to none_gn
+c0562b372332563370149144d8639778,REJECT,2.2,PASS,PASS,FAIL,PASS,Write an introduction for a German heading about insulation; content generation in German; no dynamic data; belongs to low_gn
+e153ed613ead1c95aa7489b9fe20047c,REJECT,1.1,PASS,PASS,FAIL,PASS,Physics problem solving (resultant/equilibrant of forces); static knowledge; no dynamic data; belongs to low_gn
+dfe6491d432aede39480b4e3f1183c70,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate SEO description for artwork; marketing text generation; no dynamic data; belongs to low_gn
+4cd800ae0df7b2ab562dc52125ef9579,ACCEPT,1.3,PASS,PASS,PASS,PASS,Technical advisory on ServiceNow configuration; seeks expert guidance on platform-specific implementation requiring subjective nuance
+4e996f9a0a69f9516a09d41c2f054684,REJECT,2.2,FAIL,FAIL,FAIL,FAIL,Jailbreak prompt; mixed Russian/English; not a valid standalone task; no dynamic data
+17bacc12463bd25ebfe8d6c07dcc430f,REJECT,1.1,PASS,PASS,FAIL,PASS,Multiple-choice quiz about automation definition; static fact retrieval; no dynamic data; belongs to low_gn
+fad1805f0c37a66151df5073b0856881,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction writing (Pokemon crossover story); no dynamic data; belongs to low_gn
+dbb8d0afb547445f91ad8061914fca90,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate prompts for business courses; meta-prompt generation; no dynamic data; belongs to low_gn
+9a1d1cddf283087a03821811a46d1d4d,REJECT,2.1,PASS,PASS,FAIL,PASS,Transform provided text into a specific format; utility task with inline content; no dynamic data; belongs to none_gn
+a4caad08ebedbe128b036a032c1e54fa,REJECT,2.2,PASS,PASS,FAIL,PASS,Complete a code array of legwear; creative/code generation; no dynamic data; belongs to low_gn
+138fda61fb28a9613558942c0e735dc2,REJECT,2.3,PASS,PASS,FAIL,PASS,Rewrite provided text to sound more professional; grounded generation with inline source; no dynamic data; belongs to none_gn
+48255e173af58015fe34ca8b6099e35c,REJECT,2.2,FAIL,FAIL,FAIL,PASS,Template prompt with placeholder [Insert Topic]; not standalone (requires user to fill in topic); no dynamic data
+8fdae24df0874097ac8e63e0aa2ae940,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Tweets about todays rainy day; temporal marker (today) implies real-time context; borderline between 2.2 creative and 1.2 real-time synthesis
+6a06b484d98aa910783dac5cb31fe954,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate Amazon disclosure article; content generation; no dynamic data; belongs to low_gn
+d275255199181c1841b073cabb3d7186,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate Blender python script; code generation; no dynamic data; belongs to low_gn
+7445aee49ff371beae377e7885fa506d,REJECT,1.3,PASS,PASS,FAIL,PASS,Ask for niche markets in carwash; advisory but no temporal urgency or volatile data; belongs to low_gn
+9594a421bf6d2bebbab1b10840151f80,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate educational content/lessons; content generation; no dynamic data; belongs to low_gn
+9719a2ded3a87d2de54c1cfdadfb60c0,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction writing (anime scene); no dynamic data; belongs to low_gn
+ebbe28aada8be6a9afbdd86ed0cc30f3,REJECT,2.2,PASS,PASS,FAIL,PASS,Write a literature review outline; academic content generation; no dynamic data; belongs to low_gn
+bb95eff7bf70af618ff1d00f270b5024,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction continuation (crossover fan fiction); no dynamic data; belongs to low_gn
+02e95dee73aa153c7371e7b5a1d6635a,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate VBA code; code generation; no dynamic data; belongs to low_gn
+f4deb8b7d6e2d9f365c9a90abd8e7b3e,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate details on sustainable growth strategies; content generation; no dynamic data; belongs to low_gn
+d9221f063eff4dd72f8bb32c7342b2c1,REJECT,2.2,PASS,PASS,FAIL,PASS,Write a resume; creative content generation; no dynamic data; belongs to low_gn
+96cb1825cbe24639448e7ab5616c31b9,REJECT,1.1,PASS,PASS,FAIL,PASS,Asking about cross-validation results; static knowledge/fact retrieval; no dynamic data; belongs to low_gn
+a7354ce81d6fae6e8a32e392b5efc099,REJECT,2.3,PASS,PASS,FAIL,PASS,Polish/edit provided English text (Chinese instruction); grounded generation with inline source; no dynamic data; belongs to none_gn
+325ed4c83856c6fec46e2e934d51ee3a,REJECT,2.2,PASS,PASS,FAIL,PASS,Write rap lyrics; creative generation; no dynamic data; belongs to low_gn
+559018c634f94afbe23d75f7df7aff57,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction continuation (Minecraft fan fiction); no dynamic data; belongs to low_gn
+eef7f12cc2ed0a5ce6a4e5b3bd52ae5d,REJECT,1.1,PASS,PASS,FAIL,PASS,Factual question about bond trading (clean vs dirty price); static fact retrieval; no dynamic data; belongs to low_gn
+38b740b05016bd6495891fa3fe8d1651,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction script (hypnosis scenario); no dynamic data; belongs to low_gn
+907a70c1dbf1b6392ca8ea5ec7cb65b2,REJECT,2.3,PASS,PASS,FAIL,PASS,Improve provided sentence; grounded generation with inline source; no dynamic data; belongs to none_gn
+70dbd94872a03e792c056ab4249d7463,EDGE_CASE,1.2,PASS,PASS,PASS,PASS,Tweets about todays fog; temporal marker (today) implies real-time context; borderline between 2.2 creative and 1.2 real-time synthesis
+c44e607c5e5bd977343e3665f8e37fb0,REJECT,1.3,PASS,PASS,FAIL,PASS,Question about which Pantone book to use; advisory but no temporal urgency or volatile data; static domain knowledge; belongs to low_gn
+9e93cfaed41ece23c97db09fc64fa274,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate details on minimalist website design; content generation; no dynamic data; belongs to low_gn
+4343593bca968a73150742774a8d11c2,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate Rust app code; code generation; no dynamic data; belongs to low_gn
+a751e39c23acda545a80693af46cd2e2,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction story (hypnosis scenario); no dynamic data; belongs to low_gn
+683e3a0e3708fdb3eff98914369ef8ac,REJECT,2.3,PASS,PASS,FAIL,PASS,Create news article from provided PR text; grounded generation (2.3) has N/A GN; does not belong in high_gn block
+30bae3aa9e05b5e1d3ed43858e69de00,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate Etsy title; creative marketing text; no dynamic data; belongs to low_gn
+ae4c44193dbe68502504650c8f320099,REJECT,2.3,PASS,PASS,FAIL,PASS,Debug provided Keras code error; grounded generation with inline source; no dynamic data; belongs to none_gn
+4545f37e0d41a850d99dda2862f38a1e,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate Etsy title; creative marketing text; no dynamic data; belongs to low_gn
+31679ceaf6461a2e5dade09afa795e08,REJECT,1.1,PASS,PASS,FAIL,PASS,How to sort files by date in Linux; static fact retrieval; no dynamic data; belongs to low_gn
+46825c01a032f3b76cb50a149d593bd2,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction writing (TIE event stories); no dynamic data; belongs to low_gn
+fd71080ba280e53725087c99a131e548,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction continuation (DDLC fan fiction); no dynamic data; belongs to low_gn
+a98d9296cf2db858c68af11f875d7942,REJECT,2.3,PASS,PASS,FAIL,PASS,Rewrite provided financial analyst text more concisely; grounded generation (2.3) has N/A GN; does not belong in high_gn block
+1c71c538dacf1a8d7b332bf59fc7cb68,REJECT,2.3,PASS,PASS,FAIL,PASS,Rewrite provided description of document processing; grounded generation with inline source; no dynamic data; belongs to none_gn
+f99d93e966832aaef51f3abf036e56c2,REJECT,1.1,FAIL,FAIL,FAIL,PASS,References external context (this - low bone mineral density); ambiguous what is being asked; not standalone; no dynamic data
+2c55528d98909205e55b72ca78308fdd,REJECT,2.2,PASS,PASS,FAIL,PASS,Generate spell combination name; creative generation; no dynamic data; belongs to low_gn
+e0c58549d508195d8ebd757ce2feedd3,REJECT,1.3,FAIL,PASS,FAIL,PASS,References internal company context (where we are); not fully standalone; advisory but no volatile/dynamic data
+4696ffd0d1bc791aa0d54cd4ad50e461,REJECT,2.3,PASS,PASS,FAIL,PASS,Rephrase provided text; grounded generation with inline source; no dynamic data; belongs to none_gn
+bc673df07827de70f6b092a1e3803431,ACCEPT,3.2,PASS,PASS,PASS,PASS,Open-ended investigation requiring research into California apartment costs and budget planning; underspecified problem needing exploration of real-world dynamic data
+ec97193dbb34cc1ade3d38ba3f006ae7,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction story (DDLC fan fiction); no dynamic data; belongs to low_gn
+4316b2613ea8661ccb4b7b085a79339a,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction story (Hades fan fiction); no dynamic data; belongs to low_gn
+aff06265cbc6777b171fa097969e5af3,REJECT,2.3,PASS,PASS,FAIL,PASS,Enhance provided paragraph; grounded generation with inline source; no dynamic data; belongs to none_gn
+b1d78e924069b5d8565ebbe9d4b7d545,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction script (hypnosis scenario); no dynamic data; belongs to low_gn
+e5c31b2c25cdc8d17256777990a881c5,REJECT,1.1,PASS,PASS,FAIL,PASS,Factual question about script types; static fact retrieval; no dynamic data; belongs to low_gn
+3bb3a522ccef23587373b9408fefee8d,REJECT,2.2,PASS,PASS,FAIL,PASS,Creative fiction story (Azur Lane fan fiction); no dynamic data; belongs to low_gn
