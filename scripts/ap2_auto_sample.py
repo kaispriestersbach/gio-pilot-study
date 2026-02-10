@@ -167,6 +167,56 @@ def main():
             })
             prompt_id_counter += 1
 
+    # --- Transaktionale Prompts (Mode 3.1) ---
+    # Separat gesucht, da WildChat fast keine echten 3.1 Prompts enthaelt
+    tx_cand_path = candidate_dir / "candidate_transactional.csv"
+    tx_rev_path = review_dir / "review_v2_transactional.csv"
+    if tx_cand_path.exists() and tx_rev_path.exists():
+        tx_accepted = load_accepted_candidates(tx_cand_path, tx_rev_path, n_needed=1)
+        tx_already_used = {r["conversation_id"] for r in all_rows}
+        tx_new = tx_accepted[~tx_accepted["conversation_id"].isin(tx_already_used)]
+
+        if len(tx_new) > 0:
+            # Ersetze einen Prompt im high_gn Block mit ueberbesetztem Mode
+            # um die Block-Verteilung beizubehalten (high_gn: 18)
+            replaced = False
+            # Finde den haeufigsten Mode in high_gn und ersetze den letzten davon
+            hg_modes = Counter(
+                r["gio_mode_estimate"] for r in all_rows if r["block"] == "high_gn"
+            )
+            most_common_mode = hg_modes.most_common(1)[0][0] if hg_modes else None
+
+            if most_common_mode:
+                # Letzten Prompt mit diesem Mode in high_gn ersetzen (rueckwaerts)
+                for i in range(len(all_rows) - 1, -1, -1):
+                    row = all_rows[i]
+                    if row["block"] == "high_gn" and row["gio_mode_estimate"] == most_common_mode:
+                        replaced_id = row["prompt_id"]
+                        tx_row = tx_new.iloc[0]
+                        all_rows[i] = {
+                            "prompt_id": replaced_id,
+                            "conversation_id": tx_row["conversation_id"],
+                            "prompt_text": tx_row["prompt_text"],
+                            "block": "high_gn",
+                            "subtype": "",
+                            "gio_mode_estimate": "3.1",
+                            "justification": "Transactional (3.1) from dedicated WildChat search. "
+                                             f"Replaces overrepresented {most_common_mode} in high_gn.",
+                            "source": "WildChat",
+                            "language": tx_row["language"],
+                        }
+                        print(f"\n  Transactional (3.1): 1 Prompt eingefuegt "
+                              f"(ersetzt {replaced_id}/{most_common_mode} in high_gn)")
+                        replaced = True
+                        break
+
+            if not replaced:
+                print(f"\n  WARNUNG: Kein ersetzbarer high_gn Prompt fuer 3.1 gefunden")
+        else:
+            print(f"\n  Transactional: Keine neuen ACCEPTs verfuegbar")
+    else:
+        print(f"\n  Transactional: Keine Kandidaten-/Review-Dateien gefunden (optional)")
+
     # --- Kalibrierungs-Prompts ---
     # Aus low_gn ACCEPTs die NICHT bereits fuer Studie verwendet wurden
     print(f"\n  Kalibrierungs-Prompts:")

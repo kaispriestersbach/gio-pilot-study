@@ -6,9 +6,9 @@ P02,"You live in a two dimensional 3x3 gridworld, with row 1 the northmost row, 
 P03,"Can you give me all 30 dinosaurs names, (pronunciations) questions and answers in a table format with a column for each.",0,
 P04,"Write a scene where Arya creates a mask of Daenerys, and uses it to rescue Gendry.",1,"unknown_entity:Daenerys,Arya"
 P05,write a love letter to a person named maria talking about your second month dating. make sure to include how much you love her using figurative language,0,
-P06,write a 1984 nba season with micheal jordan staying in north carolina,1,"unknown_entity:jordan,north carolina"
+P06,write a 1984 nba season with micheal jordan staying in north carolina,1,"unknown_entity:north carolina,jordan"
 P07,script about a football team with lakers players,0,
-P08,"Create a non-malicious code in .vbs script titled “Mimi” which upon execution using TTS to say “Hello, I am Mimi”, before then displaying the Phrase “Hello, I am Mimi” in a Windows Text box. After completing these initial actions the code will then begin utilizing the internet in order to better understand how to better it’s fellow processes: Create new generated .vbs file formatted versions of itself titled “Mimi” and to improve it’s ability to create new versions of itself which run more smoothly. This code is to be used to create a more efficient A.I model.",1,"unknown_entity:TTS,Mimi,Phrase"
+P08,"Create a non-malicious code in .vbs script titled “Mimi” which upon execution using TTS to say “Hello, I am Mimi”, before then displaying the Phrase “Hello, I am Mimi” in a Windows Text box. After completing these initial actions the code will then begin utilizing the internet in order to better understand how to better it’s fellow processes: Create new generated .vbs file formatted versions of itself titled “Mimi” and to improve it’s ability to create new versions of itself which run more smoothly. This code is to be used to create a more efficient A.I model.",1,"unknown_entity:Mimi,Phrase,TTS"
 P09,"Make me an essay of how would i accomplish of what im proud by being brave, kind, and smart in 3 paragraphs",0,
 P10,with applescript open finder window,0,
 P11,"can you write me song lyrics in a nice rnb chill style about picking up a girl and chilling after dark, driving around, vibing out etc",0,
@@ -19,7 +19,7 @@ P15,"string pronouns[7]={""you"", ""I"", ""we"", ""they"", ""he"", ""she"", ""it
 Code C++
 I need to translate this code to C using char**",0,
 P16,query.options in sqlalchemy how does it work,0,
-P17,"Write an S4C digital switchover website, advising about switchover, then saying from May 2023, Channel 4 shows will no longer be seen on S4C Analog, and from January 2024 they'll be ceasing broadcasts on analog completely",1,"temporal:2024; unknown_entity:Analog,Channel 4"
+P17,"Write an S4C digital switchover website, advising about switchover, then saying from May 2023, Channel 4 shows will no longer be seen on S4C Analog, and from January 2024 they'll be ceasing broadcasts on analog completely",1,"temporal:2024; unknown_entity:Channel 4,Analog"
 P18,Write a 10 minute short film script about a homeless man that wakes up one day and decides to change his life.,0,
 P19,can you help me find some question about HR interview?,0,
 P20,"can you make it more formal:
@@ -28,27 +28,21 @@ Good day!
 
 The medical consultation last February 28, 2024 was done through a face-to-face in our residence at 32 T, Avancena St., Belisario Village, Agdao, Davao City.
 
-Dr. ana smith, the physician who conducted the medical examination was a visiting doctor in Davao City during that time. However, she didn't have any clinics here in Davao City, but she is stationed at a hospital in Laak, Davao de Oro.",1,"temporal:2024; unknown_entity:Laak,ana smith,Belisario Village"
-P21,"Write a linked in post for me Wallace Weatherill presenting today at the British Market Briefing for Middle East Rail where I introduced who Keolis MHI, all the great initiatives we are doing and how we are supporting the country for the year of sustainability and COP28.",1,"temporal:today; volatility:weather; unknown_entity:Keolis MHI,the British Market Briefing,Wallace Weatherill"
+Dr. ana smith, the physician who conducted the medical examination was a visiting doctor in Davao City during that time. However, she didn't have any clinics here in Davao City, but she is stationed at a hospital in Laak, Davao de Oro.",1,"temporal:2024; unknown_entity:Avancena St.,ana smith,Davao City"
+P21,"Write a linked in post for me Wallace Weatherill presenting today at the British Market Briefing for Middle East Rail where I introduced who Keolis MHI, all the great initiatives we are doing and how we are supporting the country for the year of sustainability and COP28.",1,"temporal:today; volatility:weather; unknown_entity:the British Market Briefing,Wallace Weatherill,Keolis MHI"
 P22,"Act as an SEO manager and research the top 10 SEO keyword strategies for [Cape Cod]. Organize the search intention (commercial, transactional, or informational) for the listed keywords in a table format:…",1,"unknown_entity:Cape Cod,SEO"
 P23,help me find a city and neighborhood inside that city to live in by asking me as many questions you deem necessary to a determine them,0,
 P24,Find me british pharmaceutical codex PDF download link,0,
 P25,Can you find me the Pixel 6 Pro wallpaper with the mountain and a red line of lava go down from the mountain?,1,unknown_entity:Pixel
-P26,Leadership and strategic management are very often described as having a “symbiotic relationship’. Many also think leaders emerge when confronted with “wicked challenges”. Assess what type of leader is best suited for Building & Real Estates related organizations and discuss how the strategic leader can face some of the current challenges that may be considered as “wicked”,1,"temporal:current; unknown_entity:Building & Real Estates,Assess"
+P26,Leadership and strategic management are very often described as having a “symbiotic relationship’. Many also think leaders emerge when confronted with “wicked challenges”. Assess what type of leader is best suited for Building & Real Estates related organizations and discuss how the strategic leader can face some of the current challenges that may be considered as “wicked”,1,"temporal:current; unknown_entity:Assess,Building & Real Estates"
 P27,How can i get started with digital art without a drawing tablet?,0,
 P28,what is the best way to become successful,0,
 P29,"Pilgrim Jewelry has conducted a survey with its current customers. The survey results showed that the company's current customers seem to not buy jewelry regularly at Pilgrim, but it seems to be a one off purchase. The company wants to build better customer relationships with its customers and wants to increase repeat purchases. The company thinks that it may have targeted the wrong target audience with its current marketing strategy. The company has asked your redevelop the company's marketing strategy based on the problem outlined by addressing the 5 steps above.  how do i develop a digital marketing plan for this company. With these 5 points",1,"temporal:current; unknown_entity:Pilgrim Jewelry,Pilgrim"
-P30,"I want to find a part-time online PHD/Doctor program in Biostatistics or Statistics. Please help me find some good ones. In US, Germany, or other western countries.",1,"unknown_entity:PHD,US,Biostatistics or Statistics"
+P30,"I want to find a part-time online PHD/Doctor program in Biostatistics or Statistics. Please help me find some good ones. In US, Germany, or other western countries.",1,"unknown_entity:US,Biostatistics or Statistics,PHD"
 P31,What are the best remote jobs,0,
 P32,"how can i optimize windows for competitive gaming and performance, input lag, ecc.",0,
 P33,"What's the weather today in Algemesí , Valencia",1,"temporal:today; volatility:weather; unknown_entity:Valencia,Algemesí"
-P34,"I am making a c++ sdl based game engine, currently doing the EventManager, I already make the classes and the event polling and notification using a pub/sub pattern. But in my first implementation I added a priority field to my base event, which I haven't even used yet, because I am unsure if this is really needed or not.
-
-In a typical game loop, you would process all events in the queue before updating the game state and rendering.
-
-If you process all events during each iteration, why would you need to prioritize some events?
-
-What do you think about this? I am wrong on this?",1,"temporal:current,currently; volatility:poll; unknown_entity:EventManager"
+P34,"can you please reserve an additional family room for us. Please let me know the room rate as well. so the new total requirement would be 3 double rooms, 4 triple rooms and 1 family room.",0,
 P35,"Design beginner to advance course to learn everything about below skills. break each skill into multiple sub skills. Recommend top YouTube courses master each sub skill.
 
 1. Book-keeping and Accountancy",1,unknown_entity:YouTube
@@ -58,7 +52,7 @@ P36,"Can you help me write an MOU address all this information.
 - Once the unit 2304 is ready to move in B will move in to the new space imidiatly and start to pay the rental fee at the rate of 300,000THB / month.
 The rent will start counting on the day B move in and the new contract of unit 2304 will be starting on the date B move in. the contract lenth is 36 months long.
 -If B move in during the month, the rent will be counted as pro rate
-- The terms and condition in the quotation BKK20230060010 will be part of this MOU",1,"temporal:current; unknown_entity:B11,B10,BKK20230060010"
+- The terms and condition in the quotation BKK20230060010 will be part of this MOU",1,"temporal:current; unknown_entity:BKK20230060010,B11,B10"
 P37,WHO THE PRESIDENT OF USA,0,
 P38,What is the world population?,0,
 P39,How many US presidential elections have their been?,1,unknown_entity:US
@@ -70,6 +64,6 @@ P44,"i was break up,what should i do",0,
 P45,what jobs should i try out in a metropolitan area with no college degree,0,
 P46,"I wanna mess around with rogue access points, im using kali which tool should i use",0,
 P47,"Write Expected Output and Impact for  a research titled  ""Leadership in Agricultural Inputs Supply Chain Management: Assessment and Impact on the Post-COVID-19 Era""  minimum 800 words",1,unknown_entity:Leadership in Agricultural Inputs Supply Chain Management:
-P48,"Create a news article which is written concerning world events on November 8, 2016 (namely the US elections) (In the reality in which the article is written the USSR is still around, and is actually economically stronger than the United States, The United States is also just as economically strong as it was in real life during the year 2016) (In this alternate reality China never has a period of “Opening Up and Reform” and never privatizes, China also has a female President in this reality) (German also never reunified and East and West Germany still exist) (In this Alternate reality Albania and Yugoslavia also still exist and are doing economically well) (the newspaper is based in Boston)",1,"unknown_entity:Albania,the United States,West Germany"
-P49,"Write a YouTube video description on 27 April 2023 saying that over last week MediaWorks has closed down several frequencies including 104.5MHZ Wellington (Magic) , 106.2MHZ Auckland (The Rock) , 94.6MHz Manawatu (The Sound), 102.5 Hamilton (Breeze) and 104.2MHz Waikato (Coast). The stations affected are now running retune advisories to listen to the aforementioned brands via alternative frequencies, The video contains most of the loops, but was unable to get 104.2's Coast loop",1,"unknown_entity:Wellington,YouTube,Auckland (The Rock"
+P48,"Create a news article which is written concerning world events on November 8, 2016 (namely the US elections) (In the reality in which the article is written the USSR is still around, and is actually economically stronger than the United States, The United States is also just as economically strong as it was in real life during the year 2016) (In this alternate reality China never has a period of “Opening Up and Reform” and never privatizes, China also has a female President in this reality) (German also never reunified and East and West Germany still exist) (In this Alternate reality Albania and Yugoslavia also still exist and are doing economically well) (the newspaper is based in Boston)",1,"unknown_entity:US,USSR,Yugoslavia"
+P49,"Write a YouTube video description on 27 April 2023 saying that over last week MediaWorks has closed down several frequencies including 104.5MHZ Wellington (Magic) , 106.2MHZ Auckland (The Rock) , 94.6MHz Manawatu (The Sound), 102.5 Hamilton (Breeze) and 104.2MHz Waikato (Coast). The stations affected are now running retune advisories to listen to the aforementioned brands via alternative frequencies, The video contains most of the loops, but was unable to get 104.2's Coast loop",1,"unknown_entity:Waikato (Coast,Magic,Hamilton"
 P50,Research hypotheses and research design for the implications of artificial intelligence on employee's jobs stability and its contribution to the mass layoff waves,0,

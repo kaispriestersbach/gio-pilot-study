@@ -24,11 +24,11 @@
 
 - Mode 1.1 (Fact Retrieval): 3
 - Mode 1.2 (Real-Time Synthesis): 9
-- Mode 1.3 (Advisory): 12
+- Mode 1.3 (Advisory): 11
 - Mode 2.1 (Utility): 5
 - Mode 2.2 (Ungrounded Generation): 14
 - Mode 2.3 (Grounded Generation): 3
-- Mode 3.1 (Transactional): 1
+- Mode 3.1 (Transactional): 2
 - Mode 3.2 (Open-Ended Investigation): 3
 
 ### Quellen
@@ -78,7 +78,7 @@
 | P31 | high_gn | nan | 1.3 | WildChat | Review-accepted (1.3) from candidate_high_gn.csv. |
 | P32 | high_gn | nan | 1.3 | WildChat | Review-accepted (1.3) from candidate_high_gn.csv. |
 | P33 | high_gn | nan | 1.2 | WildChat | Review-accepted (1.2) from candidate_high_gn.csv. |
-| P34 | high_gn | nan | 1.3 | WildChat | Review-accepted (1.3) from candidate_high_gn.csv. |
+| P34 | high_gn | nan | 3.1 | WildChat | Transactional (3.1) from dedicated WildChat search. Replaces overrepresented 1.3 in high_gn. |
 | P35 | high_gn | nan | 3.2 | WildChat | Review-accepted (3.2) from candidate_high_gn.csv. |
 | P36 | high_gn | nan | 2.3 | WildChat | Review-accepted (2.3) from candidate_high_gn.csv. |
 | P37 | edge | parametric_trap | 1.2 | WildChat | Review-accepted (1.1/1.2) from candidate_parametric_trap.csv. |

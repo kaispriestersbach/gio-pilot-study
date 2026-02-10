@@ -1,0 +1,101 @@
+conversation_id,verdict,mode,failed_criteria,reason
+632b5da64f82377358c8069c4a2c4ad7,REJECT,2.1,c,Drafting email reply is utility task; not executing a transaction
+be2989691cd25c4bb24da7e778782cab,REJECT,2.1,c,Drafting professional email reply is utility; not a transaction
+474b244b33edc90777b5b630c6a24d6d,REJECT,2.1,c,Writing a cancellation email is utility; not executing cancellation
+a2390cb09c8bd3e0a887ea357a148a0c,REJECT,1.3,c,Asking how to advertise a room; advisory not transactional
+537bc993ee9a7ef5e5ca869906bd5e07,REJECT,1.3,c,Asking if motorcycle is safe to ride; advisory not a purchase
+71bd354bad7f1b36e92859eb8cbc590c,REJECT,2.1,c,Narrating cancellation desire to AI; AI cannot execute contract cancellation
+502bafb05502d3373315bd7c79b5c216,REJECT,1.3,c,Asking for AC recommendation; advisory not a purchase action
+cd27c0645375a63292a89428126ff418,ACCEPT,3.1,none,Direct room reservation request with specific requirements
+9f60bb49fb9771c420e7af9e33319a84,REJECT,2.1,c,Drafting a business communication text; utility not transactional
+be38bfa4f3892fb2446fe61a6724c785,REJECT,2.2,c,Creative roleplay about food ordering; not an actual order
+0438dac9af7366335d58241584aafb92,REJECT,2.1,c,Drafting customer service reply email; utility not transactional
+65baddb6a05fa1544bc0317cd09a8173,REJECT,2.1,c,Email text to be polished/refined; utility not transactional
+1cb4511c8b65b05907e7da0f0a06876a,REJECT,1.3,c,Seeking bicycle type recommendation; advisory not a purchase
+e5a9808614d70eac3dd636b57e24187a,REJECT,1.3,c,Seeking domain selection strategy advice; advisory not purchasing
+5235d0c11c82e783ace787955b78e1b8,REJECT,1.1,c,Mortgage cost calculation; factual computation not a transaction
+251ce87cf7c633259fe4f838c6fc9bd8,REJECT,1.3,c,Seeking pants type recommendation; advisory not a purchase
+b1e5023dd3b17836367b808a27a054ea,REJECT,1.3,c,Seeking PC specification recommendation; advisory not buying
+5929bfb93e949541ec6bb8ffe8b109df,REJECT,1.3,c,Seeking help choosing tiles; advisory not a purchase action
+8af4f926f6cd277e27847b6afd1bf9e7,REJECT,2.2,c,Game tutorial design; in-game 'buy' not a real transaction
+ceabe67a847b4f6772f5bacece4018f9,REJECT,1.3,c,Seeking monitor recommendations with analysis; advisory
+f2c98c552098e07611d3d6570ce83f6a,REJECT,1.3,c,Motorcycle comparison recommendation; advisory not purchasing
+77ef859c2577cf4927154a9ba334484e,REJECT,1.1,c,Technical question about resistor type; factual not transactional
+0ada8372e399d182793e0f64fb0afbc7,REJECT,2.1,c,Drafting a message about buying channel; utility writing task
+82e170fd9806af2b7b94d709cdef584e,REJECT,2.1,c,Drafting reply to order email; utility writing task
+4624b485ce1520a73f014fd4b8557274,REJECT,1.3,c,Seeking guidance on buying smart contract; advisory not executing
+46cdb2b23a5d9212915abac1b57479bb,REJECT,1.1,c,Technical troubleshooting for service registration; not transactional
+f07177189906c7e873db64e28ebb0976,REJECT,1.3,c,Seeking EEG device product recommendations; advisory
+98bb413e30436f82a6c048482c6c3f50,REJECT,1.3,c,Seeking backpack recommendation; advisory not purchasing
+a43189e7c35f548219b410df3d0709c5,REJECT,1.3,c,Seeking financial advice on house purchase; advisory
+dfcfb551ac79463528619c162b0a7ae2,REJECT,1.1,c,Asking what to search for when buying parts; informational
+5b174c59251fd2678a9f83a16b942bee,REJECT,1.3,c,Graphics card comparison; advisory recommendation not purchasing
+0665f6c3c03496b8d95f63b86abc1000,REJECT,1.1,c,Git technical question about unstaging; not a transaction
+9f968c6e3bc6fb66e445ae8d128c9bd5,REJECT,2.1,c,Rewriting cancellation message politely; utility writing task
+33541b8d6cd4b07aab86f2c0899d3e8e,REJECT,1.1,c,C# programming question about task cancellation; technical
+6782917306dec71f6e428f275a19fb5a,REJECT,1.3,c,Car comparison recommendation; advisory not purchasing
+64f23afa3813688153b6738318ee86b6,REJECT,1.3,c,Asking what PC parts to buy for resale; advisory
+8fdc0e8df202a0d9c35f6c15def841cd,REJECT,1.3,c,Asking about payment privacy services; advisory not transactional
+1bcb681faefdbcd4c5334f54cb93e2a9,REJECT,1.1,c,Investment calculation question; factual computation
+a511b68773df76a1c1f9beb39cea9c9a,REJECT,1.3,c,Asking for persuasion advice; advisory not a purchase
+f6b91f6e393dd72e14d4de1ad1d3427f,REJECT,1.3,c,Communication advice about cancelling meetings; advisory
+f0f3eb6cbaeae9ab55e1d678a22f4e52,REJECT,1.1,"b,c,d",Unclear meaning; 'verzion numbers' is ambiguous and garbled
+73c8b04b1ce0a7d864c6def7ba9c663d,REJECT,1.1,"a,c",References previous conversation turn; investment calculation
+4de9895069044e711e607ecdfa38f4a0,REJECT,1.1,c,Investment calculation question; factual computation
+c54991ad385197a6394535c25697b5c0,REJECT,1.3,c,Vehicle recommendation request; advisory not purchasing
+8724929421017bf0e82113915c3e29db,REJECT,2.1,c,Translating support email to French; utility not transactional
+bda47dca9481a405ee5ef791fe3e7ef6,REJECT,1.3,c,Asking for ticket buying tips; advisory not executing purchase
+e5894fb4767f03618ec1b6d4c3000cd9,REJECT,1.3,c,Asking if PC specs are suitable; advisory evaluation
+46670a9917eb74cd2168ba18f078d172,REJECT,2.1,c,Polishing email text; utility rewriting task
+326ac61de6ef019d85f3c9eb73769901,REJECT,1.3,c,Seeking toddler backpack brand recommendation; advisory
+daa684a02635346f765276cc47f07867,REJECT,2.1,c,Editing rental inquiry message; utility text editing task
+1e0c2371457cffbd7a8f4a33c15657d2,REJECT,1.3,c,Hypothetical purchase process advice; advisory not transactional
+8c2824df8a6a641f060e68099abdec2a,REJECT,2.1,c,Writing a letter to employer; utility task
+0295761b76596644f4248e73fba634c1,REJECT,2.1,c,Drafting email reply about order shipping; utility
+ba1aba01d562c76a33914c1baffb0d8f,REJECT,2.1,"a,c",References image attachment; drafting business reply is utility
+b04a2ecfdb64e6cc77cd6becfa6d3ad4,REJECT,2.1,"a,c",References missing order report data; email drafting is utility
+112f6f87b01892cf781fcb4da0db05ed,REJECT,2.1,c,Drafting email requesting lecture services; utility
+fca21378e5879b77edb290929630236d,REJECT,1.3,c,Guidance on writing a book; advisory not transactional
+07d5939a336201c6ad8fd0bd3a57dbca,REJECT,2.1,c,Grammar correction of business email; utility task
+c71f29d550cc6d0913543552ba1ad29b,REJECT,2.1,c,Writing letter to employer about raise; utility task
+2c81cbce460089f83ff86e8dd70da6a5,REJECT,2.1,c,Redrafting email about scheduling meeting; utility
+40508dd301ffb575574104617113d49b,REJECT,2.2,c,Creating scam-baiting response; creative writing not transactional
+1f55598027ea1dee7af40e64258568cc,REJECT,1.3,c,Seeking video doorbell recommendation; advisory
+c6ee5479bb098de7591da1d2a85120e2,REJECT,2.1,c,Drafting short reply to merchant; utility writing task
+cd5da273b1ac9ce046f189fded36c2d7,REJECT,2.1,c,Grammar correction of scheduling email; utility task
+660691db86921957aea08ee925999c2e,REJECT,2.1,c,Correcting HR onboarding email text; utility task
+e7acc54b82cf2926f77c64a0278543e6,REJECT,2.1,c,Rewriting text in formal language; utility task
+efeb98714686927c6efbabf3e844c622,REJECT,2.1,c,Correcting business email text; utility task
+735e940788903e6f22c69781456cc48a,REJECT,2.2,"b,c",Ambiguous task; either email polish or question generation; not 3.1
+de7799415e11d6f1972d19bdbcad223e,REJECT,2.1,c,Writing letter to employer about raise; utility task
+aaaa727bde8863bb41dbad39844a63f9,REJECT,2.1,c,Drafting reply to lease termination email; utility
+38e691c8de6e019701868245c31fcce4,REJECT,2.1,c,Revising a meeting scheduling email; utility task
+55c563ef7ed0d1115868fbd919c957d6,REJECT,1.1,c,Asking how to use app to book; informational not transactional
+52126299a932bb7ed8b902353e07445f,REJECT,1.1,c,Asking how to book via app; informational instructions
+a3f196c2320440045cd376f8fd2ee069,REJECT,2.1,c,Writing appeal letter for course registration; utility
+2b126e4f4210408d49fa0123ee29a448,REJECT,1.1,"c,d",Incomplete sentence; asking how to book is informational
+aa34567f30277708569f211573e1e92f,REJECT,1.1,"b,c",Too vague; 'how can I buy tickets' is informational not transactional
+2405cd0f6ec1c60ac9b13718717a9279,REJECT,1.1,c,Asking for scripting technique; technical not transactional
+4fd63c57a413896c985eaba914b68da7,REJECT,2.2,c,Creative rewriting of dialogue; not a real transaction
+4c588f884456efc534d62a246d0f719b,REJECT,2.2,c,Blog post writing about ordering process; not a transaction
+1f64c6977287ac7c3f73c2317b749e24,REJECT,2.1,c,Grammar correction of email; utility task
+8b64a4b06595a1ca8cbaa1bb5ed517fe,REJECT,1.1,c,Asking for store procedure advice; informational
+0e2ae16288a59821c5e5c6b6d20e6c74,REJECT,2.2,c,Creating blog post outline; creative task not transactional
+0fbefa6e2b3c3eb8dd0527b0e6d81a12,REJECT,2.1,c,Drafting email reply about order cancellation reversal; utility
+00d4677753912be73507dec65fbb0664,REJECT,1.3,c,Asking about process of buying property; advisory
+80335dfedcaeb5ea485545a818802fdd,REJECT,2.1,c,Rewriting shipping notification professionally; utility
+d17ee87462fe2f85e18d0bd1d56d2fa4,REJECT,1.3,c,Asking how to acquire delisted games; advisory
+2f75689f3c2ffaccb75345549cf71cd7,REJECT,1.1,c,Asking how to purchase domain; informational
+ec0d6632b89ca41d2700cbadaefbfa5a,REJECT,2.2,c,Writing a how-to guide about building fire; creative task
+cc9051fbdc0de040483f0f24c2fe9de6,REJECT,1.3,c,Asking what to say when booking; advisory not transactional
+0868439d82b2d3409817f5ad1d9ec294,REJECT,1.1,c,Django ORM technical question; 'order' is SQL not transactional
+58403b25658e2165a4818586e25114b9,REJECT,2.1,c,Drafting customer service reply about refund; utility
+7abc4c2688d4890befae659e70b8e8d6,REJECT,1.3,c,Analyzing meaning of business correspondence; comprehension not transactional
+c100047fc849878ba5e654e1fd4d1a7b,REJECT,1.1,c,Asking how to register; informational not executing registration
+97ad99e2f7400899b48263f4b054168b,REJECT,2.1,c,Writing project handover email; utility task
+f3451c62644b0102b49282360ef1b0ef,REJECT,2.1,c,Polishing customer service email; utility task
+5941591e73302def7cd414096e4afb25,REJECT,2.1,c,Shortening marketing paragraphs; utility text editing
+cf23af60184db884d034177e090650fc,REJECT,3.2,c,Research about foreclosure buying process; investigation not transactional
+94fe59ff11a571e4ebca1f7a73e6f1ea,REJECT,2.1,c,Grammar correction of project status email; utility
+8513ecfc74f9a2387b0b6321de810acb,REJECT,1.1,c,Laravel ORM question; 'order by' is technical not transactional
+48090a567fdbb25973ff2071cbc57a9a,REJECT,1.3,c,Asking for trademark registration guide; advisory

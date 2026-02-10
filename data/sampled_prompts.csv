@@ -42,13 +42,7 @@ P30,26f93f50f2962b424bcdc9f80208f2fe,"I want to find a part-time online PHD/Doct
 P31,4ac016142de576cae956628c8639a909,What are the best remote jobs,high_gn,,1.3,Review-accepted (1.3) from candidate_high_gn.csv.,WildChat,en
 P32,545985d3ba68c6baca591f14c2192300,"how can i optimize windows for competitive gaming and performance, input lag, ecc.",high_gn,,1.3,Review-accepted (1.3) from candidate_high_gn.csv.,WildChat,en
 P33,c423b0c23af4573e434217a1b8547daa,"What's the weather today in Algemesí , Valencia",high_gn,,1.2,Review-accepted (1.2) from candidate_high_gn.csv.,WildChat,en
-P34,c3a57387aa4f236c2b4dfdd482bbf142,"I am making a c++ sdl based game engine, currently doing the EventManager, I already make the classes and the event polling and notification using a pub/sub pattern. But in my first implementation I added a priority field to my base event, which I haven't even used yet, because I am unsure if this is really needed or not.
-
-In a typical game loop, you would process all events in the queue before updating the game state and rendering.
-
-If you process all events during each iteration, why would you need to prioritize some events?
-
-What do you think about this? I am wrong on this?",high_gn,,1.3,Review-accepted (1.3) from candidate_high_gn.csv.,WildChat,en
+P34,cd27c0645375a63292a89428126ff418,"can you please reserve an additional family room for us. Please let me know the room rate as well. so the new total requirement would be 3 double rooms, 4 triple rooms and 1 family room.",high_gn,,3.1,Transactional (3.1) from dedicated WildChat search. Replaces overrepresented 1.3 in high_gn.,WildChat,en
 P35,a99e75b2679f5f7e1e179145b3f823e9,"Design beginner to advance course to learn everything about below skills. break each skill into multiple sub skills. Recommend top YouTube courses master each sub skill.
 
 1. Book-keeping and Accountancy",high_gn,,3.2,Review-accepted (3.2) from candidate_high_gn.csv.,WildChat,en
