@@ -20,6 +20,8 @@ SAMPLED_PROMPTS_PATH = DATA_DIR / "sampled_prompts.csv"
 BASELINE_PREDICTIONS_PATH = DATA_DIR / "baseline_predictions.csv"
 EVALUATION_RESULTS_PATH = DATA_DIR / "evaluation_results.csv"
 ANNOTATION_XLSX_PATH = OUTPUT_DIR / "annotation_spreadsheet.xlsx"
+ANNOTATION_RATER_A_JSON = OUTPUT_DIR / "annotations_rater_a.json"
+ANNOTATION_RATER_B_JSON = OUTPUT_DIR / "annotations_rater_b.json"
 SAMPLING_DOC_PATH = DOCS_DIR / "sampling_documentation.md"
 
 # ---------------------------------------------------------------------------
@@ -321,7 +323,7 @@ GIO_MODES = {
     "2.3": {
         "name": "Grounded Generation",
         "category": "DOING",
-        "gn_level": "N/A",
+        "gn_level": "Grounding from Context",
         "definition": "Source-dependent creation where the user provides the source document.",
         "examples": [
             "Summarize this PDF for me.",
@@ -395,6 +397,6 @@ GN_VARIABLES = {
 
 # Dropdown-Werte fuer das Annotations-Spreadsheet
 DROPDOWN_GIO_MODES = ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "3.1", "3.2"]
-DROPDOWN_GN_LEVELS = ["Low", "Medium", "High"]
+DROPDOWN_GN_LEVELS = ["None", "Grounding from Context", "Low", "Medium", "High"]
 DROPDOWN_RETRIEVAL = ["Yes", "No"]
 DROPDOWN_CONFIDENCE = ["1", "2", "3", "4", "5"]

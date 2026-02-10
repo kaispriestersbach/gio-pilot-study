@@ -4,16 +4,18 @@ AP5: Auswertungs-Script fuer die GIO Pilot Study.
 Berechnet nach der Annotation:
   - Cohen's kappa fuer retrieval_judgment (binaer)
   - Cohen's kappa fuer gio_mode (nominal, 8 Kategorien)
-  - Gewichtetes Cohen's kappa fuer gn_level (ordinal, 3 Stufen, linear)
+  - Gewichtetes Cohen's kappa fuer gn_level (ordinal, 5 Stufen, linear)
   - Bootstrap 95%-Konfidenzintervalle (1000 Iterationen) fuer alle drei kappa-Werte
   - Confusion Matrix: Baseline vs. Experten-Konsens
   - F1-Score, Precision, Recall der Baseline gegen Experten-Konsens
   - Liste aller Disagreement-Faelle
 
-Input:  output/annotation_spreadsheet.xlsx (Sheets: Rater_A, Rater_B, Baseline)
+Input:  output/annotations_rater_a.json, output/annotations_rater_b.json,
+        data/baseline_predictions.csv
 Output: Console + data/evaluation_results.csv
 """
 
+import json
 import sys
 import warnings
 from pathlib import Path
@@ -34,14 +36,15 @@ import config
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 
-def load_rater_data(xlsx_path):
-    """Lade Rater-Daten aus dem Annotations-Spreadsheet."""
-    rater_a = pd.read_excel(xlsx_path, sheet_name="Rater_A")
-    rater_b = pd.read_excel(xlsx_path, sheet_name="Rater_B")
+def load_rater_data():
+    """Lade Rater-Daten aus den JSON-Annotationsdateien."""
+    with open(config.ANNOTATION_RATER_A_JSON, "r", encoding="utf-8") as f:
+        data_a = json.load(f)
+    with open(config.ANNOTATION_RATER_B_JSON, "r", encoding="utf-8") as f:
+        data_b = json.load(f)
 
-    # Auf prompt_id mergen (Reihenfolge kann unterschiedlich sein)
-    rater_a = rater_a.set_index("prompt_id").sort_index()
-    rater_b = rater_b.set_index("prompt_id").sort_index()
+    rater_a = pd.DataFrame(data_a["study"]).set_index("prompt_id").sort_index()
+    rater_b = pd.DataFrame(data_b["study"]).set_index("prompt_id").sort_index()
 
     # Sicherstellen, dass gleiche Prompts vorhanden
     common_ids = rater_a.index.intersection(rater_b.index)
@@ -58,9 +61,9 @@ def load_rater_data(xlsx_path):
     return rater_a, rater_b
 
 
-def load_baseline_data(xlsx_path):
-    """Lade Baseline-Vorhersagen aus dem Spreadsheet."""
-    baseline = pd.read_excel(xlsx_path, sheet_name="Baseline")
+def load_baseline_data():
+    """Lade Baseline-Vorhersagen aus der CSV-Datei."""
+    baseline = pd.read_csv(config.BASELINE_PREDICTIONS_PATH)
     baseline = baseline.set_index("prompt_id").sort_index()
     return baseline
 
@@ -175,13 +178,13 @@ def compute_inter_rater_agreement(rater_a, rater_b):
     else:
         print("  FEHLER: Keine gueltigen Werte fuer gio_mode.")
 
-    # --- gn_level (ordinal, 3 Stufen, linear gewichtet) ---
-    print("\n--- gn_level (ordinal: Low/Medium/High, linear gewichtet) ---")
+    # --- gn_level (ordinal, 5 Stufen, linear gewichtet) ---
+    print("\n--- gn_level (ordinal: None/GfC/Low/Medium/High, linear gewichtet) ---")
     a_gn, b_gn, mask_gn = check_missing_values(rater_a, rater_b, "gn_level")
 
     if len(a_gn) > 0:
-        # Ordinal-Mapping
-        ordinal_map = {"Low": 0, "Medium": 1, "High": 2}
+        # Ordinal-Mapping (5-stufig: None < Grounding from Context < Low < Medium < High)
+        ordinal_map = {"None": 0, "Grounding from Context": 1, "Low": 2, "Medium": 3, "High": 4}
         a_gn_ord = np.array([ordinal_map.get(str(x), -1) for x in a_gn])
         b_gn_ord = np.array([ordinal_map.get(str(x), -1) for x in b_gn])
 
@@ -189,7 +192,7 @@ def compute_inter_rater_agreement(rater_a, rater_b):
         valid = (a_gn_ord >= 0) & (b_gn_ord >= 0)
         if valid.sum() < len(a_gn):
             n_invalid = len(a_gn) - valid.sum()
-            print(f"  WARNUNG: {n_invalid} ungueltige Werte (nicht Low/Medium/High) ausgeschlossen.")
+            print(f"  WARNUNG: {n_invalid} ungueltige Werte (nicht in ordinal_map) ausgeschlossen.")
 
         a_gn_valid = a_gn_ord[valid]
         b_gn_valid = b_gn_ord[valid]
@@ -348,19 +351,22 @@ def main():
     print("=" * 60)
 
     # Daten laden
-    xlsx_path = config.ANNOTATION_XLSX_PATH
-    print(f"\nLade Daten aus {xlsx_path}...")
+    print(f"\nLade Rater-Daten aus JSON...")
+    for p in [config.ANNOTATION_RATER_A_JSON, config.ANNOTATION_RATER_B_JSON]:
+        if not p.exists():
+            print(f"FEHLER: {p} nicht gefunden.")
+            print("Bitte sicherstellen, dass die Annotation abgeschlossen ist.")
+            sys.exit(1)
 
-    if not xlsx_path.exists():
-        print(f"FEHLER: {xlsx_path} nicht gefunden.")
-        print("Bitte sicherstellen, dass die Annotation abgeschlossen ist.")
-        sys.exit(1)
-
-    rater_a, rater_b = load_rater_data(xlsx_path)
+    rater_a, rater_b = load_rater_data()
     print(f"  Rater_A: {len(rater_a)} Prompts")
     print(f"  Rater_B: {len(rater_b)} Prompts")
 
-    baseline = load_baseline_data(xlsx_path)
+    if not config.BASELINE_PREDICTIONS_PATH.exists():
+        print(f"FEHLER: {config.BASELINE_PREDICTIONS_PATH} nicht gefunden.")
+        sys.exit(1)
+
+    baseline = load_baseline_data()
     print(f"  Baseline: {len(baseline)} Prompts")
 
     # 1. Inter-Rater Agreement
