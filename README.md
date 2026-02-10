@@ -182,8 +182,9 @@ dataset (Zhao et al., 2024), which contains 1 million real-world
 conversations with ChatGPT collected via the Hugging Face ChatGPT
 deployment.
 
-- **License**: The dataset is released under the AI2 ImpACT License
-  (Medium Risk). See the dataset card for terms of use.
+- **License**: The dataset is released under the
+  [ODC-BY](https://opendatacommons.org/licenses/by/) license
+  (changed from AI2 ImpACT on 2024-06-26, retroactively applied).
 - **Access**: Requires a HuggingFace account and acceptance of the
   dataset terms.
 - **Download**: AP1 downloads Parquet files via `huggingface_hub`
@@ -264,7 +265,7 @@ The pipeline is fully deterministic (random seed = 42) except for:
 This code is released under the [MIT License](LICENSE).
 
 The WildChat-1M dataset is subject to the
-[AI2 ImpACT License (Medium Risk)](https://allenai.org/impact-license).
+[Open Data Commons Attribution License (ODC-BY)](https://opendatacommons.org/licenses/by/).
 
 ---
 

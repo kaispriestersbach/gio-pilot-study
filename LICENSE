@@ -24,5 +24,7 @@ SOFTWARE.
 ---
 
 Note: This license applies to the code and scripts in this repository only.
-The WildChat-1M dataset used by this code is subject to the AI2 ImpACT
-License (Medium Risk). See https://allenai.org/impact-license for details.
+The WildChat-1M dataset used by this code is subject to the Open Data
+Commons Attribution License (ODC-BY). See https://opendatacommons.org/licenses/by/
+for details. (License changed from AI2 ImpACT to ODC-BY on 2024-06-26,
+retroactively applied to all previous downloads.)
