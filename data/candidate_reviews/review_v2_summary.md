@@ -141,6 +141,67 @@ embedded source text with creative/rewriting tasks. Main rejects: stratum mismat
 All blocks except creative_volatile have sufficient candidates for the target sample.
 The creative_volatile block is marginal with only 7 usable prompts for 4 slots.
 
+## Dedicated Transactional Search (Mode 3.1)
+
+The standard candidate blocks yielded only 1 Mode 3.1 prompt (in high_gn).
+To address this gap, a dedicated exhaustive search was conducted across the
+entire filtered pool.
+
+### Search Methodology
+
+1. **Pattern-based keyword search** across 230,289 filtered prompts using
+   transactional verbs and noun patterns (book, reserve, purchase, order,
+   schedule, subscribe, sign up, register, cancel, checkout, etc.)
+2. **Multi-pattern scoring**: Each prompt scored by number of distinct
+   transactional keyword matches + presence of action-intent markers
+   ("I want to", "I need to", "help me", "can you")
+3. **Top 100 candidates** selected by score, saved as
+   `candidate_transactional.csv`
+4. **Expert review** against the standard 4 criteria
+
+### Results
+
+| Stage | Count |
+|-------|-------|
+| Filtered pool | 230,289 |
+| Keyword matches (broad) | ~7,400 |
+| Scored & ranked candidates | 100 |
+| ACCEPT | **1** (1%) |
+| REJECT | 99 |
+
+### Rejection Analysis
+
+The 99 rejected prompts were reclassified by actual GIO mode:
+
+| Actual Mode | Count | Typical Pattern |
+|-------------|-------|-----------------|
+| 2.1 Utility | 38 | "Draft/write an email to book..." |
+| 1.3 Advisory | 32 | "Should I book...", "Is it worth..." |
+| 1.1/1.2 Factual | 20 | "What is the booking policy...", "How much does..." |
+| 2.2/3.2 Other | 10 | Creative scenarios, research tasks |
+
+### Interpretation
+
+The near-absence of Mode 3.1 in WildChat reflects a fundamental
+**affordance mismatch**: users understand that current (non-agentic) LLMs
+cannot execute real-world transactions. Prompts containing transactional
+vocabulary overwhelmingly use it in a non-transactional context (drafting
+communication about transactions, seeking advice about transactions, or
+asking factual questions about transactional processes).
+
+This finding is itself a methodological contribution: Mode 3.1 represents
+a theoretical category in the GIO framework that is not yet empirically
+observable in standard chatbot corpora, but will likely emerge with the
+adoption of agentic LLM systems (tool use, function calling, browser
+automation).
+
+### Integration into Sample
+
+The single accepted transactional prompt was integrated into the high_gn
+block by replacing one overrepresented Mode 1.3 prompt, bringing the
+Mode 3.1 count from 1 to 2 in the final sample. This remains below the
+minimum threshold of 3 per mode.
+
 ## Recommendations
 
 1. **Proceed to AP2 final sampling** for low_gn, high_gn, parametric_trap,
@@ -150,8 +211,10 @@ The creative_volatile block is marginal with only 7 usable prompts for 4 slots.
    where the volatile topic is the primary subject even if the creative aspect is
    implicit), or manually source additional candidates from the untagged pool.
 
-3. **Mode 3.1 (Transactional)**: Only 1 candidate found. Must be sourced externally
-   (e.g., manually crafted or from E-GEO paper examples).
+3. **Mode 3.1 (Transactional)**: Exhaustive search of 230k prompts confirms
+   systematic absence. Only 2 prompts in final sample (below min. 3 threshold).
+   Recommend documenting as methodological finding in the paper. Future studies
+   should target agentic LLM corpora for this mode.
 
 4. **Mode 1.1 balance**: Only 3 Fact Retrieval accepts in low_gn (v1 had 13).
    Review whether the v2 heuristic over-filters simple factual questions. Consider

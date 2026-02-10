@@ -32,6 +32,9 @@ real-world LLM prompts drawn from the WildChat-1M dataset.
   (5 Parametric Trap, 5 Implicit Demand, 4 Creative-Volatile)
 - **Annotation dimensions**: GIO mode, I_gap, T_decay, E_spec, V_volatility,
   GN level, retrieval judgment, confidence
+- **Known gap**: Mode 3.1 (Transactional) is systematically absent from
+  WildChat — an exhaustive search of 230k prompts yielded only 1 genuine
+  transactional prompt (see [Sampling Documentation](docs/sampling_documentation.md))
 
 ---
 

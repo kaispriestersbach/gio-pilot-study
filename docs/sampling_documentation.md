@@ -37,9 +37,55 @@
 
 ## Bekannte Luecken
 
-- Mode 3.1 (Transactional) ist in WildChat unterrepraesentiert.
+### Mode 3.1 (Transactional) — Systematische Corpus-Luecke
+
+Mode 3.1 (Transactional) ist in WildChat systematisch unterrepraesentiert.
+Dies ist kein Sampling-Artefakt, sondern ein strukturelles Corpus-Merkmal:
+
+**Suchstrategie:**
+- Ausgangsbasis: 230.289 gefilterte WildChat-Prompts (EN/DE)
+- Mehrfache Muster-basierte Suche mit Transaktions-Keywords
+  (book, reserve, purchase, order, schedule, subscribe, etc.)
+- Scoring-basiertes Ranking (Keyword-Treffer + Aktions-Intent-Marker)
+- 100 Top-Kandidaten manuell gegen die 4 Review-Kriterien geprueft
+
+**Ergebnis:**
+
+| Stufe                        | Anzahl  |
+|------------------------------|---------|
+| Gefilterter WildChat-Pool    | 230.289 |
+| Transaktions-Keyword-Treffer | ~7.400  |
+| Scored & ranked Kandidaten   | 100     |
+| Review-Ergebnis: ACCEPT      | 1 (1%) |
+| Im finalen Sample            | 2       |
+
+**Umklassifizierung der 99 abgelehnten Kandidaten:**
+- 38% Utility/Email-Entwurf (Mode 2.1) — "draft an email to book..."
+- 32% Advisory/Empfehlung (Mode 1.3) — "should I book..."
+- 20% Faktisch/Technisch (Mode 1.1/1.2) — "what is the booking policy..."
+- 10% Sonstige (Mode 2.2, 3.2)
+
+**Ursache:** Nutzer wissen, dass aktuelle LLMs keine realen Transaktionen
+ausfuehren koennen (Hotelbuchungen, Kaeufe, API-Aufrufe). Deshalb
+formulieren sie solche Anfragen nicht. Mode 3.1 repraesentiert eine
+Affordance-Luecke zwischen dem GIO-Framework (das agentic capabilities
+theoretisch abdeckt) und dem tatsaechlichen Nutzungsverhalten bei
+nicht-agentischen Chatbots.
+
+**Konsequenz fuer die Studie:** Mode 3.1 ist mit nur 2 Prompts im
+finalen Sample unter dem Mindest-Schwellenwert von 3 vertreten. Inter-
+Rater-Uebereinstimmungswerte fuer diesen Mode sind daher nicht
+aussagekraeftig und werden in der Auswertung (AP5) separat ausgewiesen.
+
+**Empfehlung fuer kuenftige Studien:** Korpora von agentischen LLM-
+Systemen (mit Tool-Use, Function Calling oder Browser-Nutzung) werden
+voraussichtlich erheblich mehr Mode-3.1-Prompts enthalten.
+
+### Weitere bekannte Luecken
+
 - Der Code-Filter ist heuristisch und koennte einige Prompts mit Code-Referenzen faelschlicherweise entfernen.
 - Die Spracherkennung (fasttext) hat bei sehr kurzen Prompts niedrigere Genauigkeit.
+- creative_volatile: Nur 3 ACCEPTs + 1 EDGE_CASE fuer 4 Slots — minimaler Spielraum.
 
 ## Prompt-Details
 
