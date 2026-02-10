@@ -3,8 +3,9 @@
 Replication code and materials for the pilot annotation study of the
 **Generative Intent Operationalization (GIO)** framework, as described in:
 
-> Spriestersbach, K. & Vollmer, S. (2025). *From Search Goals to Generative
-> Intent: Proposing the Generative Intent Operationalization (GIO).*
+> Spriestersbach, K. & Vollmer, S. (2025). *From Search Intent to Retrieval
+> Demand: A Pre-Generation Framework for Generative Engine Optimization (GEO) —
+> Proposing the Generative Intent Operationalization (GIO).*
 > RPTU Kaiserslautern-Landau.
 
 The pilot study tests whether the eight GIO modes and the four Grounding
@@ -276,8 +277,9 @@ If you use this code or data, please cite both the paper and the dataset:
 
 ```bibtex
 @article{spriestersbach2025gio,
-  title       = {From Search Goals to Generative Intent: Proposing the
-                 Generative Intent Operationalization (GIO)},
+  title       = {From Search Intent to Retrieval Demand: A Pre-Generation
+                 Framework for Generative Engine Optimization ({GEO}) --
+                 Proposing the Generative Intent Operationalization ({GIO})},
   author      = {Spriestersbach, Kai and Vollmer, Sebastian},
   year        = {2025},
   institution = {RPTU Kaiserslautern-Landau},
