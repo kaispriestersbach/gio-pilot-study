@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: "GIO Pilot Study: Experiment Code"
+message: "If you use this software, please cite the associated paper."
+type: software
+authors:
+  - given-names: Kai
+    family-names: Spriestersbach
+    email: k.spriestersbach@rptu.de
+    affiliation: "RPTU Kaiserslautern-Landau, Department of Computer Science"
+    orcid: ""
+  - given-names: Sebastian
+    family-names: Vollmer
+    email: s.vollmer@rptu.de
+    affiliation: "RPTU Kaiserslautern-Landau, Department of Computer Science"
+repository-code: ""
+license: MIT
+version: "1.0.0"
+date-released: "2025-02-10"
+keywords:
+  - generative-engine-optimization
+  - grounding-necessity
+  - search-intent
+  - retrieval-augmented-generation
+  - user-intent-classification
+  - annotation-study
+preferred-citation:
+  type: article
+  title: "From Search Goals to Generative Intent: Proposing the Generative Intent Operationalization (GIO)"
+  authors:
+    - given-names: Kai
+      family-names: Spriestersbach
+    - given-names: Sebastian
+      family-names: Vollmer
+  year: 2025
+  institution:
+    name: "RPTU Kaiserslautern-Landau"

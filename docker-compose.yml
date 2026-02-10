@@ -1,0 +1,15 @@
+services:
+  gio-experiment:
+    build: .
+    container_name: gio-pilot-study
+    volumes:
+      # Daten, Output und Docs persistent auf dem Host
+      - ./data:/app/data
+      - ./output:/app/output
+      - ./docs:/app/docs
+    environment:
+      - PYTHONUNBUFFERED=1
+      # HuggingFace Token fuer Parquet-Download (vom Host durchreichen)
+      - HF_TOKEN=${HF_TOKEN:-}
+    stdin_open: true
+    tty: true

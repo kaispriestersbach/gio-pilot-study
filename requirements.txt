@@ -1,0 +1,10 @@
+duckdb>=1.1.0          # Parquet-Zugriff lokal (Predicate Pushdown)
+huggingface_hub>=0.20  # Download von HuggingFace (CDN/Git-LFS, kein Rate-Limit)
+pyarrow>=14.0          # Parquet-Engine fuer pandas (Checkpoint speichern/laden)
+pandas>=2.0.0
+openpyxl>=3.1.0        # Excel mit Dropdowns erstellen
+spacy>=3.6.0           # NER fuer Baseline
+scikit-learn>=1.3.0    # Cohen's Kappa, Confusion Matrix, F1
+numpy>=1.24.0
+tqdm>=4.65.0           # Fortschrittsbalken
+pytz>=2024.1           # Fuer DuckDB Timestamp-Konvertierung

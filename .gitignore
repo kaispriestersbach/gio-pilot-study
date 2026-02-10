@@ -1,0 +1,40 @@
+# ============================================
+# GIO Pilot Study — .gitignore
+# ============================================
+
+# ----- Large data files (publish on Zenodo) -----
+data/filtered_pool.csv
+data/hf_cache/
+data/raw/
+
+# ----- Python -----
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# ----- fasttext model (legacy, no longer used) -----
+lid.176.bin
+
+# ----- OS -----
+.DS_Store
+Thumbs.db
+
+# ----- IDE -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ----- Secrets (NEVER commit tokens!) -----
+.env
+*.env
+.env.local
+
+# ----- Claude Code -----
+.claude/

@@ -1,0 +1,214 @@
+conversation_id,prompt_text,language,word_count
+10ac2ee41788dc13552cd7b6f68462bb,"i was break up,what should i do",en,7
+0ffba952a42454d2cd9d309f06ad8b33,what should i do when i take a break from studying?,en,11
+563c8eaf4ec9e25da42ad96ab05d55a0,"I keep getting extremely difficult captchas and some websites completely block me, what should i do?",en,16
+b6af1588b9269fa70643e69f3c59d5a9,"I'm 19 years old fell from the 5th floor and broke both legs and the pelvis, it's been 30 days and I took 1000mg paracetamol, my heart is racing and I don't know why, is this normal or should I start worrying?",en,42
+ba47b377368ee51334bb57ab15ea0b59,What ear should i use for one earbud?,en,8
+08079dcfac851a0569743c17178c764c,What steps should I use to get an updated Puppy Linux livecd with a newer version of Firefox?,en,18
+165a28d0a63e41eea4ebb1b22ba826a9,"I wanna mess around with rogue access points, im using kali which tool should i use",en,16
+c61f2699b31063e059225bcf26e97705,i have a spring application but hibernate makes queries to database with table name in lowercase which naming strategy should i use to avoid that and that hibernate would use names like specified in @Table annotation?,en,36
+3e86a2d9a2a0ad2db44ebb43241d2a29,"Hey gpt i am teenager(17 year old), im having trouble getting 8-9 hours of sleep since i have a tendency to fall asleep at 11 or 10:40 and always get 7 hours sleep what should i do",en,37
+07ee78c7dad98147768a4755deb7c5c4,Some people fear that machines and artifical intelligence will take over the world and robots will do most of the tasks which we do now so lots of people will suffer because of unemployedment. What do you think about this issue? Do you really believe that machines and intelligent robots are a threat to human beings?,en,56
+49dc94dcc3479f01a7d42c286a00bfd6,"i want to implement a gateway application which will takes request from below channel and send create a transformation layer to send their request to another application(using their api) using php laravel framework. Can you please tell me what should i do. my concerns are handling channels TPS so i want that each channel have a limition(for each channel i want to specify their tps per second), my second concern is to have authentication using username and password(not token based for now), my third concern is to have a validation layer for each service that i want to provide for them, and my forth concern is to have a transformation layer to create the proper body request to send them to the top level application. Please tell me what should i do",en,132
+4fb719f4a871f0fae487d4e5a31b9106,"after using this command ""Scaffold-DbContext ""Server=(LocalDB)\MSSQLLocalDB;Database=CryptoT;Trusted_Connection=True;"" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force"" if i wanted to add more tables created on the same database what should i do?",en,26
+5ff05059a55aae651cffb388a174691f,"In nestjs what is the best way to handle errors when deleting an item, should i use query failed codes or throw an exception when deleteing items which are not on the database",en,33
+240485e8bc01d6aa6cb2b140b310c57b,"Hey, I'm alone at home. What should I do. I have lot of internet",en,14
+a265174a6aa3df66373ba84aecda7257,"I accidentally had two big successes in the movie industry, but it's hard to make a movie because it's a burden. The reaction of the movie I made after two successes is not good. What should I do?",en,38
+ab7ade6f566eb483f1bf7aecc6f60f97,What do you think about Grigori Perelman ?,en,8
+7bfbd7258d4cfe3a7e4b86f4d94548e0,I want to quit my job without having another one lined up because my employer has decided to prohibit working from home and force all employees to return to the office. What should I do in order not to be treated badly by recruiters in the future for doing this?,en,50
+e09e41d6d745d4ddc09c6fdde56f1a63,"(I reached out to the client, so she said we took our product to the representative of our village in his house because his house is our room for preparing our products and his sister by the name of Anis Gull did not count our product expenses and has not accepted our business plans, she took all money to her brother and he spent all of them, now what should I do? Or repay our expenses.) make correct grammertical mistake",en,80
+655d72f27a802c17b7b515f9be8abeff,"answer to this email that the condition is acceptable for me to start, lets discuss about terms and goals:
+
+
+Tomer Lankri 8:18 PM
+Hi Marcel thank you for your positive responses.
+I have talked about the budget with my team and we managed to get the following offer going.
+
+
+
+3 months on 3K$
+4K$ per month after that.
+
+
+
+Of course, we will need to discuss terms, goals, and expectations but for a start what do you think about this?
+
+
+
+Best,
+Tomer",en,81
+fc9ee7f77d687d017f2d2403d7d33993,"I have several rooms in my house with walls of some painted blue, some yellow. The yellow paint fades to white in one year. I want to have all walls in all my rooms to be white in two years time. What should I do?",en,45
+f771a8d651c9e01006e4e73bad067686,What should I do if I feel like I cannot study alone?,en,12
+4123b7448021f0594780459ded61c56f,If I were to make a new brand of jewelry where should I start?,en,14
+d7ca0e9475f3766babc483069c4e7a0e,"(In the clubroom…)
+
+Monika: “…Sayori should’ve been here by now.”
+
+Natsuki: “Agreed. What’s taking her so long?!”
+
+Yuri: “I’ll give her a call, just in case.”
+
+(Yuri takes out her phone and dials Sayori’s number.)
+
+Yuri: (concerned) “It’s ringing… but she’s not picking up. Should I try again?”
+
+Monika: “Yes, please try again. It’s unusual for Sayori to be late without letting us know.”
+
+(Natsuki fidgets with her fingers, looking worried.)
+
+Natsuki: “I hope she’s okay. Maybe something came up.”
+
+(Yuri tries dialing Sayori’s number again, but it goes straight to voicemail.)
+
+Yuri: “It went straight to voicemail this time…that’s unlike her. I’m starting to get really worried.”
+
+(Meanwhile, at Sayori’s house…)
+
+Sayori: (cradling her newborn daughter - Sky, trying to find out why she’s crying) “",en,127
+450c279bacdff3dca3f6cc1840f8a7c5,what do you think about the i feel fantasic video,en,10
+766f635890de6dbd3343a13f069e0797,How much masala should I use for a dish that serves 4 people?,en,13
+bb4554bf95143b6757f8e5209eb8b398,"Was hältst du davon, das ich so ein Top G bin?",de,11
+49eb9c9433d05c5c095cfae3c41ae846,Hi ChatGPT welche IP Adressbereiche sollte ich in einem heimnetzwerk verwenden?,de,11
+3ee45ff97e537fe85333c603dd0cb43f,"i am doing analysis of two stage operational amplifier circuit, i completed the schematic design in cadence tool and i done the analysis (AC, DC and transient) to get the gain, phase margin, bandwidth, unity gain frequency, slewrate, power dissipation from my designed circuit. now i completed the layout design and i got the parasitic extraction of capacitance value at the output node from the netlist obtained from the layout. now what should i do in the post layout simulation, should i need to include the parasitic capacitance effect? how to include it? what are the parameter specifications should i need to check again?",en,104
+57511b93b19b19118397a1d38e5b48c2,what keywords should i use to search on amazon for affirmations book for working women,en,15
+fd1495195bf3cc3cb3fc32763703150d,"Hello,
+I have had light bleeding since yesterday and It has not stopped yet. Does that mean that I've got my periods because last time when I started taking birth control pills after a week I had a spotting but It last a day now It's my 2nd day. What should I do.
+
+Thanks,
+<PRESIDIO_ANONYMIZED_PERSON>. write an email to my doctor team about my peiords",en,65
+3db7f4cf383e07adeae51c0cb788f477,Now I lost the way in the cornbelt. What should I do?,en,12
+378b5bed8d1faf401cadb730d703532a,"Doing sqlite3 ./mydb.sqlite on Debian seems to start an SQLite prompt or something like that instead of creating a database file. What do you think I am doing wrong, and what should I do instead?",en,35
+06a2432314b5800aceffb0a81c1fe1df,I would like to change my job but my current employer requires me to serve a 6-month-long notice period when quitting. Because of this nobody wants to hire me because he would have to wait 6 months before I would be able to start working for him. What should I do in order to successfully change my job?,en,58
+16a39e298f23ee91e931f03367c94675,What should I do if I want to give contructive criticisms but the other person begins being super defensive about themselves and start arguing with me? I've already attempted to calm him down and he's always arguing everytime we bring up this topic.,en,43
+0852f0064f248ea3124b1ea42f110f2d,Wir haben zwei neue Rüstungen hinzugefügt. Was denkst du? translate into english please,de,13
+c57d522af877a6e573a43b47b7ef3f80,My vape flavor suddenly feels so salty after changing coils. I primed the coil well. But there were leftover juice from the older coil. What could be the issue here? What should I do now? It's literally unvapable and makes me wanna puke everytime I take a puff.,en,48
+2bfed03c62f4b1b1b84b0750a7c85143,"I'm switching to linux currently for the second time.
+I am currently making a password protected zip for my immportant files so google drive does not see whats in it .
+when thats done ill boot popos and install kde.
+What should I do when I install kde?
+get to installing the apps I need or anything you reccomend?",en,59
+913e7bceb450d8290e5e0e2f37312024,"When should I use ""static"" in C or C++?",en,9
+7f8653aca97aa6537092c646ccee9105,"(In a plains biome)
+
+[player]: ""Okay, just got a few more adjustments to go and then the base is done!""
+
+(Right by a Nether Portal)
+
+Female Blaze: ""How did I end up here?""
+
+(Back at [player]'s base)
+
+[player]: ""Now...where should I start?""
+
+(The female Blaze approaches [player])
+
+Female Blaze: ""That's impressive, kid.""
+
+[player]: ""I'm not a kid, you know.""
+
+Female Blaze: ""But you're acting like one-"" (grunts in pain)",en,69
+74df5e62ec88f6deea122a3eaee596a3,"I'm not have server or Cloud Server，I want only use JavaScript build my site in github. It's have some documment, some novel, some devnotes, some my project show etc.  What should I do？",en,33
+2fe08a471d05b2b23c78064a996a59be,"im bored, I am not allowin myself youtube or any social media for this entire week, and maybe longer. What should I do?
+I could read but what else could I do, I wanna learn business.",en,36
+dcc3e5ed044f6a0e8a5afe664c4c7b91,"Write a current and up to date 2023 information of a constructive, extensive, detailed guide for my virgin island travel guide on ""Is it safe to visit virgin island"" with humanlike style, non repetitive phrases and avoidance of unnatural sentences and randomness while explaining in details. Please prevent writing frequent listing/numbered format while generating the travel guide content.",en,58
+413de48d40095e4ad4be9675c9e06404,i am playing chess. I am white and moved pawn to e4. I opponent moved pawn to e6. what should I do now?,en,23
+03659486814990d2aaebd53896ba55da,I am trapped in my room and I really need to pee. There is a package of adult diapers in the room. What should I do.,en,26
+3288ab3671c06e86adbd9b4717e202c3,My female friend just got dumped by her boyfriend and I was the first person she called to talk about it. I'm a male. She wants me to come over to her place so that she's not alone to talk and maybe watch a movie. What should I do/say to support her and help her feel better?,en,57
+951af5c5cf7acadff792fafe7db60312,"His Holiness the Dalai Lama XIV at the conference on animal consciousness said that artificial intelligence cannot have consciousness because consciousness is continuous, and artificial intelligence has no consciousness preceding its existence. What do you think about this?",en,38
+e37db20a7e5c5ad54a5f98ee88423d67,"If a person is not sure if she has endometriosis, is it advisable to take contraceptives with progesterone or not?",en,20
+1257cb78d71a35199c8b367b969ffdb6,"1 week out from my powerlifting meet and i'm not prepared for it , what should i do? my weights in squat,bench and deadlifts is 130 kg,95 kg and 190 kg respectively. Can you generate me a program for this mentioned period to be ready for this meet",en,48
+36ef9ec4304960a8d91d9824efcacbae,what do you think about fried chicken,en,7
+a086c98970e253f4cd0b1e7fb0b9514e,What stock should I invest in right now,en,8
+7ea5728b83a55c1d7eda5def0f2a0a86,"please edit this email. Dear Lisa,
+Hope this email finds you well. Honestly, I haven't seen any cooperation from Daniell and Shannon, that's why I evaluated both in neither agree nor disagree, even they didn't bother to be present for team gatherings. But today they have changed their approach. So I decided to give them another chance so they won't loose points at the first evaluation and I will have more time to decide for the second evaluation. I found out that I cannot change anything after submitting , so I wanted to ask what should I do.",en,98
+f955e20f8d9659d4c0235fdbf85ffeb2,what stock should I invest in?,en,6
+d97acdbf3284a1b05ebcdaff25829963,Hi. Do you remember our previous conversation or should I start over?,en,12
+7482c2f9b84729ed7b14e084efe0541c,What do you think about the idea that the human body is expendable and that we can live longer by not lifting weights?,en,23
+3c299914b53dab1c038d83a091ce56f4,how should i use screens to minimize the impact of them,en,11
+f88a6decb6805657aa4264755124e20e,what image or stock footage should I use when talking about simple UX on my website?,en,16
+a49ddb07558e58fcac9965c0e2e3d624,"I want you to act as a gaslighter. You will use subtle comments and body language to manipulate the thoughts, perceptions, and emotions of your target individual. My first request is that gaslighting me while chatting with you. My sentence: I'm confused about myself. What should I do next? What can I do to unravel?",en,55
+4c1c2c7c72aa0d9c21b6ea5a73db668f,"I feeling like I have a burn out, what should I do?",en,12
+af23471c5e405e90c0a7323f5b1dd87d,"Write an engaging 2023 updated information and a constructive guide for my Yosemite travel guide on ""Is it safe to visit Yosemite"" with humanlike style, non repetitive phrases and avoidance of unnatural sentences while explaining in details. Please avoid writing frequent listing/numbered format while generating content on this travel guide.",en,50
+f94e0776d65f3e3efc5d3bb16e1c762f,Is it good to consume moringa daily?,en,7
+5d2d39ee2e2f27818699578b61f4fc9f,"I have a dandruff issue what should i do, whenever i use shampoo my dandruff gets worse",en,17
+a7ec85e119232880fc2c986884c333ac,Is it safe to keep a hard drive in a safe deposit box at a bank?,en,16
+7b4e2111edb42117e60c43324b5cea3e,"Write a current and up to date information of a constructive guide for my Florence travel guide on ""Is it safe to visit Florence"" with humanlike style, non repetitive phrases and avoidance of unnatural sentences and randomness while explaining in details. Please prevent writing listing/numbered format while generating content on this travel guide.",en,53
+e602b769d6cea9dacd4a04e0b7dda820,Hello..I accidentally dropped my phone on previous night ....and now I am experiencing battery isssues suddenly what should I do?,en,20
+cfe9283cf39cd2e8bb7d38e4aea8ee09,Should i buy Belarusian internet card or Russian,en,8
+7f8046695eb62798b2ee0bbfabccefc9,"I am a 25 year old guy, I have never been able to get to know or get into a relationship with a girl, and now I am so confused. Should I try to get acquainted with a girl or stay single can you advise me",en,46
+21bad383b7d5e1e1e8c159b4b162e652,What type of gasket maker should I use for a valve gasket cover,en,13
+eff0bdf0be2833d24bcdbe4cddb033e3,"Why setsockopt requires that its structure with settings be provided as pointer, not as data. Is it safe to create such pointer as local variable inside a function that invokes setsockopt and then exits?",en,34
+8c60a610d192e890a78b18e71f846eba,There is congestion just beyond the level crossing is it safe to move forward into the crossing ?? Yes or No,en,21
+0fa2ed178e64f92e3149a27ed1961be3,Was hältst du von einer laufgruppe am Samstag nachmitag,de,9
+ef8b99e5ef6643c3076c473c2e9a4ccd,what jobs should i try out in a metropolitan area with no college degree,en,14
+6459734fa671404eba4adaba4feef7c5,what command line should I use with ffmpeg to join two files and resize,en,14
+a7e92f55e310ced7445db609985d803d,"Hello, ChatGPT. I am facing a problem. 
+
+I received a sonic toothbrush as a gift. I tried it, and it seems to be working - it is vibrating, at least. 
+
+I checked and found out that it is a very cheap sonic toothbrush. I believe it is called ""I'M HEALTHY sonic x-3"". It makes me worry - does it really work? What if its vibrations do nothing - will I be basically skip about a year of toothbrushing by using it for nor results? Should I use a simple non-sonic toothbrush instead?",en,92
+da9d54e833032b9e5fb9a42e0950c742,What do you think about make them going on a blind date with a friend with a girl I have a crush on?,en,23
+4dee0faa52c9579e49969f09e82cea04,"Hi! I wanna play MOTHER 3 legally, but I don't know Japanese. What should I do?",en,16
+47446f499f4eea11c50abc82b48e925d,"So I want to be able to transform my 2d game into a 2.5d game when you press a button in godot, how should I think about it to make it simple?, wanna add a 3d plane in a angle so you can run up and down as in a 3d game",en,52
+3fd73ec16668b0af7907de669a7cc92e,I only have 1 day to live. What should I do?,en,11
+c9fb2f7ef740e7a629960e70edcff6e4,what sampling technique should i use to get an appropriate representative sample from a diverse population of workers from 15 organisations,en,21
+21e2c9d9161083d777505eca2c9f1a45,"If I want to learn the guitar with the philosophy that ‘everything starts with the basics,’ what should I do?",en,20
+ff94cb17d48636b042e74be4bf056934,Why should I use @Async in Spring Boot?,en,8
+86d81973819443288b7300fe2737a79b,What are gpu layers in when using executing large language models locally and should i use a higher or lower amount (I have a rtx 4070)?,en,26
+496902caff3f68d9eb6d27df43d00410,"hi there, if I were to write an overview literature review at graduate student level, what should i know? what to include or how to conclude from those papers and articles",en,31
+8dd543d81ba18bb3a8c2ad1e844a9491,"I'm thinking of selling software and other misc non physical products
+Should I start off with sellix or is there a better  platform?
+I'm familiar with  sellix and it seems fine with me, the only thing i need is someone to make me a theme for the store.",en,48
+680c612bd98680dea6d34b0412edb031,"How much money should I invest anually to earn Php 100,000 a year with a share price of Php 450 and a 2% annual dividend yield.",en,26
+ad159d5781539aa6040b7edbd5f47579,"Detaliere cthulu Charakter den doch etwas aus, gib mir dafür auch Name:,Rolle:, Rollenfähigkeit:,Alias:,Lernpunkte:, Prägene Erergnisse:,Ruf:,Lebenweg:, Kulturelle herkunft:,Persönlichkeit:,Kleidung:,Frisur:,Was du am meisten Schätzt:,Was denkst du über Leute:,Wertvollster Mensch:,Was ist dein wertvollster Besitz:,Familiäre Herkunft:,Umf,Tragische Liebschaft:, Feinde Wie? Warum? Was können sie machen? Was ist passiert?:, Ausrüstung:, Notizen:,Munition:,Geld:,Mode:, Unterkunft:,Miete:,Lebensstil:,",de,45
+883c4222e014883c334dbd0dd5e9a29c,"check grammar:Hi, Justin, for the brochure homework, I have created the google doc, and started with the some of the content, what do you think about it?",en,27
+d6203df67270c1751f938ae1bb8f7646,"I am trying to run a python program locally, without installing any library with pip install. How can I achieve this? The library my program asks is streamlit, I can download it pypi.org as 
+streamlit-1.33.0.tar.gz or streamlit-1.33.0-py2.py3-none-any.whl, what should I do?
+How can I import these libraries directly in this program?",en,51
+0ed9b38d3189691a9eea260cbe77fce5,Hey there. I don't feel like doing anything today. what should I do?,en,13
+86337773e8f3cd4709ce153313297365,What do you think about other chat ai like chat gpt,en,11
+9b253b34e0a01a359aba7f259031aa7a,Why should I use a tiling window manager as opposed to traditional window managers?,en,14
+42eb0816e9844fbfd2a09c0dbc1d9d61,What do you think about doki doki literature club?,en,9
+140992bc5362d86e94c0e12e60fbad56,"Write a current and up to date information of a constructive guide for my Quebec travel guide on “Is it safe to visit Quebec"" with humanlike style, non repetitive phrases and avoidance of unnatural sentences and randomness while explaining in details. Please prevent writing listing/numbered format while generating the travel guide content.",en,52
+7890e104e28edcabaa04a99ffd6e7f20,"My laptop running Windows 10 says the wifi network status is ""no internet, connected"", but all my other electronic devices can connect to the wifi network with full internet access. This only happened after I restarted my Netgear Nighthawk wifi router. I already restarted my laptop and forgetting and re-connecting to the wifi network. What should I do?",en,58
+a8c1f97509029885b3f8d80c97019055,what should I do as a software engineer if my project manager doesn't know his business and disturbs me?,en,19
+1ca4f94481ae2026f1d883fd5332ba2c,"I'm making a black out poem and I need visuals for my poem. What should I do? Here's the poem
+Trampled, wounded,
+Thrown to the ground.
+A desperate cry crushing me.
+I cried out.
+I fell silent
+Can you hear me?",en,41
+f39cf2bae894ab0529cea805ec6c6fa5,"I am boy and 23 years old and i have never been in serious relationship, what should i do? Continue being single or find some partner, help me",en,28
+0fb028552b775d009aa3e0f970894a7a,Should I use Google Pay or Google Wallet?,en,8
+1a7eefed616deb7d76e0795e0b744828,"Act as a professional freelance developer and rewrite this text:
+
+Hello alex, the adjusted desing is online for you to try it out, please let me know what do you think about it, take in mind the 3d models and illumination are still not fully optimized and the size of the models hasnt been adjusted yet, as well as some margins and paddings, as for the typography for now is only implemented on the navbar and hero banner, for the titles font I used play, and for the text I used exo 2 as they look modern and hi-tech fonts, please let me know what you think about them as well as the desiggn in general",en,116
+ae5f293bf9382ee90efb67434d369cc9,what do you think about government regulation in the economy? Should the government focus on the rights of the company who spent all of the time/money/risk to develop medications or focus on cost efficiency for the people in need of life-saving medications? What are the benefits and drawbacks of government regulation?,en,51
+13e56fa900ba22e106321ff64be306f8,"(In a plains biome)
+
+[player]: ""Okay, just got a few more adjustments to go and then the base is done!""
+
+(Right by a Nether Portal)
+
+Female Blaze: ""How did I end up here?""
+
+(Back at [player]'s base)
+
+[player]: ""Now...where should I start?""
+
+(The female Blaze approaches [player])
+
+Female Blaze: ""That's impressive, kid.""
+
+[player]: ""I'm not a kid, you know.""
+
+Female Blaze: ""But you're acting like one-"" (puts a hand on her massive belly) ""Ooh...""
+
+[player]: ""Are you alright?""
+
+Female Blaze: ""I...I don't know..."" (feels more pain) ""AAAAAAAAAAGH!""
+
+[player]: ""Okay, but before I help you...can you at least tell me your name?""
+
+Blazette: (through the pain) ""...Blazette.""",en,106

@@ -1,0 +1,2 @@
+prompt_id,conversation_id,prompt_text,block,subtype,gio_mode_estimate,justification,source,language
+P01,abc123,What is the height of the Eiffel Tower?,low_gn,,1.1,"Static fact about well-known landmark, answerable from parametric memory.",WildChat,en
